@@ -1,8 +1,8 @@
 Installation
 ************
 
-Preparing system
-================
+Preparing the system
+====================
 
 The EVA ICS installer prepares the system automatically, installing required
 packages. The only necessary pre-installed packages is "curl" to download and
@@ -71,6 +71,16 @@ Additional configuration can be performed by editing :doc:`registry` keys.
         EVA_NODE_MODE=registry /opt/eva4/bin/eva-control start
 
     allows to start the registry database server only
+
+Read more in :doc:`configuring <config>` documentation section.
+
+Startup
+=======
+
+If the automatic startup has been set up, EVA ICS node is started automatically
+either by systemctl or by OpenRC (Alpine). To start/stop the node server
+manually, use either "/opt/eva4/sbin/eva-control" script or
+:doc:`eva-shell<cli>`.
 
 Configuring/rebuilding Python venv
 ==================================

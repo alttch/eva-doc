@@ -1,0 +1,12 @@
+# ELBUS buffer size (core + defaults for services)
+buf_size: 8192
+# Buffer time-to-live (microseconds)
+buf_ttl: 10
+# The default queue size
+queue_size: 512
+# ELBUS sockets
+sockets:
+  # always keep this one unles you know what you are doing
+  - var/elbus.ipc
+  # allow ELBUS calls from remotes (insecure, for private networks only)
+  #- 0.0.0.0:7777

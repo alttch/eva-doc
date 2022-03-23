@@ -55,6 +55,8 @@ clean:
 .PHONY: html
 html:
 	cp /opt/eva4/CHANGELOG.rst changelog.rst
+	rm -rf registry_config
+	cp -r /opt/eva4/share/registry/defaults/config registry_config
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."

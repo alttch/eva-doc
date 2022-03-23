@@ -35,6 +35,7 @@ Industry-4.0 automated control systems.
     install
     What is new <changelog>
     architecture
+    config
     auth
     cli
     highload

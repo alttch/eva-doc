@@ -1,0 +1,13 @@
+# worker threads (max recommended = number of CPUs)
+workers: 2
+# the default timeout
+timeout: 5
+# the suicide timeout, used during shutdown (the node process is forcibly
+# killed after)
+suicide_timeout: 10
+# instantly save item states
+instant_save: true
+# keep action history in memory (seconds)
+keep_action_history: 86400
+# keep the pid file path as default unless you know what you are doing
+pid_file: var/eva.pid
