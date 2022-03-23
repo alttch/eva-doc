@@ -112,8 +112,8 @@ Limitations
 
 * OID masks do not support internal wildcards (e.g. "sensor:\*/test")
 
-Active Directory authentication service (single node)
-=====================================================
+Active Directory authentication service
+=======================================
 
 The service provides authentication against Active Directory.
 
