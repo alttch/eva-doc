@@ -1,6 +1,8 @@
 Platform architecture
 *********************
 
+.. contents::
+
 Basics
 ======
 
@@ -80,9 +82,12 @@ The following services are additionally provided by default:
 Service management
 ==================
 
+Create
+------
+
 If managed by EVA ICS launchers, a service can be created either:
 
-* via "eva.core" ELBUS RPC
+* via "eva.core" bus RPC
 
 * using :ref:`eva-shell` (svc create / svc deploy commands)
 
@@ -98,4 +103,26 @@ If deployed with eva-shell, the payload must have the following minimal format:
         config:
             # service configuration
 
-For the whole parameters, see "svc.deploy" method of eva.core bus RPC.
+For the whole parameters, see bus RPC "svc.deploy" method of "eva.core".
+
+Manage
+------
+
+Services provide bus RPC methods, methods "test" and "info" are mandatory.
+
+If using :ref:`eva-shell`, service methods can be either assigned to dedicated
+commands or be called directly with "svc call" command.
+
+Service methods can be called via bus RPC directly, e.g.:
+
+.. code:: bash
+
+    /opt/eva4/sbin/elbus /opt/eva4/var/elbus.ipc rpc call eva.aaa.acl acl.list
+
+If payload is required, it must be packed to MessagePack. A tool "bin/yml2mp"
+can be used to convert YAML files to MessagePack from the command-line.
+
+Destroy / undeploy / purge
+--------------------------
+
+Use either :ref:`eva-shell` or the corresponding bus RPC methods of "eva.core".
