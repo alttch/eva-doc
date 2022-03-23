@@ -18,9 +18,9 @@ The default Enterprise pack can be obtained from `EVA ICS representatives
 * The default Enterprise pack costs 2,000 EUR/year and includes 10 hours of
   support from the EVA ICS core team.
 
-* The Enterprise extensions may be provided for free for customers who
-  regularly spend certain amount of funds on support contracts. Please contact
-  your representative for details.
+* The Enterprise extensions may be provided for free or with a discount for
+  customers who regularly spend certain amount of funds on support contracts.
+  Please contact your representative for details.
 
 EVA JS Framework WASM extension
 ===============================
