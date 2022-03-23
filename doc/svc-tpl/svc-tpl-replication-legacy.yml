@@ -1,0 +1,26 @@
+# Legacy (EVA ICS v3) replication service
+command: venv/bin/eva4-repl-legacy
+bus:
+  path: var/elbus.ipc
+config:
+  key_svc: eva.aaa.localauth
+  ## psrt configuration
+  pubsub:
+    proto: psrt
+    path: localhost:2873
+    user: null
+    password: null
+    timeout: 10
+    buf_size: 65536
+    tls: false
+    tls_ca: null
+    bulk_subscribe:
+      - all
+  ## node configuration
+  #nodes:
+    #node1_legacy:
+      #key: default-v3
+      #key_legacy_name: default
+      #reload_interval: 30
+      #timeout: 5
+      #controllers: ['uc', 'lm']

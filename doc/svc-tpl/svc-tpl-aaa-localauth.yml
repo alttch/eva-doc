@@ -1,0 +1,6 @@
+# Local users and API keys service
+command: svc/eva-aaa-localauth
+bus:
+  path: var/elbus.ipc
+config:
+  acl_svc: eva.aaa.acl

@@ -57,6 +57,10 @@ html:
 	cp /opt/eva4/CHANGELOG.rst changelog.rst
 	rm -rf registry_config
 	cp -r /opt/eva4/share/registry/defaults/config registry_config
+	rm -rf svc-tpl
+	cp -r /opt/eva4/share/svc-tpl .
+	find svc-tpl -name "*.yml" -exec sed -i 's|target/debug/|svc/|g' {} \;
+	sed -i 's|svc/eva-aaa-msad|path/to/eva-aaa-msad|g' svc-tpl/svc-tpl-aaa-msad.yml
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."

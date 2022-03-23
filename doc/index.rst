@@ -40,6 +40,7 @@ Industry-4.0 automated control systems.
     cli
     highload
     enterprise
+    trademarks
 
 .. toctree::
     :caption: Services
