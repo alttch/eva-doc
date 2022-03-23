@@ -23,6 +23,22 @@ The interactive mode provides various features, like TAB-auto-completion,
 command repetitions ("command \|T" or "command \|cT", where T is the command
 interval, in seconds) etc.
 
+Installing/updating
+-------------------
+
+eva-shell is not included into EVA ICS distribution any longer (but may be
+installed automatically). To install/update it, either edit
+"eva/config/python-venv" registry key, specify the desired version in "extra"
+section (e.g. eva-shell>=1.0.0) and rebuild the Python virtual environment
+(/opt/eva4/install/build-venv). Or execute:
+
+.. code:: shell
+
+    /opt/eva4/venv/bin/pip install -U eva-shell
+
+The latest eva-shell version number can be got from
+https://pypi.org/project/eva-shell/
+
 ELBUS CLI
 =========
 
@@ -32,7 +48,7 @@ Various calls to the EVA ICS core and services can be performed via `ELBUS
 .. note::
 
     EVA ICS ELBUS RPC uses MessagePack-packed payloads. To convert YAML to
-    MessagePack, a tool "bin/yml2mp" is provided.
+    MessagePack, a provided tool "bin/yml2mp" can be used.
 
 Registry management
 ===================
@@ -47,6 +63,8 @@ Command-line tools
 
 * **sbin/key-as-source** and **sbin/key-set-flag** wrappers around
   "eva-registry-cli" for certain tasks.
+    
+* **sbin/eva-edit-python-venv** edit Python virtual environment configuration.
 
 ELBUS cheat-sheet
 -----------------
