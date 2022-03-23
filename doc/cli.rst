@@ -3,6 +3,8 @@ Command-line tools
 
 .. contents::
 
+.. _eva-shell:
+
 eva-shell
 =========
 

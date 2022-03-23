@@ -1,5 +1,5 @@
-EVA ICS v4 architecture
-***********************
+Platform architecture
+*********************
 
 Basics
 ======
