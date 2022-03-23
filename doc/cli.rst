@@ -1,6 +1,8 @@
 Command-line tools
 ******************
 
+.. contents::
+
 eva-shell
 =========
 
@@ -24,8 +26,8 @@ interval, in seconds) etc.
 ELBUS CLI
 =========
 
-Various calls to the EVA ICS core and services can be performed with
-"sbin/elbus" command-line tool.
+Various calls to the EVA ICS core and services can be performed via `ELBUS
+<https://elbus.bma.ai/>`_ with "sbin/elbus" command-line tool.
 
 .. note::
 
@@ -35,6 +37,9 @@ Various calls to the EVA ICS core and services can be performed with
 Registry management
 ===================
 
+Command-line tools
+------------------
+
 * **bin/eva-registry** registry interactive/command-line tool (Python, installed
   automatically with eva-shell)
 
@@ -42,3 +47,42 @@ Registry management
 
 * **sbin/key-as-source** and **sbin/key-set-flag** wrappers around
   "eva-registry-cli" for certain tasks.
+
+ELBUS cheat-sheet
+-----------------
+
+As the registry is based on `YEDB <https://yedb.bma.ai>`_, "eva.registry"
+service accepts various calls via ELBUS.
+
+Purge
+~~~~~
+
+To automatically purge the registry, e.g. after undeploying multiple items,
+execute:
+
+.. code:: shell
+
+    /opt/eva4/sbin/elbus /opt/eva4/var/elbus.ipc rpc call eva.registry safe_purge
+
+The same can be done with eva-shell:
+
+.. code:: shell
+
+    eva svc call eva.registry safe_purge
+
+Temporary enable/disable auto-flush
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To deploy multiple items, it may be useful to disable the registry auto-flush
+feature:
+
+.. code:: shell
+
+    /opt/eva4/sbin/elbus /opt/eva4/var/elbus.ipc rpc call eva.registry server_set name=auto_flush value=false
+
+The same can be done with eva-shell:
+
+.. code:: shell
+
+    eva svc call eva.registry server_set name=auto_flush value=false
+
