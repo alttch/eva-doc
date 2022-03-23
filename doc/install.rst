@@ -78,7 +78,7 @@ Startup
 =======
 
 If the automatic startup has been set up, EVA ICS node is started automatically
-either by systemctl or by OpenRC (Alpine). To start/stop the node server
+either by Systemd or by OpenRC (Alpine). To start/stop the node server
 manually, use either "/opt/eva4/sbin/eva-control" script or
 :doc:`eva-shell<cli>`.
 

@@ -38,7 +38,7 @@ section (e.g. eva-shell>=1.0.0) and rebuild the Python virtual environment
 
     /opt/eva4/venv/bin/pip install -U eva-shell
 
-The latest eva-shell version number can be got from
+The latest eva-shell version number can be obtained from
 https://pypi.org/project/eva-shell/
 
 Bus CLI
