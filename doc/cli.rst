@@ -39,15 +39,15 @@ section (e.g. eva-shell>=1.0.0) and rebuild the Python virtual environment
 The latest eva-shell version number can be got from
 https://pypi.org/project/eva-shell/
 
-ELBUS CLI
-=========
+Bus CLI
+=======
 
 Various calls to the EVA ICS core and services can be performed via `ELBUS
 <https://elbus.bma.ai/>`_ with "sbin/elbus" command-line tool.
 
 .. note::
 
-    EVA ICS ELBUS RPC uses MessagePack-packed payloads. To convert YAML to
+    EVA ICS bus RPC uses MessagePack-packed payloads. To convert YAML to
     MessagePack, a provided tool "bin/yml2mp" can be used.
 
 Registry management
@@ -66,11 +66,11 @@ Command-line tools
     
 * **sbin/eva-edit-python-venv** edit Python virtual environment configuration.
 
-ELBUS cheat-sheet
------------------
+Bus cheat-sheet
+---------------
 
 As the registry is based on `YEDB <https://yedb.bma.ai>`_, "eva.registry"
-service accepts various calls via ELBUS.
+service accepts various calls via the bus.
 
 Purge
 ~~~~~
