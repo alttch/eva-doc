@@ -1,6 +1,8 @@
 Installation
 ************
 
+.. contents::
+
 Preparing the system
 ====================
 
