@@ -71,16 +71,13 @@ Unlike v3, item status 0 does not mean that the item is disabled (all items god
 "enabled" property instead), however if an lvar has status=0, its state can not
 be updated from raw bus events, unless forced.
 
-Item types and properties
-=========================
-
-Common properties
-------------------
+Common item properties
+======================
 
 .. _oid:
 
 OID
-~~~
+---
 
 All items have "oid" (object id) property, which has the format:
 
@@ -100,20 +97,20 @@ wildcards:
 * **#** - all available items
 
 meta
-~~~~
+----
 
 In EVA ICS v4 items have no fields such as "description", "location", etc.,
 however there is a field "meta", which can contain any serializable value,
 including structures with sub-fields.
 
 enabled
-~~~~~~~
+-------
 
 If set to false, items can not update their states from raw bus events, unit
 and lmacro actions are disabled.
 
 logic
-~~~~~
+-----
 
 If set, contains the value logical range. If the item receives an event with an
 out-of-range value, it is considered as failed and its status is set to -1,
@@ -132,25 +129,28 @@ The property format:
 as lmacro items have no states, they have no "logic" property as well.
 
 connected
-~~~~~~~~~
+---------
 
 A read-only property, for remote items, contains true if the remote node is
 accessible for the replication service, which synchronizes the item. Local
 items have always "connected=true".
 
 node
-~~~~
+----
 
 A read-only property, contains the node name, where item is replicated from.
 For local items, node name is always equal to the local system name.
+
+Item types
+==========
 
 .. _sensor:
 
 sensor
 ------
 
-A simple item, which is usually mapped to some external equipment register or
-state. Sensors are used for monitoring only and can not execute actions.
+An item, which is usually mapped to some external equipment register or state.
+Sensors are used for monitoring only and can not execute actions.
 
 Sensor items have no additional fields.
 
@@ -159,8 +159,8 @@ Sensor items have no additional fields.
 unit
 ----
 
-A simple item, which is usually mapped to some external equipment register or
-state and can accept actions (e.g. turn on, off etc.).
+An item, which is usually mapped to some external equipment register or state
+and can accept actions (e.g. turn on, off etc.).
 
 To execute actions, a unit must have "action" property in the format:
 
@@ -169,7 +169,7 @@ To execute actions, a unit must have "action" property in the format:
     action:
       svc: service.id # a service, responsible for actions for this item
       timeout: N # float number, overrides the default core timeout
-      config: ANYTHING # additional property with parameters for the service
+      config: null # optional property with parameters for the service
 
 .. _lvar:
 
