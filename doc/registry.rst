@@ -13,7 +13,7 @@ Technology
 EVA ICS uses `YEDB <https://yedb.bma.ai>`_ as the structured database. YEDB is
 fast, easy to repair and crash-free.
 
-Registry service is embedded into the node server and always started
+Registry service is embedded into the node server and is always started
 automatically.
 
 Registry can be managed with "bin/eva-registry", "eva registry manage" and
