@@ -8,7 +8,7 @@ Basics
 
 Each EVA ICS v4 node has the following architecture:
 
-.. figure:: v4arch.png
+.. figure:: schemas/v4arch.png
     :scale: 100%
     :alt: v4 architecture
 

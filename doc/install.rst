@@ -66,14 +66,6 @@ in /opt/eva4/etc folder (create them from provided examples if missing).
 
 Additional configuration can be performed by editing :doc:`registry` keys.
 
-.. note::
-
-    The following command:
-
-        EVA_NODE_MODE=registry /opt/eva4/bin/eva-control start
-
-    allows to start the registry database server only
-
 Read more in :doc:`configuring <config>` documentation section.
 
 Startup

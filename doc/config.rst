@@ -79,3 +79,22 @@ must be rebuilt with the command:
 .. literalinclude:: ./registry_config/python-venv.yml
     :language: yaml
 
+Troubleshooting
+===============
+
+If certain parts of the configuration are missing or contain invalid values,
+the node may stop starting. Sometimes there may be no messages in logs, e.g. if
+the core or the logging system configuration is broken.
+
+In this case, launch the node server in verbose mode with the console output:
+
+.. code:: shell
+
+    /opt/eva/sbin/eva-control launch
+
+Or using :ref:`eva-shell`:
+
+.. code:: shell
+
+    eva server launch
+

@@ -12,7 +12,7 @@ The primary command-line tool to manage EVA ICS nodes is **eva-shell**, which
 is either :doc:`installed <install>` automatically or can be added later, by
 including "eva-shell" Python module in the Python virtual environment.
 
-.. figure:: eva-shell.png
+.. figure:: screenshots/eva-shell.png
     :scale: 50%
     :alt: eva-shell
 

@@ -161,14 +161,14 @@ Active Directory configuration
 Log into the Active Directory domain controller, open *Active Directory Users
 and Computers* and create an organizational unit (default - *EVA*)
 
-.. figure:: msad_ou.png
+.. figure:: screenshots/msad_ou.png
     :scale: 70%
     :alt: create AD OU
 
 Create security groups inside the organizational unit. Group names must match
 IDs of EVA ICS ACLs:
 
-.. figure:: msad_group.png
+.. figure:: screenshots/msad_group.png
     :scale: 70%
     :alt: create AD group
 

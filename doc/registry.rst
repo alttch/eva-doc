@@ -49,6 +49,16 @@ To list deleted and backup copies, use "ls -a" command of "eva-registry" tool.
 All data is stored in "runtime/registry" directory, which should
 not be accessed directly, unless data loss occur.
 
+Starting the registry service only
+
+The following command:
+
+.. code:: shell
+
+    EVA_NODE_MODE=registry /opt/eva4/bin/eva-control start
+
+allows to temporary start the registry database server only.
+
 Bus cheat-sheet 
 ---------------
 
