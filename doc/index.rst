@@ -36,6 +36,7 @@ Industry-4.0 automated control systems.
     What is new <changelog>
     architecture
     config
+    registry
     items
     auth
     cli
@@ -48,7 +49,6 @@ Industry-4.0 automated control systems.
     :maxdepth: 1
 
     core
-    registry
     svc/aaa-acl
     svc/aaa-localauth
     svc/db-influx
