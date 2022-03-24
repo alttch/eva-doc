@@ -119,7 +119,7 @@ config/registry       yes           the registry service :doc:`configuration <co
 config/logs           yes           logging :doc:`configuration <config>`
 data                  forbidden     system objects
 inventory             not rec.      inventory key (EVA ICS :doc:`items <items>`)
-state                 not rec.      item states
+state                 not rec.      :doc:`item <items>` states
 svc                   not rec.      external service configuration
 svc_data              not rec.      used by external services
 user_data             yes           any user-defined data
