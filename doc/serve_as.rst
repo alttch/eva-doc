@@ -48,14 +48,14 @@ following request:
 
 .. code-block:: bash
 
-    http://<IP:7727>/%pub/REGISTRY-KEY
+    http://<IP:7727>/:pub/REGISTRY-KEY
 
 where REGISTRY-KEY - key name, relative to *eva/user_data/pub*, e.g.
 to request a key "eva/user_data/pub/settings" use the following request:
 
 .. code-block:: bash
 
-    http://<IP:7727>/%pub/settings
+    http://<IP:7727>/:pub/settings
 
 By default, registry data is served in JSON. To change format or add locale
 translation, see :ref:`serve_as_format` and :ref:`serve_as_locale`.
