@@ -56,3 +56,15 @@ Industry-4.0 automated control systems.
     svc/expiration
     svc/hmi
     svc/replication-legacy
+
+.. toctree::
+    :caption:  Interface development
+    :maxdepth: 1
+
+    ui
+    pvt
+    serve_as
+    upload
+    api_tokens
+    evahi
+    EVA JS Framework <https://github.com/alttch/eva-js-framework>
