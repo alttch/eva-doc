@@ -58,7 +58,7 @@ Industry-4.0 automated control systems.
     svc/replication-legacy
 
 .. toctree::
-    :caption:  Interface development (the default HMI service)
+    :caption:  Interface development
     :maxdepth: 1
 
     ui
