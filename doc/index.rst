@@ -7,7 +7,7 @@ What is EVA ICS
 `EVA ICS <https://www.eva-ics.com>`_ v4 is a new-generation SCADA platform for
 Industry-4.0 automated control systems.
 
-* The world first and only Enterprise SCADA platform, written completely in
+* The world-first and only Enterprise SCADA platform, written completely in
   Rust: extremely fast, secure and stable.
 
 * Allows to handle millions of objects on a single node.

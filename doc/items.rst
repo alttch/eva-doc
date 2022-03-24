@@ -6,7 +6,7 @@ Items
 EVA ICS v4 has four types of items: "unit", "sensor", "lvar" and "lmacro".
 External services can have more types, e.g.  ACLs, users, API keys, cycles and
 rules, but "eva.core" and replication services operate only with the listed
-below.
+ones.
 
 EVA ICS v4 has the very minimal core logic for items. This allows to process
 dozens million items on a single node without additional overhead.
@@ -67,9 +67,9 @@ properties:
 
 * **t** contains the state UNIX timestamp (float)
 
-Unlike v3, item status 0 does not mean that the item is disabled (all items god
-"enabled" property instead), however if an lvar has status=0, its state can not
-be updated from raw bus events, unless forced.
+Unlike v3, item status 0 does not mean that the item is disabled (all items
+have got "enabled" property instead), however if an lvar has status=0, its
+state can not be updated from raw bus events, unless forced.
 
 Common item properties
 ======================
