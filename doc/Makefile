@@ -59,6 +59,9 @@ html:
 	cp -r /opt/eva4/share/registry/defaults/config registry_config
 	rm -rf svc-tpl
 	cp -r /opt/eva4/share/svc-tpl .
+	rm -rf etc-config
+	mkdir etc-config
+	cp -r /opt/eva4/etc/*-dist etc-config/
 	find svc-tpl -name "*.yml" -exec sed -i 's|target/debug/|svc/|g' {} \;
 	sed -i 's|svc/eva-aaa-msad|path/to/eva-aaa-msad|g' svc-tpl/svc-tpl-aaa-msad.yml
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html

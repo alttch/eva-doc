@@ -36,6 +36,7 @@ Industry-4.0 automated control systems.
     What is new <changelog>
     architecture
     config
+    items
     auth
     cli
     highload
