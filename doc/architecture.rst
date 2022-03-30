@@ -115,7 +115,7 @@ commands or be called directly with "svc call" command.
 
 Service methods can be called via bus RPC directly, e.g.:
 
-.. code:: bash
+.. code:: shell
 
     /opt/eva4/sbin/elbus /opt/eva4/var/elbus.ipc rpc call eva.aaa.acl acl.list
 

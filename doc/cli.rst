@@ -16,7 +16,7 @@ including "eva-shell" Python module in the Python virtual environment.
     :scale: 50%
     :alt: eva-shell
 
-    with eva-shell, IoT management is a joy
+    with eva-shell IoT management is a joy
 
 EVA ICS v4 eva-shell can work in both command-line and interactive mode (type
 "eva" without arguments to start it).
