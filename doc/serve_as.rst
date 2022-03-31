@@ -142,6 +142,11 @@ After editing, compile ".po" file manually with "msgfmt", or run
 
     /opt/eva4/bin/gen-intl -u /opt/eva4/ui -o /opt/eva4/pvt/locales -l cs /opt/eva4/ui/tests/test.yml compile
 
+.. note::
+
+    As in EVA ICS v4 ui and pvt directories can have any custom locations,
+    specifying "-u" and "-o" options for "gen-intl" is mandatory.
+
 Locale cache
 ------------
 
