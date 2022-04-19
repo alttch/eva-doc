@@ -58,9 +58,6 @@ Registry management
 Command-line tools
 ------------------
 
-* **bin/eva-registry** registry interactive/command-line tool (Python, installed
-  automatically with eva-shell)
-
 * **sbin/eva-registry-cli** registry command-line tool (included by default)
 
 * **sbin/key-as-source** and **sbin/key-set-flag** wrappers around
