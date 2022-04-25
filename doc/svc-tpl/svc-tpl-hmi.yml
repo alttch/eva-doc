@@ -1,9 +1,9 @@
 # The default HMI service
 command: svc/eva-svc-hmi
+workers: 4
 bus:
   path: var/elbus.ipc
 config:
-  workers: 4
   api:
     - proto: http
       listen: 0.0.0.0:7727
@@ -21,3 +21,6 @@ config:
   pvt_path: pvt
   default_db: default
   mime_types: share/mime.yml
+  buf_size: 16384
+user: nobody
+group: nogroup

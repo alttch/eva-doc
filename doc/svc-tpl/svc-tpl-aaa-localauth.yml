@@ -4,3 +4,5 @@ bus:
   path: var/elbus.ipc
 config:
   acl_svc: eva.aaa.acl
+user: nobody
+group: nogroup

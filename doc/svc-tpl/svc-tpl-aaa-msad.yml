@@ -23,3 +23,5 @@ config:
   #cache_time: 86400
   ## if cached entry exists - use it before ad authentication
   #cache_first: false
+user: nobody
+group: nogroup

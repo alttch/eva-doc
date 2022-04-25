@@ -1,4 +1,6 @@
+# Event-to-InfluxDB database service
 command: svc/eva-svc-db-influx
+workers: 2
 bus:
   path: var/elbus.ipc
 config:
@@ -20,10 +22,10 @@ config:
   ignore_events: false
   # event queue size
   queue_size: 8192
-  # worker theads
-  workers: 2
-  # influx client pool size
-  clients: 2
+  # influx client pool size (default = workers)
+  #clients: 2
   # item OIDs / OID masks
   oids:
     - "#"
+user: nobody
+group: nogroup

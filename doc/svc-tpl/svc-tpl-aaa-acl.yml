@@ -3,3 +3,5 @@ command: svc/eva-aaa-acl
 bus:
   path: var/elbus.ipc
 config: {}
+user: nobody
+group: nogroup

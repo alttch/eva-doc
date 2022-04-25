@@ -1,4 +1,6 @@
+# Event-to-SQL database service
 command: svc/eva-svc-db-sql
+workers: 2
 bus:
   path: var/elbus.ipc
 config:
@@ -18,10 +20,8 @@ config:
   keep: 604800
   # event queue size
   queue_size: 8192
-  # worker theads
-  workers: 2
   # database pool size
-  pool_size: 2
+  #pool_size: 2 (default = workers)
   # item OIDs / OID masks
   oids:
     - "#"

@@ -1,5 +1,7 @@
 # Legacy (EVA ICS v3) replication service
-command: venv/bin/eva4-repl-legacy
+#
+# Requires https://pypi.org/project/eva4-repl-legacy/ Python module installed
+command: venv/bin/eva4-svc-repl-legacy
 bus:
   path: var/elbus.ipc
 config:
@@ -24,3 +26,5 @@ config:
       #reload_interval: 30
       #timeout: 5
       #controllers: ['uc', 'lm']
+user: nobody
+group: nogroup

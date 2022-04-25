@@ -12,3 +12,5 @@ pip_extra_options: ""
 # additional module
 extra: []
 # - eva-shell
+# mirror moduls for additional Python versions
+mirror_extra_versions: []

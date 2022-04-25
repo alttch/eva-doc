@@ -3,7 +3,7 @@
 # Only a single console/memory/elbus logger is supported
 - output: console
   level: info
-- output: elbus
+- output: bus
   level: info
 - output: memory
   level: info
