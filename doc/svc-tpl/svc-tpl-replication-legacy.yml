@@ -27,4 +27,3 @@ config:
       #timeout: 5
       #controllers: ['uc', 'lm']
 user: nobody
-group: nogroup

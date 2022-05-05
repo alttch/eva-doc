@@ -28,4 +28,3 @@ config:
   oids:
     - "#"
 user: nobody
-group: nogroup

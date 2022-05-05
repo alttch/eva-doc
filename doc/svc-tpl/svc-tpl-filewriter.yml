@@ -1,0 +1,22 @@
+# Event-to-file writer service
+command: svc/eva-svc-filewriter
+bus:
+  path: var/elbus.ipc
+config:
+  file_path: /tmp/1.csv
+  # flush data after each block (slow, but more reliable)
+  auto_flush: false
+  # use DOS-style CR/LF
+  dos_cr: false
+  # csv or json for NDJSON
+  format: csv
+  # periodically submit all item states
+  interval: null
+  # ignore real-time events
+  ignore_events: false
+  # event queue size
+  queue_size: 8192
+  # item OIDs / OID masks
+  oids:
+    - "#"
+user: nobody

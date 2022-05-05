@@ -68,3 +68,11 @@ Industry-4.0 automated control systems.
     api_tokens
     evahi
     EVA JS Framework <https://github.com/alttch/eva-js-framework>
+
+.. toctree::
+    :caption: SDK
+    :maxdepth: 1
+
+    eapi
+    EVA ICS v4 SDK for Rust <https://crates.io/crates/eva-sdk>
+    EVA ICS v4 SDK for Python <https://pypi.org/project/evaics/>

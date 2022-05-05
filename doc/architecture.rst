@@ -45,7 +45,32 @@ Each EVA ICS v4 node has the following architecture:
 * HMI services provide web servers to host user-interface applications and
   HTTP/web socket API.
 
-* When configured, service IDs should start from:
+Service types
+=============
+
+Common types
+------------
+
+There are several common types of services, used in EVA ICS v4:
+
+* **authentication services** provide ACLs, login- and key-based authentication
+
+* **controllers and PLC gateways** provide logic and/or equipment connection
+  services. The base distribution includes controller gateways for popular
+  industrial protocols, such as Modbus and Ethernet/IP
+
+* **database services** provide input/output functions for SQL and time-series
+  databases
+
+* **HMI services** provide HTTP API and host user-interface web applications.
+
+* **Other services** various tools and helpers, such as shared locks services,
+  mailers etc.
+
+Service names
+-------------
+
+* When created/deployed, service IDs should be named as:
 
     * "eva.aaa.ID" - authentication and ACL services
     * "eva.hmi.ID" - HMI services
@@ -53,7 +78,8 @@ Each EVA ICS v4 node has the following architecture:
     * "eva.db.ID" - database services
     * "eva.repl.ID" - replication services
     * "eva.svc.ID" - all other services
-    
+
+Majority of services can have multiple instances running under different names.
 
 Primary external services
 =========================
@@ -65,19 +91,14 @@ created automatically:
 * **eva.aaa.localauth** Local authentication service (local users / API keys)
 * **eva.hmi.default** The default HMI service (web UI and HTTP API)
 
+* **eva.filemgr.ID** File managers, allow to deploy/undeploy custom files in
+  EVA_DIR/runtime. The primary file manager service on each node is
+  automatically created and called "eva.filemgr.main".
+
 Additional external services
 ============================
 
-The following services are additionally provided by default:
-
-* **controller-virtual** virtual controller service
-
-* **db-influx** `Influx <https://www.influxdata.com>`_ databases service
-
-* **db-sql** SQL databases service
-
-* **svc-expiration** State expiration checker service (for timers and
-  expire-on-fail)
+See :doc:`list of all default services<services>`.
 
 Service management
 ==================

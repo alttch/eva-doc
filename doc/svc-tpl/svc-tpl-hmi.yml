@@ -22,5 +22,4 @@ config:
   default_db: default
   mime_types: share/mime.yml
   buf_size: 16384
-user: nobody
-group: nogroup
+user: eva

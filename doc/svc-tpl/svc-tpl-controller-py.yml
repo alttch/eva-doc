@@ -1,0 +1,10 @@
+# Python macros controller service
+#
+# Requires https://pypi.org/project/eva4-controller-py/ Python module installed
+command: venv/bin/eva4-svc-controller-py
+bus:
+  path: var/elbus.ipc
+config:
+  #locker_svc: eva.svc.locker
+  #mailer_svc: eva.svc.mailer
+user: nobody

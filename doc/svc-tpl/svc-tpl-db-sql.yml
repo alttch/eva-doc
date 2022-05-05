@@ -25,3 +25,4 @@ config:
   # item OIDs / OID masks
   oids:
     - "#"
+user: nobody
