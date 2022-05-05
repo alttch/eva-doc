@@ -63,6 +63,7 @@ prepare:
 	cp -r /opt/eva4/etc/*-dist etc-config/
 	find svc-tpl -name "*.yml" -exec sed -i 's|target/debug/|svc/|g' {} \;
 	sed -i 's|svc/eva-aaa-msad|path/to/eva-aaa-msad|g' svc-tpl/svc-tpl-aaa-msad.yml
+	/opt/eva4/sbin/eapigen /opt/eva4/eva/eapi.yml > ./eapi/core.rst
 
 .PHONY: html
 html:
