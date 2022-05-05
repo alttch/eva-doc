@@ -45,7 +45,7 @@ Industry-4.0 automated control systems.
     trademarks
 
 .. toctree::
-    :caption: Services
+    :caption: The core and services
     :maxdepth: 1
 
     core
