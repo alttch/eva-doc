@@ -9,8 +9,89 @@ EAPI is based on `ELBUS <https://elbus.bma.ai/>`_ IPC bus and uses its default
 RPC layer for procedure calls. The default encoding payload for all RPC calls
 (except a few exclusions) is `MessagePack <https://msgpack.org/index.html>`_.
 
-Basics
-======
+.. contents::
+
+Calling EAPI methods
+====================
+
+Service EAPI methods can be called either with ELBUS clients or with included
+CLI ELBUS client (EVA_DIR/sbin/elbus). Methods of individual services
+(including internal ones) can be called as well with :ref:`eva-shell`, using
+"svc call" command.
+
+.. note::
+
+    In ELBUS RPC, "no payload" and "null payload" have different meaning. In
+    EVA ICS, "none" payload means that a method accepts no payload. If the
+    method is called with "null" payload, it may return invalid parameters
+    error.
+
+    If RPC method requies parameters but all of them are optional, an empty
+    struct (dict) MUST be specified as the parameters.
+
+Type specifications
+-------------------
+
+The following type specifications are used in EVA ICS documentation:
+
+* **uN** unsigned integer (e.g. u8 for 8-bit unsigned, u32 for 32-bit unsigned
+  etc.)
+
+* **iN** signed integer (e.g. u8 for 8-bit signed, u32 for 32-bit signed etc.)
+
+* **fN** float-pointing number (f32 for 32-bit float, f64 for 64-bit float)
+
+* **String** string value
+
+* **bool** boolean (true/false)
+
+* **Vec** vector (list/array)
+
+* **struct** structure with particular fields (dictionary/object)
+
+* **map** key/value map with variable fields (dictionary/object)
+
+When a parameter or a result field is a time value, it is usually specified as
+f64-timestamp or f64-duration (some low-level methods may require durations as
+micro- or nano-seconds).
+
+Errors
+------
+
+* ERR_CODE_NOT_FOUND: -32001
+* ERR_CODE_ACCESS_DENIED: -32002
+* ERR_CODE_SYSTEM_ERROR: -32003
+* ERR_CODE_OTHER: -32004
+* ERR_CODE_NOT_READY: -32005
+* ERR_CODE_UNSUPPORTED: -32006
+* ERR_CODE_CORE_ERROR: -32007
+* ERR_CODE_TIMEOUT: -32008
+* ERR_CODE_INVALID_DATA: -32009
+* ERR_CODE_FUNC_FAILED: -32010
+* ERR_CODE_ABORTED: -32011
+* ERR_CODE_ALREADY_EXISTS: -32012
+* ERR_CODE_BUSY: -32013
+* ERR_CODE_METHOD_NOT_IMPLEMENTED: -32014
+* ERR_CODE_TOKEN_RESTRICTED: -32015
+* ERR_CODE_IO: -32016
+* ERR_CODE_REGISTRY: -32017
+* ERR_CODE_EVAHI_AUTH_REQUIRED: -32018
+* ERR_CODE_PARSE: -32700
+* ERR_CODE_INVALID_REQUEST: -32600
+* ERR_CODE_METHOD_NOT_FOUND: -32601
+* ERR_CODE_INVALID_PARAMS: -32602
+* ERR_CODE_INTERNAL_RPC: -32603
+* ERR_CODE_ELBUS_CLIENT_NOT_REGISTERED: -32113
+* ERR_CODE_ELBUS_DATA: -32114
+* ERR_CODE_ELBUS_IO: -32115
+* ERR_CODE_ELBUS_OTHER: -32116
+* ERR_CODE_ELBUS_NOT_SUPPORTED: -32117
+* ERR_CODE_ELBUS_BUSY: -32118
+* ERR_CODE_ELBUS_NOT_DELIVERED: -32119
+* ERR_CODE_ELBUS_TIMEOUT: -32120
+
+EAPI Basics
+===========
 
 All services must respond to "test" method (returns no payload) and to "info"
 (returns the service meta data). The services, which fail to respond to "test",

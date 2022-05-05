@@ -34,6 +34,9 @@ Configuration registry keys
 The configuration registry keys are used by the core to configure itself and
 additional services. To apply changes, the node server must be restarted.
 
+They keys can be edited with either :ref:`eva-shell` command "edit config/X" or
+with "EVA_DIR/sbin/eva-registry-cli edit <FULL_KEY_NAME>"
+
 eva/config/core
 ---------------
 
@@ -74,7 +77,7 @@ must be rebuilt with the command:
 
 .. code:: shell
 
-    /opt/eva4/install/build-venv
+    /opt/eva4/sbin/venvmgr build
 
 .. literalinclude:: ./registry_config/python-venv.yml
     :language: yaml

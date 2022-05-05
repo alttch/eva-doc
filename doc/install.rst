@@ -90,7 +90,7 @@ in other tools.
 
 .. code:: shell
 
-    /opt/eva4/install/build-venv
+    /opt/eva4/sbin/venvmgr build
 
 To rebuild the virtual environment from scratch, completely delete
-/opt/eva4/venv folder.
+/opt/eva4/venv folder or call the above command with *-S* argument.

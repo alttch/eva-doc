@@ -36,7 +36,9 @@ section (e.g. eva-shell>=1.0.0) and rebuild the Python virtual environment
 
 .. code:: shell
 
-    /opt/eva4/venv/bin/pip install -U eva-shell
+    /opt/eva4/sbin/venvmgr add eva-shell
+    # or 
+    /opt/eva4/sbin/venvmgr add eva-shell==N # where N = version number
 
 The latest eva-shell version number can be obtained from
 https://pypi.org/project/eva-shell/
@@ -64,3 +66,9 @@ Command-line tools
   "eva-registry-cli" for certain tasks.
     
 * **sbin/eva-edit-python-venv** edit Python virtual environment configuration.
+
+Python VENV management
+======================
+
+A tool **sbin/venvmgr** can be used to quickly setup/manage the optional Python
+virtual environment (requires for Python services and certain tools).
