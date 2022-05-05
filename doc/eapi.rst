@@ -49,7 +49,7 @@ The following type specifications are used in EVA ICS documentation:
 
 * **struct** structure with particular fields (dictionary/object)
 
-* **map** key/value map with variable fields (dictionary/object)
+* **Map** key/value map with variable fields (dictionary/object)
 
 When a parameter or a result field is a time value, it is usually specified as
 f64-timestamp or f64-duration (some low-level methods may require durations as
