@@ -26,7 +26,7 @@ CLI ELBUS client (EVA_DIR/sbin/elbus). Methods of individual services
     method is called with "null" payload, it may return invalid parameters
     error.
 
-    If RPC method requies parameters but all of them are optional, an empty
+    If RPC method requires parameters but all of them are optional, an empty
     struct (dict) MUST be specified as the parameters.
 
 Type specifications
