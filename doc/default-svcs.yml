@@ -1,11 +1,11 @@
 - nam: eva.aaa.acl
   exe: svc/eva-aaa-acl
   dsc: The default ACL service
-  ins: by default in mode 1 (*-a*)
+  ins: by default with HMI (*--hmi*)
 - nam: eva.aaa.localauth
   exe: svc/eva-aaa-localauth
   dsc: Local user/key authentication service
-  ins: by default in mode 1 (*-a*)
+  ins: by default with HMI (*--hmi*)
 - nam: eva.controller.enipN
   exe: svc/eva-controller-enip
   dsc: Ethernet/IP PLC controller gateway

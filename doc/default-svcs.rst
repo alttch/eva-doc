@@ -7,11 +7,11 @@
    * - :doc:`eva.aaa.acl</svc/eva-aaa-acl>`
      - svc/eva-aaa-acl
      - :doc:`The default ACL service</svc/eva-aaa-acl>`
-     - by default in mode 1 (*-a*)
+     - by default with HMI (*--hmi*)
    * - :doc:`eva.aaa.localauth</svc/eva-aaa-localauth>`
      - svc/eva-aaa-localauth
      - :doc:`Local user/key authentication service</svc/eva-aaa-localauth>`
-     - by default in mode 1 (*-a*)
+     - by default with HMI (*--hmi*)
    * - :doc:`eva.controller.enipN</svc/eva-controller-enip>`
      - svc/eva-controller-enip
      - :doc:`Ethernet/IP PLC controller gateway</svc/eva-controller-enip>`
