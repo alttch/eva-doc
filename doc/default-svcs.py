@@ -27,20 +27,23 @@ svcs = sorted(svcs, key=lambda k: k['nam'])
 
 print('.. list-table::')
 print()
-print('   * - Sugg.name')
+print('   * - Suggested name')
 print('     - Executable')
 print('     - Description')
 print('     - Install')
 for svc in svcs:
+    nam = svc['nam']
     exe = svc['exe']
     exe_link = exe.replace('venv/bin/', 'svc/')
-    exe = f':doc:`{exe}</{exe_link}>`'
+    dsc = svc['dsc']
+    nam = f':doc:`{nam}</{exe_link}>`'
+    dsc = f':doc:`{dsc}</{exe_link}>`'
     ins = svc.get('ins', '')
     if ins.startswith('py:'):
         mod = ins[3:]
         ins = (f'Requires `{mod} <https://pypi.org/project/{mod}/>`_ '
                'Python module')
-    print(f'   * - {svc["nam"]}')
+    print(f'   * - {nam}')
     print(f'     - {exe}')
-    print(f'     - {svc["dsc"]}')
+    print(f'     - {dsc}')
     print(f'     - {ins}')

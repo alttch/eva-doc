@@ -1,78 +1,78 @@
 .. list-table::
 
-   * - Sugg.name
+   * - Suggested name
      - Executable
      - Description
      - Install
-   * - eva.aaa.acl
-     - :doc:`svc/eva-aaa-acl</svc/eva-aaa-acl>`
-     - The default ACL service
+   * - :doc:`eva.aaa.acl</svc/eva-aaa-acl>`
+     - svc/eva-aaa-acl
+     - :doc:`The default ACL service</svc/eva-aaa-acl>`
      - by default in mode 1 (*-a*)
-   * - eva.aaa.localauth
-     - :doc:`svc/eva-aaa-localauth</svc/eva-aaa-localauth>`
-     - Local user/key authentication service
+   * - :doc:`eva.aaa.localauth</svc/eva-aaa-localauth>`
+     - svc/eva-aaa-localauth
+     - :doc:`Local user/key authentication service</svc/eva-aaa-localauth>`
      - by default in mode 1 (*-a*)
-   * - eva.controller.enipN
-     - :doc:`svc/eva-controller-enip</svc/eva-controller-enip>`
-     - Ethernet/IP PLC controller gateway
+   * - :doc:`eva.controller.enipN</svc/eva-controller-enip>`
+     - svc/eva-controller-enip
+     - :doc:`Ethernet/IP PLC controller gateway</svc/eva-controller-enip>`
      - 
-   * - eva.controller.modbusN
-     - :doc:`svc/eva-controller-modbus</svc/eva-controller-modbus>`
-     - Modbus master gateway/service
+   * - :doc:`eva.controller.modbusN</svc/eva-controller-modbus>`
+     - svc/eva-controller-modbus
+     - :doc:`Modbus master gateway/service</svc/eva-controller-modbus>`
      - 
-   * - eva.controller.py
-     - :doc:`venv/bin/eva4-svc-controller-py</svc/eva4-svc-controller-py>`
-     - Python macros controller
+   * - :doc:`eva.controller.py</svc/eva4-svc-controller-py>`
+     - venv/bin/eva4-svc-controller-py
+     - :doc:`Python macros controller</svc/eva4-svc-controller-py>`
      - Requires `eva4-controller-py <https://pypi.org/project/eva4-controller-py/>`_ Python module
-   * - eva.controller.virtual
-     - :doc:`svc/eva-controller-virtual</svc/eva-controller-virtual>`
-     - Virtual (test) controller
+   * - :doc:`eva.controller.virtual</svc/eva-controller-virtual>`
+     - svc/eva-controller-virtual
+     - :doc:`Virtual (test) controller</svc/eva-controller-virtual>`
      - 
-   * - eva.db.iN
-     - :doc:`svc/eva-db-influx</svc/eva-db-influx>`
-     - InfluxDB v1/v2 state history
+   * - :doc:`eva.db.iN</svc/eva-db-influx>`
+     - svc/eva-db-influx
+     - :doc:`InfluxDB v1/v2 state history</svc/eva-db-influx>`
      - 
-   * - eva.db.sN
-     - :doc:`svc/eva-db-sql</svc/eva-db-sql>`
-     - SQL databases state history
+   * - :doc:`eva.db.sN</svc/eva-db-sql>`
+     - svc/eva-db-sql
+     - :doc:`SQL databases state history</svc/eva-db-sql>`
      - 
-   * - eva.filemgr.main
-     - :doc:`svc/eva-filemgr</svc/eva-filemgr>`
-     - File manager service
+   * - :doc:`eva.filemgr.main</svc/eva-filemgr>`
+     - svc/eva-filemgr
+     - :doc:`File manager service</svc/eva-filemgr>`
      - always by default
-   * - eva.hmi.default
-     - :doc:`svc/eva-hmi</svc/eva-hmi>`
-     - HMI (UI) and HTTP API service
+   * - :doc:`eva.hmi.default</svc/eva-hmi>`
+     - svc/eva-hmi
+     - :doc:`HMI (UI) and HTTP API service</svc/eva-hmi>`
      - by default with *--hmi* arg
-   * - eva.repl.N
-     - :doc:`svc/eva-repl</svc/eva-repl>`
-     - replication service
+   * - :doc:`eva.repl.N</svc/eva-repl>`
+     - svc/eva-repl
+     - :doc:`replication service</svc/eva-repl>`
      - 
-   * - eva.repl.legacyN
-     - :doc:`venv/bin/eva4-svc-repl-legacy</svc/eva4-svc-repl-legacy>`
-     - legacy (v3) replication service
+   * - :doc:`eva.repl.legacyN</svc/eva4-svc-repl-legacy>`
+     - venv/bin/eva4-svc-repl-legacy
+     - :doc:`legacy (v3) replication service</svc/eva4-svc-repl-legacy>`
      - Requires `eva4-repl-legacy <https://pypi.org/project/eva4-repl-legacy/>`_ Python module
-   * - eva.svc.expN
-     - :doc:`svc/eva-svc-expiration</svc/eva-svc-expiration>`
-     - Item state expiration service
+   * - :doc:`eva.svc.expN</svc/eva-svc-expiration>`
+     - svc/eva-svc-expiration
+     - :doc:`Item state expiration service</svc/eva-svc-expiration>`
      - 
-   * - eva.svc.fwriterN
-     - :doc:`svc/eva-svc-filewriter</svc/eva-svc-filewriter>`
-     - Item state file writer (JSON/CSV)
+   * - :doc:`eva.svc.fwriterN</svc/eva-svc-filewriter>`
+     - svc/eva-svc-filewriter
+     - :doc:`Item state file writer (JSON/CSV)</svc/eva-svc-filewriter>`
      - 
-   * - eva.svc.lockerN
-     - :doc:`svc/eva-svc-locker</svc/eva-svc-locker>`
-     - Shared lock service
+   * - :doc:`eva.svc.lockerN</svc/eva-svc-locker>`
+     - svc/eva-svc-locker
+     - :doc:`Shared lock service</svc/eva-svc-locker>`
      - 
-   * - eva.svc.mailer
-     - :doc:`svc/eva-svc-mailer</svc/eva-svc-mailer>`
-     - Mailer service
+   * - :doc:`eva.svc.mailer</svc/eva-svc-mailer>`
+     - svc/eva-svc-mailer
+     - :doc:`Mailer service</svc/eva-svc-mailer>`
      - 
-   * - eva.svc.mirror
-     - :doc:`svc/eva-svc-mirror</svc/eva-svc-mirror>`
-     - EVA ICS / PyPi mirror service
+   * - :doc:`eva.svc.mirror</svc/eva-svc-mirror>`
+     - svc/eva-svc-mirror
+     - :doc:`EVA ICS / PyPi mirror service</svc/eva-svc-mirror>`
      - 
-   * - eva.svc.modbusN
-     - :doc:`svc/eva-svc-modbus-slave</svc/eva-svc-modbus-slave>`
-     - Modbus slave service
+   * - :doc:`eva.svc.modbusN</svc/eva-svc-modbus-slave>`
+     - svc/eva-svc-modbus-slave
+     - :doc:`Modbus slave service</svc/eva-svc-modbus-slave>`
      - 
