@@ -1,0 +1,60 @@
+- nam: eva.aaa.acl
+  exe: svc/eva-aaa-acl
+  dsc: The default ACL service
+  ins: by default in mode 1 (*-a*)
+- nam: eva.aaa.localauth
+  exe: svc/eva-aaa-localauth
+  dsc: Local user/key authentication service
+  ins: by default in mode 1 (*-a*)
+- nam: eva.controller.enipN
+  exe: svc/eva-controller-enip
+  dsc: Ethernet/IP PLC controller gateway
+- nam: eva.controller.modbusN
+  exe: svc/eva-controller-modbus
+  dsc: Modbus master gateway/service
+- nam: eva.controller.py
+  exe: venv/bin/eva4-svc-controller-py
+  dsc: Python macros controller
+  ins: py:eva4-controller-py
+- nam: eva.controller.virtual
+  exe: svc/eva-controller-virtual
+  dsc: Virtual (test) controller
+- nam: eva.filemgr.main
+  dsc: File manager service
+  exe: svc/eva-filemgr
+  ins: always by default
+- nam: eva.db.iN
+  exe: svc/eva-db-influx
+  dsc: InfluxDB v1/v2 state history
+- nam: eva.db.sN
+  exe: svc/eva-db-sql
+  dsc: SQL databases state history
+- nam: eva.svc.expN
+  exe: svc/eva-svc-expiration
+  dsc: Item state expiration service
+- nam: eva.svc.fwriterN
+  exe: svc/eva-svc-filewriter
+  dsc: Item state file writer (JSON/CSV)
+- nam: eva.hmi.default
+  exe: svc/eva-hmi
+  dsc: HMI (UI) and HTTP API service
+  ins: "by default with *--hmi* arg"
+- nam: eva.svc.lockerN
+  exe: svc/eva-svc-locker
+  dsc: Shared lock service
+- nam: eva.svc.mailer
+  exe: svc/eva-svc-mailer
+  dsc: Mailer service
+- nam: eva.svc.mirror
+  exe: svc/eva-svc-mirror
+  dsc: EVA ICS / PyPi mirror service
+- nam: eva.svc.modbusN
+  exe: svc/eva-svc-modbus-slave
+  dsc: Modbus slave service
+- nam: eva.repl.N
+  exe: svc/eva-repl
+  dsc: replication service
+- nam: eva.repl.legacyN
+  exe: venv/bin/eva4-svc-repl-legacy
+  dsc: legacy (v3) replication service
+  ins: py:eva4-repl-legacy

@@ -1,5 +1,5 @@
 # Event-to-InfluxDB database service
-command: svc/eva-svc-db-influx
+command: svc/eva-db-influx
 workers: 2
 bus:
   path: var/elbus.ipc

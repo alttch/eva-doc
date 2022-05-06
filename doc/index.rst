@@ -49,13 +49,7 @@ Industry-4.0 automated control systems.
     :maxdepth: 1
 
     core
-    svc/aaa-acl
-    svc/aaa-localauth
-    svc/db-influx
-    svc/db-sql
-    svc/expiration
-    svc/hmi
-    svc/replication-legacy
+    services
 
 .. toctree::
     :caption:  Interface development

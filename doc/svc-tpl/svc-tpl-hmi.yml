@@ -1,5 +1,5 @@
 # The default HMI service
-command: svc/eva-svc-hmi
+command: svc/eva-hmi
 workers: 4
 bus:
   path: var/elbus.ipc

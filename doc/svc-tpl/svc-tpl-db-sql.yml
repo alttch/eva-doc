@@ -1,5 +1,5 @@
 # Event-to-SQL database service
-command: svc/eva-svc-db-sql
+command: svc/eva-db-sql
 workers: 2
 bus:
   path: var/elbus.ipc
