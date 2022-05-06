@@ -1318,7 +1318,7 @@ update
    :header-rows: 0
 
    * - Description
-     - *update the node*
+     - *Updates the node*
    * - Parameters
      - *required*
    * - Returns

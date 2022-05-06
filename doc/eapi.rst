@@ -37,7 +37,7 @@ The following type specifications are used in EVA ICS documentation:
 * **uN** unsigned integer (e.g. u8 for 8-bit unsigned, u32 for 32-bit unsigned
   etc.)
 
-* **iN** signed integer (e.g. u8 for 8-bit signed, u32 for 32-bit signed etc.)
+* **iN** signed integer (e.g. i8 for 8-bit signed, i32 for 32-bit signed etc.)
 
 * **fN** float-pointing number (f32 for 32-bit float, f64 for 64-bit float)
 
