@@ -17,7 +17,7 @@ Use either :ref:`eva-shell`:
 
 or :ref:`eva-cloud-manager-cli`:
 
-.. code: shell
+.. code:: shell
 
   /opt/eva4/bin/eva-cloud-manager node mirror-update
 
