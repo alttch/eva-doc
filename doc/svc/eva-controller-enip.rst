@@ -44,7 +44,7 @@ action
    :header-rows: 0
 
    * - Description
-     - *Executes a unit action*
+     - *Executes a mapped unit action*
    * - Parameters
      - See :ref:`unit_action`
    * - Returns
@@ -103,6 +103,10 @@ tag.get
      - u32
      - Count of data blocks (e.g. for arrays)
      - no
+   * - **bit**
+     - u32
+     - Get an individual bit
+     - no
    * - **timeout**
      - f64
      - Max operation timeout
@@ -142,13 +146,17 @@ tag.set
      - String
      - Data type (e.g. DINT)
      - **yes**
-   * - **timeout**
-     - f64
-     - Max operation timeout
+   * - **bit**
+     - u32
+     - Get an individual bit
      - no
    * - **verify**
      - bool
      - Read the tag back and verify its value
+     - no
+   * - **timeout**
+     - f64
+     - Max operation timeout
      - no
    * - **retries**
      - u8

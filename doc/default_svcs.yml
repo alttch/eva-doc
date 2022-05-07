@@ -21,6 +21,9 @@
 - nam: eva.controller.modbusN
   exe: svc/eva-controller-modbus
   des: Modbus master gateway/service
+  txt: Allows to communicate with Modbus-powered PLCs and other equipment.
+  tpl: svc-tpl-controller-modbus.yml
+  api: svc/controller-modbus/eapi.yml
 - nam: eva.controller.py
   exe: venv/bin/eva4-svc-controller-py
   des: Python macros controller
