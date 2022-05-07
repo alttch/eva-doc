@@ -1,5 +1,5 @@
-The default ACL service
-***********************
+Default ACL service
+*******************
 
 .. contents::
 

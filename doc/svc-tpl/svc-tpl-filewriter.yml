@@ -19,4 +19,5 @@ config:
   # item OIDs / OID masks
   oids:
     - "#"
-user: nobody
+# make sure the user has create/write access for the output file
+user: eva

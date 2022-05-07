@@ -6,7 +6,7 @@
      - Install
    * - :doc:`eva.aaa.acl</svc/eva-aaa-acl>`
      - svc/eva-aaa-acl
-     - :doc:`The default ACL service</svc/eva-aaa-acl>`
+     - :doc:`Default ACL service</svc/eva-aaa-acl>`
      - by default with HMI (*--hmi*)
    * - :doc:`eva.aaa.localauth</svc/eva-aaa-localauth>`
      - svc/eva-aaa-localauth
@@ -46,7 +46,7 @@
      - by default with *--hmi* arg
    * - :doc:`eva.repl.N</svc/eva-repl>`
      - svc/eva-repl
-     - :doc:`replication service</svc/eva-repl>`
+     - :doc:`Replication service</svc/eva-repl>`
      - 
    * - :doc:`eva.repl.legacyN</svc/eva4-svc-repl-legacy>`
      - venv/bin/eva4-svc-repl-legacy

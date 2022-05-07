@@ -47,9 +47,11 @@ Industry-4.0 automated control systems.
 .. toctree::
     :caption: The core and services
     :maxdepth: 1
+    :glob:
 
-    core
-    services
+    core.rst
+    services.rst
+    svc/*
 
 .. toctree::
     :caption:  Interface development

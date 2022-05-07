@@ -1,4 +1,4 @@
-replication service
+Replication service
 *******************
 
 .. contents::

@@ -1,6 +1,6 @@
 - nam: eva.aaa.acl
   exe: svc/eva-aaa-acl
-  dsc: The default ACL service
+  dsc: Default ACL service
   ins: by default with HMI (*--hmi*)
 - nam: eva.aaa.localauth
   exe: svc/eva-aaa-localauth
@@ -32,9 +32,23 @@
 - nam: eva.svc.expN
   exe: svc/eva-svc-expiration
   dsc: Item state expiration service
+  txt: |
+    Marks items as expired/error.
+
+    Useful to create lvar timers (timers have status -1 when expired) or set
+    error item states (items get status=1 if not updated for a long time, e.g.
+    because of a data puller service crash).
+  tpl: svc-tpl-expiration.yml
 - nam: eva.svc.fwriterN
   exe: svc/eva-svc-filewriter
   dsc: Item state file writer (JSON/CSV)
+  txt: |
+    Allows to write item states into JSON/CSV text files.
+
+    The files can be rotated with any external tool or manually. As soon as the
+    file is rotated, a new one is created automatically.
+  tpl: svc-tpl-filewriter.yml
+  api: svc/svc-filewriter/eapi.yml
 - nam: eva.hmi.default
   exe: svc/eva-hmi
   dsc: HMI (UI) and HTTP API service
@@ -59,7 +73,7 @@
   dsc: Modbus slave service
 - nam: eva.repl.N
   exe: svc/eva-repl
-  dsc: replication service
+  dsc: Replication service
 - nam: eva.repl.legacyN
   exe: venv/bin/eva4-svc-repl-legacy
   dsc: legacy (v3) replication service
