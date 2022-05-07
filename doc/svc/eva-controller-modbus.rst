@@ -87,6 +87,10 @@ reg.get
      - Type
      - Description
      - Required
+   * - **unit**
+     - u8
+     - Modbus unit ID
+     - **yes**
    * - **reg**
      - String
      - Register (h/i/d/c e.g. h100 for holding #100)
@@ -134,6 +138,10 @@ reg.set
      - Type
      - Description
      - Required
+   * - **unit**
+     - u8
+     - Modbus unit ID
+     - **yes**
    * - **reg**
      - String
      - Register (h/i/d/c e.g. h100 for holding #100)

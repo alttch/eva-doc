@@ -24,6 +24,16 @@
   txt: Allows to communicate with Modbus-powered PLCs and other equipment.
   tpl: svc-tpl-controller-modbus.yml
   api: svc/controller-modbus/eapi.yml
+- nam: eva.svc.modbusN
+  exe: svc/eva-svc-modbus-slave
+  des: Modbus slave service
+  txt: |
+    Provides Modbus slave context.
+
+    A :doc:`/svc/eva-controller-modbus` can be used later to pull the context
+    and analyze its data (Modbus via ELBUS is highly recommended).
+  tpl: svc-tpl-modbus-slave.yml
+  api: svc/svc-modbus-slave/eapi.yml
 - nam: eva.controller.py
   exe: venv/bin/eva4-svc-controller-py
   des: Python macros controller
@@ -100,13 +110,10 @@
       /opt/eva4/bin/eva-cloud-manager node mirror-update
 
   tpl: svc-tpl-mirror.yml
-- nam: eva.svc.modbusN
-  exe: svc/eva-svc-modbus-slave
-  des: Modbus slave service
 - nam: eva.repl.N
   exe: svc/eva-repl
   des: Replication service
 - nam: eva.repl.legacyN
   exe: venv/bin/eva4-svc-repl-legacy
-  des: legacy (v3) replication service
+  des: Legacy (v3) replication service
   ins: py:eva4-repl-legacy

@@ -148,7 +148,7 @@ tag.set
      - **yes**
    * - **bit**
      - u32
-     - Get an individual bit
+     - Set an individual bit
      - no
    * - **verify**
      - bool

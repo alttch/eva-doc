@@ -44,14 +44,7 @@ Industry-4.0 automated control systems.
     enterprise
     trademarks
 
-.. toctree::
-    :caption: The core and services
-    :maxdepth: 1
-    :glob:
-
-    core.rst
-    services.rst
-    svc/*
+.. include:: core_svcs_toc.rst
 
 .. toctree::
     :caption:  Interface development
