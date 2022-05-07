@@ -1,3 +1,5 @@
 Virtual (test) controller
 *************************
 
+.. contents::
+

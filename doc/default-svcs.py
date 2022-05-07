@@ -60,10 +60,17 @@ with open('default_svcs.rst', 'w') as fh:
             if txt:
                 print(txt, file=sfh)
                 print(file=sfh)
+            print('.. contents::', file=sfh)
+            print(file=sfh)
             tpl = svc.get('tpl')
             if tpl is not None:
                 print('Setup', file=sfh)
                 print('=====', file=sfh)
+                snam = svc['nam']
+                gnam = snam
+                if snam.endswith('N'):
+                    snam = snam[:-1] + '1'
+                    gnam = gnam[:-1]
                 print(f"""
 Use the template *EVA_DIR/share/svc-tpl/{tpl}*:
 
@@ -74,26 +81,26 @@ Create the service using :ref:`eva-shell`:
 
 .. code:: shell
 
-    eva svc create {svc["nam"]} /opt/eva4/share/svc-tpl/{tpl}
+    eva svc create {snam} /opt/eva4/share/svc-tpl/{tpl}
 
 or using ELBUS CLI client:
 
 .. code:: shell
 
     cd /opt/eva4
-    echo TPL.yml | ./bin/yml2mp | \\
+    cat DEPLOY.yml | ./bin/yml2mp | \\
         ./sbin/elbus ./var/elbus.ipc rpc call eva.core svc.deploy -
+
+(see :ref:`eva.core::svc.deploy<eva.core__svc.deploy>` for more info)
 """,
                       file=sfh)
             api = svc.get('api')
             if api:
-                p = subprocess.Popen([
-                    '/opt/eva4/sbin/eapigen',
-                    f'/opt/eva4/{api}'
-                ],
-                                     stdout=subprocess.PIPE)
+                p = subprocess.Popen(
+                    ['/opt/eva4/sbin/eapigen', gnam, f'/opt/eva4/{api}'],
+                    stdout=subprocess.PIPE)
                 stdout, _ = p.communicate()
                 if p.returncode != 0:
-                    raise RuntimeError
+                    raise RuntimeError(svc['nam'])
                 print(file=sfh)
-                print(stdout.decode(), file=sfh, end='')
+                print(stdout.decode().rstrip(), file=sfh)

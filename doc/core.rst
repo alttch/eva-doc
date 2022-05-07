@@ -20,4 +20,4 @@ Configuration
 
 See :doc:`config`
 
-.. include:: eapi/core.rst
+.. include:: core_eapi.rst

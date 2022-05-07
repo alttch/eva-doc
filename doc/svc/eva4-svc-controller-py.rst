@@ -1,3 +1,5 @@
 Python macros controller
 ************************
 
+.. contents::
+

@@ -3,6 +3,8 @@ EAPI methods
 
 See :doc:`/eapi` for the common information about the bus, types, errors and RPC calls.
 
+.. _eva.core__action:
+
 action
 ------
 
@@ -15,6 +17,7 @@ action
      - *required*
    * - Returns
      - *action result payload (final or current one), the UUID field is returned as Vec<u8;16>*
+
 .. list-table:: Parameters
    :align: left
 
@@ -73,6 +76,8 @@ action
   }
   
 
+.. _eva.core__action.kill:
+
 action.kill
 -----------
 
@@ -85,6 +90,7 @@ action.kill
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -96,6 +102,8 @@ action.kill
      - String
      - OID
      - **yes**
+
+.. _eva.core__action.list:
 
 action.list
 -----------
@@ -109,6 +117,7 @@ action.list
      - *required*
    * - Returns
      - *list of action result payloads, the UUID fields are returned as Vec<u8;16>*
+
 .. list-table:: Parameters
    :align: left
 
@@ -165,6 +174,8 @@ action.list
   ]
   
 
+.. _eva.core__action.result:
+
 action.result
 -------------
 
@@ -177,6 +188,7 @@ action.result
      - *required*
    * - Returns
      - *action result payload (final or current one), the UUID field is returned as Vec<u8;16>*
+
 .. list-table:: Parameters
    :align: left
 
@@ -219,6 +231,8 @@ action.result
   }
   
 
+.. _eva.core__action.terminate:
+
 action.terminate
 ----------------
 
@@ -231,6 +245,7 @@ action.terminate
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -242,6 +257,8 @@ action.terminate
      - Vec<u8; 16>
      - Action UUID
      - **yes**
+
+.. _eva.core__action.toggle:
 
 action.toggle
 -------------
@@ -255,6 +272,7 @@ action.toggle
      - *required*
    * - Returns
      - *unit action result payload (final or current one), the UUID field is returned as Vec<u8;16>*
+
 .. list-table:: Parameters
    :align: left
 
@@ -305,6 +323,8 @@ action.toggle
   }
   
 
+.. _eva.core__core.shutdown:
+
 core.shutdown
 -------------
 
@@ -318,6 +338,8 @@ core.shutdown
    * - Returns
      - *nothing*
 
+.. _eva.core__item.announce:
+
 item.announce
 -------------
 
@@ -330,6 +352,7 @@ item.announce
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -346,6 +369,8 @@ item.announce
      - filter items by node (use .local as an alias for the local one)
      - no
 
+.. _eva.core__item.create:
+
 item.create
 -----------
 
@@ -358,6 +383,7 @@ item.create
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -369,6 +395,8 @@ item.create
      - String
      - OID
      - **yes**
+
+.. _eva.core__item.deploy:
 
 item.deploy
 -----------
@@ -382,6 +410,7 @@ item.deploy
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -393,6 +422,8 @@ item.deploy
      - Vec<struct>
      - :doc:`item</items>` configuration
      - no
+
+.. _eva.core__item.destroy:
 
 item.destroy
 ------------
@@ -406,6 +437,7 @@ item.destroy
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -417,6 +449,8 @@ item.destroy
      - String
      - OID
      - **yes**
+
+.. _eva.core__item.disable:
 
 item.disable
 ------------
@@ -430,6 +464,7 @@ item.disable
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -441,6 +476,8 @@ item.disable
      - String
      - Item OID or OID mask
      - no
+
+.. _eva.core__item.enable:
 
 item.enable
 -----------
@@ -454,6 +491,7 @@ item.enable
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -465,6 +503,8 @@ item.enable
      - String
      - Item OID or OID mask
      - no
+
+.. _eva.core__item.get_config:
 
 item.get_config
 ---------------
@@ -478,6 +518,7 @@ item.get_config
      - *required*
    * - Returns
      - *item configuration (struct)*
+
 .. list-table:: Parameters
    :align: left
 
@@ -504,6 +545,8 @@ item.get_config
   }
   
 
+.. _eva.core__item.list:
+
 item.list
 ---------
 
@@ -516,6 +559,7 @@ item.list
      - *required*
    * - Returns
      - *list of items*
+
 .. list-table:: Parameters
    :align: left
 
@@ -565,6 +609,8 @@ item.list
   ]
   
 
+.. _eva.core__item.state:
+
 item.state
 ----------
 
@@ -577,6 +623,7 @@ item.state
      - *required*
    * - Returns
      - *list of item states*
+
 .. list-table:: Parameters
    :align: left
 
@@ -634,6 +681,8 @@ item.state
   ]
   
 
+.. _eva.core__item.summary:
+
 item.summary
 ------------
 
@@ -661,6 +710,8 @@ item.summary
   }
   
 
+.. _eva.core__item.undeploy:
+
 item.undeploy
 -------------
 
@@ -673,6 +724,7 @@ item.undeploy
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -684,6 +736,8 @@ item.undeploy
      - Vec<struct/String>
      - item configuration or a list of OIDS
      - no
+
+.. _eva.core__log.get:
 
 log.get
 -------
@@ -697,6 +751,7 @@ log.get
      - *required*
    * - Returns
      - *memory log records (list)*
+
 .. list-table:: Parameters
    :align: left
 
@@ -754,6 +809,8 @@ log.get
   ]
   
 
+.. _eva.core__log.purge:
+
 log.purge
 ---------
 
@@ -767,6 +824,8 @@ log.purge
    * - Returns
      - *nothing*
 
+.. _eva.core__lvar.clear:
+
 lvar.clear
 ----------
 
@@ -779,6 +838,7 @@ lvar.clear
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -790,6 +850,8 @@ lvar.clear
      - String
      - Lvar OID
      - **yes**
+
+.. _eva.core__lvar.decr:
 
 lvar.decr
 ---------
@@ -803,6 +865,7 @@ lvar.decr
      - *required*
    * - Returns
      - *new Lvar value (i64)*
+
 .. list-table:: Parameters
    :align: left
 
@@ -814,6 +877,8 @@ lvar.decr
      - String
      - Lvar OID
      - **yes**
+
+.. _eva.core__lvar.incr:
 
 lvar.incr
 ---------
@@ -827,6 +892,7 @@ lvar.incr
      - *required*
    * - Returns
      - *new Lvar value (i64)*
+
 .. list-table:: Parameters
    :align: left
 
@@ -838,6 +904,8 @@ lvar.incr
      - String
      - Lvar OID
      - **yes**
+
+.. _eva.core__lvar.reset:
 
 lvar.reset
 ----------
@@ -851,6 +919,7 @@ lvar.reset
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -862,6 +931,8 @@ lvar.reset
      - String
      - Lvar OID
      - **yes**
+
+.. _eva.core__lvar.set:
 
 lvar.set
 --------
@@ -875,6 +946,7 @@ lvar.set
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -895,6 +967,8 @@ lvar.set
      - Lvar value
      - no
 
+.. _eva.core__lvar.toggle:
+
 lvar.toggle
 -----------
 
@@ -907,6 +981,7 @@ lvar.toggle
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -918,6 +993,8 @@ lvar.toggle
      - String
      - Lvar OID
      - **yes**
+
+.. _eva.core__node.get:
 
 node.get
 --------
@@ -931,6 +1008,7 @@ node.get
      - *required*
    * - Returns
      - *node info (struct)*
+
 .. list-table:: Parameters
    :align: left
 
@@ -957,6 +1035,8 @@ node.get
       "svc": "eva.repl.default"
   }
   
+
+.. _eva.core__node.list:
 
 node.list
 ---------
@@ -1000,6 +1080,8 @@ node.list
   ]
   
 
+.. _eva.core__run:
+
 run
 ---
 
@@ -1012,6 +1094,7 @@ run
      - *required*
    * - Returns
      - *macro action result payload (final or current one), the UUID field is returned as Vec<u8;16>*
+
 .. list-table:: Parameters
    :align: left
 
@@ -1074,6 +1157,8 @@ run
   }
   
 
+.. _eva.core__save:
+
 save
 ----
 
@@ -1087,6 +1172,8 @@ save
    * - Returns
      - *nothing*
 
+.. _eva.core__svc.deploy:
+
 svc.deploy
 ----------
 
@@ -1099,6 +1186,7 @@ svc.deploy
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -1110,6 +1198,8 @@ svc.deploy
      - Vec<struct>
      - Service parameters
      - no
+
+.. _eva.core__svc.get:
 
 svc.get
 -------
@@ -1123,6 +1213,7 @@ svc.get
      - *required*
    * - Returns
      - *service status*
+
 .. list-table:: Parameters
    :align: left
 
@@ -1148,6 +1239,8 @@ svc.get
   }
   
 
+.. _eva.core__svc.get_params:
+
 svc.get_params
 --------------
 
@@ -1160,6 +1253,7 @@ svc.get_params
      - *required*
    * - Returns
      - *service parameters and configuration (struct)*
+
 .. list-table:: Parameters
    :align: left
 
@@ -1212,6 +1306,8 @@ svc.get_params
   }
   
 
+.. _eva.core__svc.list:
+
 svc.list
 --------
 
@@ -1252,6 +1348,8 @@ svc.list
   ]
   
 
+.. _eva.core__svc.undeploy:
+
 svc.undeploy
 ------------
 
@@ -1264,6 +1362,7 @@ svc.undeploy
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -1275,6 +1374,8 @@ svc.undeploy
      - Vec<struct/String>
      - Service parameters or a list of service IDs
      - no
+
+.. _eva.core__test:
 
 test
 ----
@@ -1311,6 +1412,8 @@ test
   }
   
 
+.. _eva.core__update:
+
 update
 ------
 
@@ -1323,6 +1426,7 @@ update
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 

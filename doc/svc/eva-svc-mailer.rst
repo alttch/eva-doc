@@ -3,6 +3,8 @@ Mailer service
 
 Allows other services to send email notifications
 
+.. contents::
+
 Setup
 =====
 
@@ -22,14 +24,18 @@ or using ELBUS CLI client:
 .. code:: shell
 
     cd /opt/eva4
-    echo TPL.yml | ./bin/yml2mp | \
+    cat DEPLOY.yml | ./bin/yml2mp | \
         ./sbin/elbus ./var/elbus.ipc rpc call eva.core svc.deploy -
+
+(see :ref:`eva.core::svc.deploy<eva.core__svc.deploy>` for more info)
 
 
 EAPI methods
 ============
 
 See :doc:`/eapi` for the common information about the bus, types, errors and RPC calls.
+
+.. _eva.svc.mailer__send:
 
 send
 ----
@@ -43,6 +49,7 @@ send
      - *required*
    * - Returns
      - *nothing*
+
 .. list-table:: Parameters
    :align: left
 
@@ -62,4 +69,3 @@ send
      - String
      - e-mail text
      - no
-

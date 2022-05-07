@@ -1,3 +1,5 @@
 File manager service
 ********************
 
+.. contents::
+

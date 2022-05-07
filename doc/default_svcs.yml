@@ -42,6 +42,9 @@
 - nam: eva.svc.lockerN
   exe: svc/eva-svc-locker
   dsc: Shared lock service
+  txt: Allows other services to work with shared locks
+  tpl: svc-tpl-locker.yml
+  api: svc/svc-locker/eapi.yml
 - nam: eva.svc.mailer
   exe: svc/eva-svc-mailer
   dsc: Mailer service
