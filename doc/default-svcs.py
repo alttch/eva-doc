@@ -88,7 +88,7 @@ or using ELBUS CLI client:
             api = svc.get('api')
             if api:
                 p = subprocess.Popen([
-                    '/opt/eva-util/v4/eapigen/target/x86_64-unknown-linux-musl/release/eapigen',
+                    '/opt/eva4/sbin/eapigen',
                     f'/opt/eva4/{api}'
                 ],
                                      stdout=subprocess.PIPE)
