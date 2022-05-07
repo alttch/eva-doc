@@ -45,6 +45,9 @@
 - nam: eva.svc.mailer
   exe: svc/eva-svc-mailer
   dsc: Mailer service
+  txt: Allows other services to send email notifications
+  tpl: svc-tpl-mailer.yml
+  api: svc/svc-mailer/eapi.yml
 - nam: eva.svc.mirror
   exe: svc/eva-svc-mirror
   dsc: EVA ICS / PyPi mirror service
