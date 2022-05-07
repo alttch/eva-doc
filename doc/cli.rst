@@ -43,6 +43,20 @@ section (e.g. eva-shell>=1.0.0) and rebuild the Python virtual environment
 The latest eva-shell version number can be obtained from
 https://pypi.org/project/eva-shell/
 
+.. _eva-cloud-manager-cli:
+
+EVA Cloud Manager CLI
+=====================
+
+EVA Cloud manager CLI is a powerful command-line tool, which allows to perform
+certain tasks on the local node/cloud without eva-shell, such as updating
+nodes, performing cloud deployment etc.
+
+The tool is used by the node process and eva-shell, but can be called directly
+as well.
+
+Always installed by default, location: */opt/eva4/bin/eva-cloud-manager*
+
 Bus CLI
 =======
 

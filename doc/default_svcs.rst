@@ -70,7 +70,7 @@
      - 
    * - :doc:`eva.svc.mirror</svc/eva-svc-mirror>`
      - svc/eva-svc-mirror
-     - :doc:`EVA ICS / PyPi mirror service</svc/eva-svc-mirror>`
+     - :doc:`Mirror service</svc/eva-svc-mirror>`
      - 
    * - :doc:`eva.svc.modbusN</svc/eva-svc-modbus-slave>`
      - svc/eva-svc-modbus-slave

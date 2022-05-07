@@ -56,12 +56,12 @@ with open('default_svcs.rst', 'w') as fh:
             print(svc['dsc'], file=sfh)
             print('*' * len(svc['dsc']), file=sfh)
             print(file=sfh)
+            print('.. contents::', file=sfh)
+            print(file=sfh)
             txt = svc.get('txt')
             if txt:
                 print(txt, file=sfh)
                 print(file=sfh)
-            print('.. contents::', file=sfh)
-            print(file=sfh)
             tpl = svc.get('tpl')
             if tpl is not None:
                 print('Setup', file=sfh)

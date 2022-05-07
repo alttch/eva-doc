@@ -1,9 +1,9 @@
 Shared lock service
 *******************
 
-Allows other services to work with shared locks
-
 .. contents::
+
+Allows other services to work with shared locks
 
 Setup
 =====

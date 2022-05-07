@@ -1,14 +1,14 @@
 Item state expiration service
 *****************************
 
+.. contents::
+
 Marks items as expired/error.
 
 Useful to create lvar timers (timers have status -1 when expired) or set
 error item states (items get status=1 if not updated for a long time, e.g.
 because of a data puller service crash).
 
-
-.. contents::
 
 Setup
 =====

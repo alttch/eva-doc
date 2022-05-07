@@ -1,9 +1,9 @@
 Mailer service
 **************
 
-Allows other services to send email notifications
-
 .. contents::
+
+Allows other services to send email notifications
 
 Setup
 =====

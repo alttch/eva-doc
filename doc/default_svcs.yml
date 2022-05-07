@@ -67,7 +67,27 @@
   api: svc/svc-mailer/eapi.yml
 - nam: eva.svc.mirror
   exe: svc/eva-svc-mirror
-  dsc: EVA ICS / PyPi mirror service
+  dsc: Mirror service
+  txt: |
+    Allows to host mirror for the current version of EVA ICS distribution and
+    Python modules if venv is configured.
+
+    Updating mirror files
+    =====================
+
+    Use either :ref:`eva-shell`:
+
+    .. code:: shell
+
+      eva mirror update
+
+    or :ref:`eva-cloud-manager-cli`:
+
+    .. code: shell
+
+      /opt/eva4/bin/eva-cloud-manager node mirror-update
+
+  tpl: svc-tpl-mirror.yml
 - nam: eva.svc.modbusN
   exe: svc/eva-svc-modbus-slave
   dsc: Modbus slave service

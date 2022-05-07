@@ -1,13 +1,13 @@
 Item state file writer (JSON/CSV)
 *********************************
 
+.. contents::
+
 Allows to write item states into JSON/CSV text files.
 
 The files can be rotated with any external tool or manually. As soon as the
 file is rotated, a new one is created automatically.
 
-
-.. contents::
 
 Setup
 =====
