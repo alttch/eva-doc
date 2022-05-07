@@ -48,7 +48,7 @@ list
    * - Parameters
      - *none*
    * - Returns
-     - *List of lock status*
+     - List of lock status
 
 
 *Return payload example:*
@@ -78,7 +78,7 @@ lock
    * - Description
      - *Acquire a shared lock*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -113,9 +113,9 @@ status
    * - Description
      - *Get status of a lock*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *Lock status (struct)*
+     - Lock status (struct)
 
 .. list-table:: Parameters
    :align: left
@@ -151,7 +151,7 @@ unlock
    * - Description
      - *Unlock previously acquired lock*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 

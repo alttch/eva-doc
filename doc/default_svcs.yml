@@ -15,6 +15,9 @@
 - nam: eva.controller.enipN
   exe: svc/eva-controller-enip
   des: Ethernet/IP PLC controller gateway
+  txt: Allows to communicate with Ethernet/IP-powered PLCs and other equipment.
+  tpl: svc-tpl-controller-enip.yml
+  api: svc/controller-enip/eapi.yml
 - nam: eva.controller.modbusN
   exe: svc/eva-controller-modbus
   des: Modbus master gateway/service

@@ -46,7 +46,7 @@ acl.deploy
    * - Description
      - *Deploys ACLs*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -73,7 +73,7 @@ acl.destroy
    * - Description
      - *Destroy a single ACL*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -100,9 +100,9 @@ acl.export
    * - Description
      - *Export ACLs as a deployment*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *ACL deployment struct*
+     - ACL deployment struct
 
 .. list-table:: Parameters
    :align: left
@@ -156,9 +156,9 @@ acl.format
    * - Description
      - *Prepares/combines ACL(s)*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *ACL, prepared for authorization*
+     - ACL, prepared for authorization
 
 .. list-table:: Parameters
    :align: left
@@ -213,9 +213,9 @@ acl.get_config
    * - Description
      - *Get configuration of a single ACL*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *ACL configuration*
+     - ACL configuration
 
 .. list-table:: Parameters
    :align: left
@@ -267,7 +267,7 @@ acl.list
    * - Parameters
      - *none*
    * - Returns
-     - *List of ACLs (struct)*
+     - List of ACLs (struct)
 
 
 *Return payload example:*
@@ -311,7 +311,7 @@ acl.undeploy
    * - Description
      - *Undeploy ACLs*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 

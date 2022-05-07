@@ -46,7 +46,7 @@ send
    * - Description
      - *Sends an e-mail letter*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 

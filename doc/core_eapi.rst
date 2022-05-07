@@ -14,9 +14,9 @@ action
    * - Description
      - *Executes a unit action*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *action result payload (final or current one), the UUID field is returned as Vec<u8;16>*
+     - action result payload (final or current one), the UUID field is returned as Vec<u8;16>
 
 .. list-table:: Parameters
    :align: left
@@ -87,7 +87,7 @@ action.kill
    * - Description
      - *Attempts to terminate/cancel all scheduled/running actions for the specified item*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -114,9 +114,9 @@ action.list
    * - Description
      - *Lists results of recently scheduled/executed actions*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *list of action result payloads, the UUID fields are returned as Vec<u8;16>*
+     - list of action result payloads, the UUID fields are returned as Vec<u8;16>
 
 .. list-table:: Parameters
    :align: left
@@ -185,9 +185,9 @@ action.result
    * - Description
      - *Gets the result of previously executed action*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *action result payload (final or current one), the UUID field is returned as Vec<u8;16>*
+     - action result payload (final or current one), the UUID field is returned as Vec<u8;16>
 
 .. list-table:: Parameters
    :align: left
@@ -242,7 +242,7 @@ action.terminate
    * - Description
      - *Attempts to terminate/cancel a scheduled/running action*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -269,9 +269,9 @@ action.toggle
    * - Description
      - *Executes a unit action to toggle its status (between 0/1)*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *unit action result payload (final or current one), the UUID field is returned as Vec<u8;16>*
+     - unit action result payload (final or current one), the UUID field is returned as Vec<u8;16>
 
 .. list-table:: Parameters
    :align: left
@@ -349,7 +349,7 @@ item.announce
    * - Description
      - *Forces bus state announcements for selected items*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -380,7 +380,7 @@ item.create
    * - Description
      - *Creates a local item with empty config*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -407,7 +407,7 @@ item.deploy
    * - Description
      - *Deploys local items*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -434,7 +434,7 @@ item.destroy
    * - Description
      - *Destroys a local item*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -461,7 +461,7 @@ item.disable
    * - Description
      - *Disables local item(s)*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -488,7 +488,7 @@ item.enable
    * - Description
      - *Enables local item(s)*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -515,9 +515,9 @@ item.get_config
    * - Description
      - *Gets config for an individual item*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *item configuration (struct)*
+     - item configuration (struct)
 
 .. list-table:: Parameters
    :align: left
@@ -556,9 +556,9 @@ item.list
    * - Description
      - *Gets filtered list of items*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *list of items*
+     - list of items
 
 .. list-table:: Parameters
    :align: left
@@ -620,9 +620,9 @@ item.state
    * - Description
      - *Gets filtered list of item states*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *list of item states*
+     - list of item states
 
 .. list-table:: Parameters
    :align: left
@@ -694,7 +694,7 @@ item.summary
    * - Parameters
      - *none*
    * - Returns
-     - *item summary*
+     - item summary
 
 
 *Return payload example:*
@@ -721,7 +721,7 @@ item.undeploy
    * - Description
      - *Undeploys local items*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -748,9 +748,9 @@ log.get
    * - Description
      - *Gets memory log records*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *memory log records (list)*
+     - memory log records (list)
 
 .. list-table:: Parameters
    :align: left
@@ -835,7 +835,7 @@ lvar.clear
    * - Description
      - *Sets Lvar status to 0*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -862,9 +862,9 @@ lvar.decr
    * - Description
      - *Decrements Lvar value by 1*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *new Lvar value (i64)*
+     - new Lvar value (i64)
 
 .. list-table:: Parameters
    :align: left
@@ -889,9 +889,9 @@ lvar.incr
    * - Description
      - *Increments Lvar value by 1*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *new Lvar value (i64)*
+     - new Lvar value (i64)
 
 .. list-table:: Parameters
    :align: left
@@ -916,7 +916,7 @@ lvar.reset
    * - Description
      - *Sets Lvar status to 1*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -943,7 +943,7 @@ lvar.set
    * - Description
      - *Sets Lvar status/value*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -978,7 +978,7 @@ lvar.toggle
    * - Description
      - *Toggles Lvar status between 0/1*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -1005,9 +1005,9 @@ node.get
    * - Description
      - *Gets local/remote node info*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *node info (struct)*
+     - node info (struct)
 
 .. list-table:: Parameters
    :align: left
@@ -1049,7 +1049,7 @@ node.list
    * - Parameters
      - *none*
    * - Returns
-     - *node info (list)*
+     - node info (list)
 
 
 *Return payload example:*
@@ -1091,9 +1091,9 @@ run
    * - Description
      - *Executes lmacro*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *macro action result payload (final or current one), the UUID field is returned as Vec<u8;16>*
+     - macro action result payload (final or current one), the UUID field is returned as Vec<u8;16>
 
 .. list-table:: Parameters
    :align: left
@@ -1183,7 +1183,7 @@ svc.deploy
    * - Description
      - *Deploys local services*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -1210,9 +1210,9 @@ svc.get
    * - Description
      - *Gets status of an individual service*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *service status*
+     - service status
 
 .. list-table:: Parameters
    :align: left
@@ -1250,9 +1250,9 @@ svc.get_params
    * - Description
      - *Gets parameters for an individual service*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *service parameters and configuration (struct)*
+     - service parameters and configuration (struct)
 
 .. list-table:: Parameters
    :align: left
@@ -1319,7 +1319,7 @@ svc.list
    * - Parameters
      - *none*
    * - Returns
-     - *list of services and their status*
+     - list of services and their status
 
 
 *Return payload example:*
@@ -1359,7 +1359,7 @@ svc.undeploy
    * - Description
      - *Undeploys local services and purge their data*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -1388,7 +1388,7 @@ test
    * - Parameters
      - *none*
    * - Returns
-     - *system and core information (struct)*
+     - system and core information (struct)
 
 
 *Return payload example:*
@@ -1423,7 +1423,7 @@ update
    * - Description
      - *Updates the node*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 

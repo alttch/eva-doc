@@ -46,9 +46,9 @@ auth.key
    * - Description
      - *Authenticates a client using API key*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *The method returns errors if auth is not successful*
+     - The method returns errors if auth is not successful
 
 .. list-table:: Parameters
    :align: left
@@ -77,9 +77,9 @@ auth.user
    * - Description
      - *Authenticates a client using a local user account*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *The method returns errors if auth is not successful*
+     - The method returns errors if auth is not successful
 
 .. list-table:: Parameters
    :align: left
@@ -112,7 +112,7 @@ key.deploy
    * - Description
      - *Deploys API keys*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -139,7 +139,7 @@ key.destroy
    * - Description
      - *Destroy a single API key*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -166,9 +166,9 @@ key.export
    * - Description
      - *Export API keys as a deployment*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *API key deployment struct*
+     - API key deployment struct
 
 .. list-table:: Parameters
    :align: left
@@ -211,9 +211,9 @@ key.get
    * - Description
      - *Get a single API key value*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *API key ID/key value*
+     - API key ID/key value
 
 .. list-table:: Parameters
    :align: left
@@ -249,9 +249,9 @@ key.get_config
    * - Description
      - *Get configuration of a single API key*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *API key configuration*
+     - API key configuration
 
 .. list-table:: Parameters
    :align: left
@@ -292,7 +292,7 @@ key.list
    * - Parameters
      - *none*
    * - Returns
-     - *List of defined API keys, they values and assigned ACLs*
+     - List of defined API keys, they values and assigned ACLs
 
 
 *Return payload example:*
@@ -348,9 +348,9 @@ key.regenerate
    * - Description
      - *Re-generates key value of API key*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *API key configuration with a new key value*
+     - API key configuration with a new key value
 
 .. list-table:: Parameters
    :align: left
@@ -389,7 +389,7 @@ key.undeploy
    * - Description
      - *Undeploy API keys*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -416,7 +416,7 @@ user.deploy
    * - Description
      - *Deploys local user accounts*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -443,7 +443,7 @@ user.destroy
    * - Description
      - *Destroy a single local user account*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -470,9 +470,9 @@ user.export
    * - Description
      - *Exports local user accounts as a deployment*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *User accounts deployment struct*
+     - User accounts deployment struct
 
 .. list-table:: Parameters
    :align: left
@@ -516,9 +516,9 @@ user.get_config
    * - Description
      - *Get configuration of a single user account*
    * - Parameters
-     - *required*
+     - required
    * - Returns
-     - *User account configuration*
+     - User account configuration
 
 .. list-table:: Parameters
    :align: left
@@ -560,7 +560,7 @@ user.list
    * - Parameters
      - *none*
    * - Returns
-     - *List of defined local user accounts, the ACLs and password hashes*
+     - List of defined local user accounts, the ACLs and password hashes
 
 
 *Return payload example:*
@@ -597,7 +597,7 @@ user.set_password
    * - Description
      - *Changes user's password. Does not require the current one, so consider calling *auth.user* before*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
@@ -628,7 +628,7 @@ user.undeploy
    * - Description
      - *Undeploy local users*
    * - Parameters
-     - *required*
+     - required
    * - Returns
      - *nothing*
 
