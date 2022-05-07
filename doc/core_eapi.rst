@@ -421,7 +421,7 @@ item.deploy
    * - **items**
      - Vec<struct>
      - :doc:`item</items>` configuration
-     - no
+     - **yes**
 
 .. _eva.core__item.destroy:
 

@@ -402,6 +402,8 @@ Events
 Controllers are not pulled by the core, they must send events from its internal
 registers to RAW/OID ELBUS topic.
 
+.. _unit_action:
+
 Unit actions
 ------------
 
@@ -435,6 +437,8 @@ contains:
 * b1000\_0010 - terminated
 * out: output (optional)
 * err: error output (optional)
+
+.. _macro_action:
 
 Macros
 ------

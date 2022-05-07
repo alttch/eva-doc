@@ -11,13 +11,13 @@ SCHEMA = {
         'properties': {
             'nam': {},
             'exe': {},
-            'dsc': {},
+            'des': {},
             'ins': {},
             'txt': {},
             'tpl': {},
             'api': {}
         },
-        'required': ['nam', 'exe', 'dsc'],
+        'required': ['nam', 'exe', 'des'],
         'additionalProperties': False
     }
 }
@@ -40,9 +40,9 @@ with open('default_svcs.rst', 'w') as fh:
         nam = svc['nam']
         exe = svc['exe']
         exe_link = exe.replace('venv/bin/', 'svc/')
-        dsc = svc['dsc']
+        des = svc['des']
         nam = f':doc:`{nam}</{exe_link}>`'
-        dsc = f':doc:`{dsc}</{exe_link}>`'
+        des = f':doc:`{des}</{exe_link}>`'
         ins = svc.get('ins', '')
         if ins.startswith('py:'):
             mod = ins[3:]
@@ -50,11 +50,11 @@ with open('default_svcs.rst', 'w') as fh:
                    'Python module')
         print(f'   * - {nam}', file=fh)
         print(f'     - {exe}', file=fh)
-        print(f'     - {dsc}', file=fh)
+        print(f'     - {des}', file=fh)
         print(f'     - {ins}', file=fh)
         with open(f'./{exe_link}.rst', 'w') as sfh:
-            print(svc['dsc'], file=sfh)
-            print('*' * len(svc['dsc']), file=sfh)
+            print(svc['des'], file=sfh)
+            print('*' * len(svc['des']), file=sfh)
             print(file=sfh)
             print('.. contents::', file=sfh)
             print(file=sfh)

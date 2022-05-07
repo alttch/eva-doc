@@ -1,37 +1,43 @@
 - nam: eva.aaa.acl
   exe: svc/eva-aaa-acl
-  dsc: Default ACL service
+  des: Default ACL service
   ins: by default with HMI (*--hmi*)
+  txt: Base authorization service, see :doc:`/auth` for more details.
+  tpl: svc-tpl-aaa-acl.yml
+  api: svc/aaa-acl/eapi.yml
 - nam: eva.aaa.localauth
   exe: svc/eva-aaa-localauth
-  dsc: Local user/key authentication service
+  des: Local user/key authentication service
   ins: by default with HMI (*--hmi*)
+  txt: Local user/API key authentication service
+  tpl: svc-tpl-aaa-localauth.yml
+  api: svc/aaa-localauth/eapi.yml
 - nam: eva.controller.enipN
   exe: svc/eva-controller-enip
-  dsc: Ethernet/IP PLC controller gateway
+  des: Ethernet/IP PLC controller gateway
 - nam: eva.controller.modbusN
   exe: svc/eva-controller-modbus
-  dsc: Modbus master gateway/service
+  des: Modbus master gateway/service
 - nam: eva.controller.py
   exe: venv/bin/eva4-svc-controller-py
-  dsc: Python macros controller
+  des: Python macros controller
   ins: py:eva4-controller-py
 - nam: eva.controller.virtual
   exe: svc/eva-controller-virtual
-  dsc: Virtual (test) controller
+  des: Virtual (test) controller
 - nam: eva.filemgr.main
-  dsc: File manager service
+  des: File manager service
   exe: svc/eva-filemgr
   ins: always by default
 - nam: eva.db.iN
   exe: svc/eva-db-influx
-  dsc: InfluxDB v1/v2 state history
+  des: InfluxDB v1/v2 state history
 - nam: eva.db.sN
   exe: svc/eva-db-sql
-  dsc: SQL databases state history
+  des: SQL databases state history
 - nam: eva.svc.expN
   exe: svc/eva-svc-expiration
-  dsc: Item state expiration service
+  des: Item state expiration service
   txt: |
     Marks items as expired/error.
 
@@ -41,7 +47,7 @@
   tpl: svc-tpl-expiration.yml
 - nam: eva.svc.fwriterN
   exe: svc/eva-svc-filewriter
-  dsc: Item state file writer (JSON/CSV)
+  des: Item state file writer (JSON/CSV)
   txt: |
     Allows to write item states into JSON/CSV text files.
 
@@ -51,23 +57,23 @@
   api: svc/svc-filewriter/eapi.yml
 - nam: eva.hmi.default
   exe: svc/eva-hmi
-  dsc: HMI (UI) and HTTP API service
+  des: HMI (UI) and HTTP API service
   ins: "by default with *--hmi* arg"
 - nam: eva.svc.lockerN
   exe: svc/eva-svc-locker
-  dsc: Shared lock service
+  des: Shared lock service
   txt: Allows other services to work with shared locks
   tpl: svc-tpl-locker.yml
   api: svc/svc-locker/eapi.yml
 - nam: eva.svc.mailer
   exe: svc/eva-svc-mailer
-  dsc: Mailer service
+  des: Mailer service
   txt: Allows other services to send email notifications
   tpl: svc-tpl-mailer.yml
   api: svc/svc-mailer/eapi.yml
 - nam: eva.svc.mirror
   exe: svc/eva-svc-mirror
-  dsc: Mirror service
+  des: Mirror service
   txt: |
     Allows to host mirror for the current version of EVA ICS distribution and
     Python modules if venv is configured.
@@ -90,11 +96,11 @@
   tpl: svc-tpl-mirror.yml
 - nam: eva.svc.modbusN
   exe: svc/eva-svc-modbus-slave
-  dsc: Modbus slave service
+  des: Modbus slave service
 - nam: eva.repl.N
   exe: svc/eva-repl
-  dsc: Replication service
+  des: Replication service
 - nam: eva.repl.legacyN
   exe: venv/bin/eva4-svc-repl-legacy
-  dsc: legacy (v3) replication service
+  des: legacy (v3) replication service
   ins: py:eva4-repl-legacy
