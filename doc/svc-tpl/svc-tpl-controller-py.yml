@@ -7,4 +7,4 @@ bus:
 config:
   #locker_svc: eva.svc.locker
   #mailer_svc: eva.svc.mailer
-user: nobody
+user: nobody # if file operations are required, make sure the user has access to
