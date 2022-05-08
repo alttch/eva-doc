@@ -30,9 +30,9 @@ Installing/updating
 
 eva-shell is not included into EVA ICS distribution any longer (but may be
 installed automatically). To install/update it, either edit
-"eva/config/python-venv" registry key, specify the desired version in "extra"
-section (e.g. eva-shell>=1.0.0) and rebuild the Python virtual environment
-(/opt/eva4/install/build-venv). Or execute:
+"eva/config/python-venv" :doc:`registry</registry>` key, specify the desired
+version in "extra" section (e.g. *eva-shell>=0.0.1*) and rebuild the Python
+virtual environment (*/opt/eva4/sbin/venvmgr build*). Or execute:
 
 .. code:: shell
 

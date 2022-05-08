@@ -3,25 +3,20 @@ Legacy (v3) replication service
 
 .. contents::
 
+Installing/updating
+===================
 
-Use the template *EVA_DIR/share/svc-tpl/None*:
-
-.. literalinclude:: ../svc-tpl/None
-   :language: yaml
-
-Create the service using :ref:`eva-shell`:
-
-.. code:: shell
-
-    eva svc create eva.svc.fwriter1 /opt/eva4/share/svc-tpl/None
-
-or using ELBUS CLI client:
+Legacy (v3) replication service is not included into EVA ICS distribution. To install/update it,
+either edit "eva/config/python-venv" :doc:`registry</registry>` key, specify
+the desired version in "extra" section (e.g. *eva4-repl-legacy>=0.0.1*) and rebuild the
+Python virtual environment (*/opt/eva4/sbin/venvmgr build*). Or execute:
 
 .. code:: shell
 
-    cd /opt/eva4
-    cat DEPLOY.yml | ./bin/yml2mp | \
-        ./sbin/elbus ./var/elbus.ipc rpc call eva.core svc.deploy -
+    /opt/eva4/sbin/venvmgr add eva4-repl-legacy
+    # or 
+    /opt/eva4/sbin/venvmgr add eva4-repl-legacy==N # where N = version number
 
-(see :ref:`eva.core::svc.deploy<eva.core__svc.deploy>` for more info)
+The latest eva-shell version number can be obtained from
+https://pypi.org/project/eva4-repl-legacy/
 

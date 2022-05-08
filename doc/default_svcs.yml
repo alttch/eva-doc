@@ -38,6 +38,9 @@
   exe: venv/bin/eva4-svc-controller-py
   des: Python macros controller
   ins: py:eva4-controller-py
+  txt: "Executor controller service for Python macros. See :doc:`/lmacro/python_macros`."
+  tpl: svc-tpl-controller-py.yml
+  api: svc/controller-py/eapi.yml
 - nam: eva.controller.virtual
   exe: svc/eva-controller-virtual
   des: Virtual (test) controller

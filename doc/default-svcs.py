@@ -52,9 +52,11 @@ with open('core_svcs_toc.rst', 'w') as tfh:
             des = f':doc:`{des}</{exe_link}>`'
             ins = svc.get('ins', '')
             if ins.startswith('py:'):
-                mod = ins[3:]
-                ins = (f'Requires `{mod} <https://pypi.org/project/{mod}/>`_ '
+                pymod = ins[3:]
+                ins = (f'Requires `{pymod} <https://pypi.org/project/{pymod}/>`_ '
                        'Python module')
+            else:
+                pymod = None
             print(f'   * - {nam}', file=fh)
             print(f'     - {exe}', file=fh)
             print(f'     - {des}', file=fh)
@@ -70,6 +72,25 @@ with open('core_svcs_toc.rst', 'w') as tfh:
                 if txt:
                     print(txt, file=sfh)
                     print(file=sfh)
+                if pymod:
+                    print(f"""Installing/updating
+===================
+
+{svc["des"]} is not included into EVA ICS distribution. To install/update it,
+either edit "eva/config/python-venv" :doc:`registry</registry>` key, specify
+the desired version in "extra" section (e.g. *{pymod}>=0.0.1*) and rebuild the
+Python virtual environment (*/opt/eva4/sbin/venvmgr build*). Or execute:
+
+.. code:: shell
+
+    /opt/eva4/sbin/venvmgr add {pymod}
+    # or 
+    /opt/eva4/sbin/venvmgr add {pymod}==N # where N = version number
+
+The latest eva-shell version number can be obtained from
+https://pypi.org/project/{pymod}/
+""",
+                          file=sfh)
                 tpl = svc.get('tpl')
                 if tpl is not None:
                     print('Setup', file=sfh)
@@ -79,7 +100,7 @@ with open('core_svcs_toc.rst', 'w') as tfh:
                     if snam.endswith('N'):
                         snam = snam[:-1] + '1'
                         gnam = gnam[:-1]
-                print(f"""
+                    print(f"""
 Use the template *EVA_DIR/share/svc-tpl/{tpl}*:
 
 .. literalinclude:: ../svc-tpl/{tpl}
@@ -101,7 +122,7 @@ or using ELBUS CLI client:
 
 (see :ref:`eva.core::svc.deploy<eva.core__svc.deploy>` for more info)
 """,
-                      file=sfh)
+                          file=sfh)
                 api = svc.get('api')
                 if api:
                     p = subprocess.Popen(

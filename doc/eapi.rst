@@ -409,9 +409,9 @@ Unit actions
 
 A controller can react to "action" rpc call command. the payload contains:
 
-* uuid: uuid (array of 16 bytes)
-* i: OID
-* timeout: timeout (microseconds)
+* uuid: uuid (array of u8;16)
+* i: OID (String)
+* timeout: timeout (microseconds, u64)
 * priority: u8 // lower is higher
 * params/status: status (i16)
 * params/value: value payload, if required
@@ -440,19 +440,19 @@ contains:
 
 .. _macro_action:
 
-Macros
-------
+Macros actions
+--------------
 
 A macro is any kind of scenario or function, stored and processed by the
 controller or external hardware PLC.
 
 A controller can react to "run" rpc call command. the payload contains:
 
-* uuid: uuid (array of 16 bytes)
-* i: lmacro OID
-* timeout: timeout (microseconds), optional
-* params/args: [Value] - macro arguments, optional
-* params/kwargs: String-Value - macro keyword arguments, optional
+* uuid: uuid (array of u8;16)
+* i: lmacro OID (String)
+* timeout: timeout (microseconds, u64), optional
+* params/args: [Any] - macro arguments, optional
+* params/kwargs: Map<String, Any> - macro keyword arguments, optional
 * config: optional config
 
 The controller reports action states to LMACT/OID topic, where the payload has
