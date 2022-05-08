@@ -59,6 +59,12 @@ Industry-4.0 automated control systems.
     EVA JS Framework <https://github.com/alttch/eva-js-framework>
 
 .. toctree::
+    :caption: Automation
+    :maxdepth: 1
+
+    lmacro/py/python_macros
+
+.. toctree::
     :caption: SDK
     :maxdepth: 1
 

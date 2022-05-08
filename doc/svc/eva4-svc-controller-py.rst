@@ -3,7 +3,7 @@ Python macros controller
 
 .. contents::
 
-Executor controller service for Python macros. See :doc:`/lmacro/python_macros`.
+Executor controller service for Python macros. See :doc:`/lmacro/py/python_macros`.
 
 Installing/updating
 ===================

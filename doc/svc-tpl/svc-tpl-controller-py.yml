@@ -5,6 +5,10 @@ command: venv/bin/eva4-svc-controller-py
 bus:
   path: var/elbus.ipc
 config:
+  # required for lock functions
   #locker_svc: eva.svc.locker
+  # required for mail functions
   #mailer_svc: eva.svc.mailer
+  # override macros directory (runtime-relative)
+  #macro_dir: xc/py
 user: nobody # if file operations are required, make sure the user has access to
