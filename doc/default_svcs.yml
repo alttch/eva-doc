@@ -20,7 +20,7 @@
   api: svc/controller-enip/eapi.yml
 - nam: eva.controller.modbusN
   exe: svc/eva-controller-modbus
-  des: Modbus master gateway/service
+  des: Modbus master controller
   txt: Allows to communicate with Modbus-powered PLCs and other equipment.
   tpl: svc-tpl-controller-modbus.yml
   api: svc/controller-modbus/eapi.yml
@@ -43,7 +43,12 @@
   api: svc/controller-py/eapi.yml
 - nam: eva.controller.virtual
   exe: svc/eva-controller-virtual
-  des: Virtual (test) controller
+  des: Virtual controller
+  txt: |
+    The virtual controller service allows to define virtual units and sensors,
+    which can be used for automation tests, demos and other related purposes.
+  tpl: svc-tpl-controller-virtual.yml
+  api: svc/controller-virtual/eapi.yml
 - nam: eva.filemgr.main
   des: File manager service
   exe: svc/eva-filemgr

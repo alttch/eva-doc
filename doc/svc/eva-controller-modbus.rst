@@ -1,5 +1,5 @@
-Modbus master gateway/service
-*****************************
+Modbus master controller
+************************
 
 .. contents::
 

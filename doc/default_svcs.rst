@@ -50,7 +50,7 @@
      - 
    * - :doc:`eva.controller.modbusN</svc/eva-controller-modbus>`
      - svc/eva-controller-modbus
-     - :doc:`Modbus master gateway/service</svc/eva-controller-modbus>`
+     - :doc:`Modbus master controller</svc/eva-controller-modbus>`
      - 
    * - :doc:`eva.svc.modbusN</svc/eva-svc-modbus-slave>`
      - svc/eva-svc-modbus-slave
@@ -74,5 +74,5 @@
      - 
    * - :doc:`eva.controller.virtual</svc/eva-controller-virtual>`
      - svc/eva-controller-virtual
-     - :doc:`Virtual (test) controller</svc/eva-controller-virtual>`
+     - :doc:`Virtual controller</svc/eva-controller-virtual>`
      - 
