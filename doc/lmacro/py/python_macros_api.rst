@@ -107,7 +107,14 @@ Parameters:
 instant - system monotonic timer value
 --------------------------------------
 
-Performance counter for benchmarking.
+Alias for time.perf_counter
+
+.. code-block:: python
+
+    r = instant()
+    print(r)
+
+    522.5493
 
 
 .. _py_macro_api_ls:
@@ -379,6 +386,25 @@ Delay execution for a given number of seconds.  The argument may be a floating p
 .. code-block:: python
 
     sleep(0.1)
+
+
+.. _py_macro_api_system:
+
+system - execute the command in a subshell
+------------------------------------------
+
+Alias for os.system
+
+.. code-block:: python
+
+    r = system('touch /tmp/1.dat')
+    print(r)
+
+    0
+
+Returns:
+
+shell exit code (0 - no error)
 
 
 .. _py_macro_api_time:
@@ -1031,10 +1057,10 @@ Logging
 
 .. _py_macro_api_debug:
 
-debug - log a message with severity 'DEBUG' on the root logger. If the logger has
----------------------------------------------------------------------------------
+debug - log debug message
+-------------------------
 
-no handlers, call basicConfig() to add a console handler with a pre-defined format.
+Alias for logging.debug
 
 .. code-block:: python
 
@@ -1043,10 +1069,15 @@ no handlers, call basicConfig() to add a console handler with a pre-defined form
 
 .. _py_macro_api_info:
 
-info - log a message with severity 'INFO' on the root logger. If the logger has
--------------------------------------------------------------------------------
+info - log info message
+-----------------------
 
-no handlers, call basicConfig() to add a console handler with a pre-defined format.
+Alias for logging.info
+
+.. note::
+
+  In Python macros, the default "print" function is alias for logging.info as well.
+
 
 .. code-block:: python
 
@@ -1055,10 +1086,10 @@ no handlers, call basicConfig() to add a console handler with a pre-defined form
 
 .. _py_macro_api_warning:
 
-warning - log a message with severity 'WARNING' on the root logger. If the logger has
--------------------------------------------------------------------------------------
+warning - log warning message
+-----------------------------
 
-no handlers, call basicConfig() to add a console handler with a pre-defined format.
+Alias for logging.warning
 
 .. code-block:: python
 
@@ -1067,10 +1098,10 @@ no handlers, call basicConfig() to add a console handler with a pre-defined form
 
 .. _py_macro_api_error:
 
-error - log a message with severity 'ERROR' on the root logger. If the logger has
----------------------------------------------------------------------------------
+error - log error message
+-------------------------
 
-no handlers, call basicConfig() to add a console handler with a pre-defined format.
+Alias for logging.error
 
 .. code-block:: python
 
@@ -1079,10 +1110,10 @@ no handlers, call basicConfig() to add a console handler with a pre-defined form
 
 .. _py_macro_api_critical:
 
-critical - log a message with severity 'CRITICAL' on the root logger. If the logger
------------------------------------------------------------------------------------
+critical - log critical message
+-------------------------------
 
-has no handlers, call basicConfig() to add a console handler with a pre-defined format.
+Alias for logging.critical
 
 .. code-block:: python
 
