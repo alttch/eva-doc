@@ -1,0 +1,20 @@
+bus:
+  path: var/elbus.ipc
+command: svc/eva-controller-virtual
+config:
+  # define virtual items
+  items:
+  #- sensor:tests/temp
+  #- sensor:tests/hum
+  #- sensor:tests/pressure
+  #- sensor:tests/alarm
+  #- sensor:tests/voltage
+  #- sensor:tests/power
+  #- unit:tests/lamp
+  #- unit:tests/vent
+  #- unit:tests/door
+  #- unit:tests/u1
+prepare_command: null
+react_to_fail: false
+user: nobody
+workers: 1
