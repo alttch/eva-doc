@@ -14,7 +14,5 @@ config:
   #- unit:tests/vent
   #- unit:tests/door
   #- unit:tests/u1
-prepare_command: null
-react_to_fail: false
 user: nobody
 workers: 1
