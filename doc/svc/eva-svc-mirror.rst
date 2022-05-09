@@ -6,8 +6,13 @@ Mirror service
 Allows to host mirror for the current version of EVA ICS distribution and
 Python modules if venv is configured.
 
-Updating mirror files
-=====================
+Updating mirror files on the source node
+========================================
+
+.. note::
+
+    The files must be updated every time the source node is updated to a
+    new version/build.
 
 Use either :ref:`eva-shell`:
 
@@ -20,6 +25,21 @@ or :ref:`eva-cloud-manager-cli`:
 .. code:: shell
 
   /opt/eva4/bin/eva-cloud-manager node mirror-update
+
+Configuring mirror on target nodes
+==================================
+
+Use either :ref:`eva-shell`:
+
+.. code:: shell
+
+  eva mirror set <URL>
+
+or :ref:`eva-cloud-manager-cli`:
+
+.. code:: shell
+
+  /opt/eva4/bin/eva-cloud-manager node mirror-set <URL>
 
 
 Setup
