@@ -12,8 +12,8 @@ Industry-4.0 automated control systems.
 
 * Allows to handle millions of objects on a single node.
 
-* Provides the real control of objects, instead of just monitoring, objects can
-  receive and perform actions.
+* Provides the real control of objects: actions and various automation
+  scenarios can be executed, both locally and remotely.
 
 * The new v4 micro-kernel architecture is completely scalable and allows to
   build complex setups for any industrial needs: factories, power plants,
