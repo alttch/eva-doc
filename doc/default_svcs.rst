@@ -35,7 +35,7 @@
    * - :doc:`eva.repl.legacyN</svc/eva4-svc-repl-legacy>`
      - venv/bin/eva4-svc-repl-legacy
      - :doc:`Legacy (v3) replication service</svc/eva4-svc-repl-legacy>`
-     - Requires `eva4-repl-legacy <https://pypi.org/project/eva4-repl-legacy/>`_ Python module
+     - requires `eva4-repl-legacy <https://pypi.org/project/eva4-repl-legacy/>`_ Python module
    * - :doc:`eva.aaa.localauth</svc/eva-aaa-localauth>`
      - svc/eva-aaa-localauth
      - :doc:`Local user/key authentication service</svc/eva-aaa-localauth>`
@@ -59,7 +59,7 @@
    * - :doc:`eva.controller.py</svc/eva4-svc-controller-py>`
      - venv/bin/eva4-svc-controller-py
      - :doc:`Python macros controller</svc/eva4-svc-controller-py>`
-     - Requires `eva4-controller-py <https://pypi.org/project/eva4-controller-py/>`_ Python module
+     - requires `eva4-controller-py <https://pypi.org/project/eva4-controller-py/>`_ Python module
    * - :doc:`eva.repl.N</svc/eva-repl>`
      - svc/eva-repl
      - :doc:`Replication service</svc/eva-repl>`
@@ -72,7 +72,7 @@
      - svc/eva-svc-locker
      - :doc:`Shared lock service</svc/eva-svc-locker>`
      - 
-   * - :doc:`eva.controller.virtual</svc/eva-controller-virtual>`
+   * - :doc:`eva.controller.virtN</svc/eva-controller-virtual>`
      - svc/eva-controller-virtual
      - :doc:`Virtual controller</svc/eva-controller-virtual>`
      - 

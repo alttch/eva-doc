@@ -41,7 +41,7 @@
   txt: "Executor controller service for Python macros. See :doc:`/lmacro/py/python_macros`."
   tpl: svc-tpl-controller-py.yml
   api: svc/controller-py/eapi.yml
-- nam: eva.controller.virtual
+- nam: eva.controller.virtN
   exe: svc/eva-controller-virtual
   des: Virtual controller
   txt: |

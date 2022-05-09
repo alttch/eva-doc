@@ -53,7 +53,7 @@ with open('core_svcs_toc.rst', 'w') as tfh:
             ins = svc.get('ins', '')
             if ins.startswith('py:'):
                 pymod = ins[3:]
-                ins = (f'Requires `{pymod} <https://pypi.org/project/{pymod}/>`_ '
+                ins = (f'requires `{pymod} <https://pypi.org/project/{pymod}/>`_ '
                        'Python module')
             else:
                 pymod = None

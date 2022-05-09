@@ -19,7 +19,7 @@ Create the service using :ref:`eva-shell`:
 
 .. code:: shell
 
-    eva svc create eva.controller.virtual /opt/eva4/share/svc-tpl/svc-tpl-controller-virtual.yml
+    eva svc create eva.controller.virt1 /opt/eva4/share/svc-tpl/svc-tpl-controller-virtual.yml
 
 or using ELBUS CLI client:
 
@@ -37,7 +37,7 @@ EAPI methods
 
 See :doc:`/eapi` for the common information about the bus, types, errors and RPC calls.
 
-.. _eva.controller.virtual__action:
+.. _eva.controller.virt__action:
 
 action
 ------
@@ -52,7 +52,7 @@ action
    * - Returns
      - See :ref:`unit_action`
 
-.. _eva.controller.virtual__get:
+.. _eva.controller.virt__get:
 
 get
 ---
@@ -91,7 +91,7 @@ get
   }
   
 
-.. _eva.controller.virtual__list:
+.. _eva.controller.virt__list:
 
 list
 ----
@@ -130,7 +130,7 @@ list
   ]
   
 
-.. _eva.controller.virtual__set:
+.. _eva.controller.virt__set:
 
 set
 ---
