@@ -19,8 +19,8 @@ Industry-4.0 automated control systems.
   build complex setups for any industrial needs: factories, power plants,
   military sector etc.
 
-* Real-time event replication and interaction between cluster nodes and web HMI
-  applications.
+* Real-time event :doc:`replication</svc/eva-repl>` and interaction between
+  cluster nodes and web HMI applications.
 
 * Supported architectures out-of-the-box (Linux only): x86_64, ARMv7, AARCH64
 
