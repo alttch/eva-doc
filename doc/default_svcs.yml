@@ -151,6 +151,11 @@
 - nam: eva.repl.N
   exe: svc/eva-repl
   des: Replication service
+  txt: |
+  tpl: svc-tpl-replication.yml
+  api: svc/repl/eapi.yml
+  txt: |
+    .. include:: /repl/repl.rst
 - nam: eva.repl.legacyN
   exe: venv/bin/eva4-svc-repl-legacy
   des: Legacy (V3) replication service
