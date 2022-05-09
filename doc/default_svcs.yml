@@ -53,6 +53,13 @@
   des: File manager service
   exe: svc/eva-filemgr
   ins: always by default
+  txt: |
+    The file manager service allows to remotely deploy/undeploy files to/from
+    runtime directory. The service is always installed by default, however can
+    be removed/undeployed for the security purposes without affecting anything
+    but file deployment.
+  tpl: svc-tpl-filemgr.yml
+  api: svc/filemgr/eapi.yml
 - nam: eva.db.iN
   exe: svc/eva-db-influx
   des: InfluxDB v1/v2 state history
