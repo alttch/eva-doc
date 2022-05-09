@@ -38,7 +38,8 @@ Each EVA ICS v4 node has the following architecture:
   the bus directly (if externals sockets are specified in "eva/config/elbus"
   registry key).
 
-* Multiple EVA ICS nodes can be replicated with replication services.
+* Multiple EVA ICS nodes can be replicated and interact with each other via
+  replication services.
 
 * Authentication services are commonly used by HMI services only.
 
