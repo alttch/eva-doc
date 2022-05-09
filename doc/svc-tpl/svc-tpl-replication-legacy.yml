@@ -17,6 +17,7 @@ config:
     tls: false
     tls_ca: null
     bulk_subscribe:
+      # bulk topics, required
       - all
   ## node configuration
   #nodes:

@@ -155,3 +155,7 @@
   exe: venv/bin/eva4-svc-repl-legacy
   des: Legacy (V3) replication service
   ins: py:eva4-repl-legacy
+  txt: |
+    .. include:: /repl/repl_v3legacy.rst
+  tpl: svc-tpl-replication-legacy.yml
+  api: svc/repl-legacy/eapi.yml
