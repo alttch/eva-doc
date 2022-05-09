@@ -62,10 +62,33 @@
   api: svc/filemgr/eapi.yml
 - nam: eva.db.iN
   exe: svc/eva-db-influx
-  des: InfluxDB v1/v2 state history
+  des: InfluxDB state history
+  txt: |
+    Allows to store item states history in `InfluxDB
+    <https://www.influxdata.com>`_, v1 and v2 protocols are supported.
+
+    The service provides unified database EAPI.
+  tpl: svc-tpl-db-influx.yml
+  api: svc/db-influx/eapi.yml
 - nam: eva.db.sN
   exe: svc/eva-db-sql
   des: SQL databases state history
+  txt: |
+    Allows to store item states history in SQL databases. Supported:
+
+    * `SQLite <https://www.sqlite.org/>`_ (serverless)
+    * `MySQL <https://www.mysql.com>`_
+    * `PostgreSQL <https://www.postgresql.org>`_
+    * Microsoft SQL Server (alpha)
+
+    Dataframe filling requires tsdb extension (ts_extension configuration
+    parameter) installed and chosen. The following extensions are supported:
+
+    * `Timescale <https://www.timescale.com>`_ (PostgreSQL)
+
+    The service provides unified database EAPI.
+  tpl: svc-tpl-db-sql.yml
+  api: svc/db-sql/eapi.yml
 - nam: eva.svc.expN
   exe: svc/eva-svc-expiration
   des: Item state expiration service
@@ -130,5 +153,5 @@
   des: Replication service
 - nam: eva.repl.legacyN
   exe: venv/bin/eva4-svc-repl-legacy
-  des: Legacy (v3) replication service
+  des: Legacy (V3) replication service
   ins: py:eva4-repl-legacy

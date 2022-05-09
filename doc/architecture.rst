@@ -57,14 +57,14 @@ There are several common types of services, used in EVA ICS v4:
 
 * **controllers and PLC gateways** provide logic and/or equipment connection
   services. The base distribution includes controller gateways for popular
-  industrial protocols, such as Modbus and Ethernet/IP
+  industrial protocols, such as Modbus, Ethernet/IP etc.
 
-* **database services** provide input/output functions for SQL and time-series
-  databases
+* **database services** provide input/output functions (unified database EAPI)
+  for SQL and time-series databases
 
 * **HMI services** provide HTTP API and host user-interface web applications.
 
-* **Other services** various tools and helpers, such as shared locks services,
+* **other services** various tools and helpers, such as shared locks services,
   mailers etc.
 
 Service names

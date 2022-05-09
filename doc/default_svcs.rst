@@ -22,7 +22,7 @@
      - by default with *--hmi* arg
    * - :doc:`eva.db.iN</svc/eva-db-influx>`
      - svc/eva-db-influx
-     - :doc:`InfluxDB v1/v2 state history</svc/eva-db-influx>`
+     - :doc:`InfluxDB state history</svc/eva-db-influx>`
      - 
    * - :doc:`eva.svc.expN</svc/eva-svc-expiration>`
      - svc/eva-svc-expiration
@@ -34,7 +34,7 @@
      - 
    * - :doc:`eva.repl.legacyN</svc/eva4-svc-repl-legacy>`
      - venv/bin/eva4-svc-repl-legacy
-     - :doc:`Legacy (v3) replication service</svc/eva4-svc-repl-legacy>`
+     - :doc:`Legacy (V3) replication service</svc/eva4-svc-repl-legacy>`
      - requires `eva4-repl-legacy <https://pypi.org/project/eva4-repl-legacy/>`_ Python module
    * - :doc:`eva.aaa.localauth</svc/eva-aaa-localauth>`
      - svc/eva-aaa-localauth

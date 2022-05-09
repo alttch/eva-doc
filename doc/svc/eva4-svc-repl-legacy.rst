@@ -1,4 +1,4 @@
-Legacy (v3) replication service
+Legacy (V3) replication service
 *******************************
 
 .. contents::
@@ -6,7 +6,7 @@ Legacy (v3) replication service
 Installing/updating
 ===================
 
-Legacy (v3) replication service is not included into EVA ICS distribution. To install/update it,
+Legacy (V3) replication service is not included into EVA ICS distribution. To install/update it,
 either edit "eva/config/python-venv" :doc:`registry</registry>` key, specify
 the desired version in "extra" section (e.g. *eva4-repl-legacy>=0.0.1*) and rebuild the
 Python virtual environment (*/opt/eva4/sbin/venvmgr build*). Or execute:
