@@ -114,9 +114,11 @@
   des: HMI service
   ins: "by default with *--hmi* arg"
   txt: |
-    The HMI service hosts web UI applications and provides HTTP/WebSocket API.
+    .. include:: /hmi/hmi.rst
   tpl: svc-tpl-hmi.yml
   api: svc/hmi/eapi.yml
+  xtr: |
+    .. include:: /hmi/hmi_xtra.rst
 - nam: eva.svc.lockerN
   exe: svc/eva-svc-locker
   des: Shared lock service

@@ -64,6 +64,7 @@ prepare:
 	find svc-tpl -name "*.yml" -exec sed -i 's|target/debug/|svc/|g' {} \;
 	sed -i 's|svc/eva-aaa-msad|path/to/eva-aaa-msad|g' svc-tpl/svc-tpl-aaa-msad.yml
 	/opt/eva4/sbin/eapigen eva.core /opt/eva4/eva/eapi.yml > ./core_eapi.rst
+	/opt/eva4/sbin/eapigen hmi_ws /opt/eva4/svc/hmi/ws_api.yml --omit-title > ./hmi/ws_api.rst
 	./default-svcs.py
 
 .PHONY: html

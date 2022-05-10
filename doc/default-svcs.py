@@ -15,7 +15,8 @@ SCHEMA = {
             'ins': {},
             'txt': {},
             'tpl': {},
-            'api': {}
+            'api': {},
+            'xtr': {},
         },
         'required': ['nam', 'exe', 'des'],
         'additionalProperties': False
@@ -53,8 +54,9 @@ with open('core_svcs_toc.rst', 'w') as tfh:
             ins = svc.get('ins', '')
             if ins.startswith('py:'):
                 pymod = ins[3:]
-                ins = (f'requires `{pymod} <https://pypi.org/project/{pymod}/>`_ '
-                       'Python module')
+                ins = (
+                    f'requires `{pymod} <https://pypi.org/project/{pymod}/>`_ '
+                    'Python module')
             else:
                 pymod = None
             print(f'   * - {nam}', file=fh)
@@ -133,3 +135,6 @@ or using ELBUS CLI client:
                         raise RuntimeError(svc['nam'])
                     print(file=sfh)
                     print(stdout.decode().rstrip(), file=sfh)
+                xtr = svc.get('xtr')
+                if xtr:
+                    print(xtr, file=sfh)

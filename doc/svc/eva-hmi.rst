@@ -3,7 +3,7 @@ HMI service
 
 .. contents::
 
-The HMI service hosts web UI applications and provides HTTP/WebSocket API
+.. include:: /hmi/hmi.rst
 
 
 Setup
@@ -236,3 +236,5 @@ ws.stats
       "sub_clients": 1,
       "subscriptions": 1
   }
+.. include:: /hmi/hmi_xtra.rst
+
