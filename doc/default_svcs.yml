@@ -111,8 +111,12 @@
   api: svc/svc-filewriter/eapi.yml
 - nam: eva.hmi.default
   exe: svc/eva-hmi
-  des: HMI (UI) and HTTP API service
+  des: HMI service
   ins: "by default with *--hmi* arg"
+  txt: |
+    The HMI service hosts web UI applications and provides HTTP/WebSocket API.
+  tpl: svc-tpl-hmi.yml
+  api: svc/hmi/eapi.yml
 - nam: eva.svc.lockerN
   exe: svc/eva-svc-locker
   des: Shared lock service

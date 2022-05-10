@@ -18,7 +18,7 @@
      - always by default
    * - :doc:`eva.hmi.default</svc/eva-hmi>`
      - svc/eva-hmi
-     - :doc:`HMI (UI) and HTTP API service</svc/eva-hmi>`
+     - :doc:`HMI service</svc/eva-hmi>`
      - by default with *--hmi* arg
    * - :doc:`eva.db.iN</svc/eva-db-influx>`
      - svc/eva-db-influx
