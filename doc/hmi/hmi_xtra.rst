@@ -24,7 +24,7 @@ fields:
      - method name
      - **yes**
    * - params
-     - String
+     - Any
      - parameters
      - no
 

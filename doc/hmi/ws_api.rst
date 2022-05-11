@@ -22,7 +22,7 @@ ping
    :header-rows: 0
 
    * - Description
-     - *Manually ping the server*
+     - *Manually pings the server*
    * - Parameters
      - *none*
    * - Returns
