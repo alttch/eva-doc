@@ -10,7 +10,7 @@ host: localhost:7727
   "params": {
     "k": "secretkey",
     "i": "lvar:tests/v1",
-    "value": "TEST",
-    "status": 1
+    "status": 1,
+    "value": "TEST"
   }
 }

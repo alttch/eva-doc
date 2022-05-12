@@ -230,8 +230,8 @@ bus::<TARGET_SVC>::<METHOD>
      - **yes**
 
 ..  http:example:: curl wget httpie python-requests
-    :request: http_api_examples/bus::<TARGET_SVC>::<METHOD>.req
-    :response: http_api_examples/bus::<TARGET_SVC>::<METHOD>.resp
+    :request: http_api_examples/bus__TARGET_SVC__METHOD.req
+    :response: http_api_examples/bus__TARGET_SVC__METHOD.resp
 
 
 .. _hmi_http__item.state:
@@ -993,7 +993,7 @@ acl     Struct  call ACL
      - **yes**
 
 ..  http:example:: curl wget httpie python-requests
-    :request: http_api_examples/x::<TARGET_SVC>::<METHOD>.req
-    :response: http_api_examples/x::<TARGET_SVC>::<METHOD>.resp
+    :request: http_api_examples/x__TARGET_SVC__METHOD.req
+    :response: http_api_examples/x__TARGET_SVC__METHOD.resp
 
 

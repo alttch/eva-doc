@@ -9,7 +9,7 @@ host: localhost:7727
   "method": "item.state_log",
   "params": {
     "k": "secretkey",
-    "t_start": 1652387700.0,
-    "i": "sensor:env/temp"
+    "i": "sensor:env/temp",
+    "t_start": 1652387700.0
   }
 }

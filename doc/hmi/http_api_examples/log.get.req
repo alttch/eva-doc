@@ -9,9 +9,9 @@ host: localhost:7727
   "method": "log.get",
   "params": {
     "level": "info",
-    "k": "secretkey",
+    "time": 60,
     "module": "eva::svc",
     "rx": "starting.*",
-    "time": 60
+    "k": "secretkey"
   }
 }
