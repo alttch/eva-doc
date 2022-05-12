@@ -1,3 +1,215 @@
+.. _hmi_http__item.state:
+
+item.state
+----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Gets state of item(s)*
+   * - Parameters
+     - required
+   * - Returns
+     - List of item states
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - Vec<String>/String
+     - Item OID(s) or masks
+     - no
+   * - **full**
+     - bool
+     - Full state (enabled + meta)
+     - no
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/item.state.req
+    :response: http_api_examples/item.state.resp
+
+
+.. _hmi_http__item.state_history:
+
+item.state_history
+------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Gets state history for item(s)*
+   * - Parameters
+     - required
+   * - Returns
+     - State history payload
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - Vec<String>/String
+     - Item OID(s)
+     - **yes**
+   * - **t_start**
+     - f64
+     - Beginning timestamp (default: last 24 hours)
+     - no
+   * - **t_end**
+     - f64
+     - Ending timestamp (default: now)
+     - no
+   * - **fill**
+     - String
+     - Fill (nS/T/H/D/W e.g. 10T for 10-minute) + optional [:precision]
+     - no
+   * - **limit**
+     - u32
+     - Limit records to
+     - no
+   * - **xopts**
+     - Map<String, String>
+     - Extra options, depending on database type
+     - no
+   * - **database**
+     - String
+     - DB svc to get history from, w/o "eva.db." pfx (def: specified in default_db)
+     - no
+   * - **output_format**
+     - String
+     - "list" or "dict"
+     - no
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/item.state_history.req
+    :response: http_api_examples/item.state_history.resp
+
+
+.. _hmi_http__item.state_log:
+
+item.state_log
+--------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Gets state log for item(s)*
+   * - Parameters
+     - required
+   * - Returns
+     - State log payload
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - Vec<String>/String
+     - Item OID(s)
+     - **yes**
+   * - **t_start**
+     - f64
+     - Beginning timestamp (default: last 24 hours)
+     - no
+   * - **t_end**
+     - f64
+     - Ending timestamp (default: now)
+     - no
+   * - **limit**
+     - u32
+     - Limit records to
+     - no
+   * - **xopts**
+     - Map<String, String>
+     - Extra options, depending on database type
+     - no
+   * - **database**
+     - String
+     - DB svc to get history from, w/o "eva.db." pfx (def: specified in default_db)
+     - no
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/item.state_log.req
+    :response: http_api_examples/item.state_log.resp
+
+
+.. _hmi_http__log.get:
+
+log.get
+-------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Gets memory logger log records, requires log allow in ACL*
+   * - Parameters
+     - required
+   * - Returns
+     - List of log records
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **level**
+     - String/u8
+     - Log level (trace, debug, info, warn, error)
+     - no
+   * - **time**
+     - u32
+     - Recent entries, N seconds before now
+     - no
+   * - **limit**
+     - u32
+     - Limit records to
+     - no
+   * - **module**
+     - String
+     - Filter by module
+     - no
+   * - **rx**
+     - String
+     - Filter by regex in message
+     - no
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/log.get.req
+    :response: http_api_examples/log.get.resp
+
+
 .. _hmi_http__login:
 
 login
@@ -82,6 +294,46 @@ logout
     :response: http_api_examples/logout.resp
 
 
+.. _hmi_http__set_password:
+
+set_password
+------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Changes the current password (user must be logged in and session token used)*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **current_password**
+     - String
+     - Current user's password
+     - **yes**
+   * - **password**
+     - String
+     - New user's password
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/set_password.req
+    :response: http_api_examples/set_password.resp
+
+
 .. _hmi_http__test:
 
 test
@@ -106,7 +358,7 @@ test
      - Required
    * - **k**
      - String
-     - valid API key
+     - valid API key/token
      - **yes**
 
 ..  http:example:: curl wget httpie python-requests

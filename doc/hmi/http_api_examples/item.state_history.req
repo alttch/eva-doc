@@ -6,9 +6,11 @@ host: localhost:7727
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "login",
+  "method": "item.state_history",
   "params": {
-    "user": "admin",
-    "password": "secret"
+    "fill": "5T:2",
+    "t_start": 1652387700.0,
+    "k": "secretkey",
+    "i": "sensor:env/temp"
   }
 }

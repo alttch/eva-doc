@@ -6,9 +6,12 @@ host: localhost:7727
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "login",
+  "method": "log.get",
   "params": {
-    "user": "admin",
-    "password": "secret"
+    "k": "secretkey",
+    "level": "info",
+    "module": "eva::svc",
+    "time": 60,
+    "rx": "starting.*"
   }
 }

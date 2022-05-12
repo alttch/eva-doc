@@ -6,9 +6,10 @@ host: localhost:7727
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "login",
+  "method": "item.state",
   "params": {
-    "user": "admin",
-    "password": "secret"
+    "k": "secretkey",
+    "full": true,
+    "i": "sensor:#"
   }
 }

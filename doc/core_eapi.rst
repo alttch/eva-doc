@@ -568,8 +568,8 @@ item.list
      - Description
      - Required
    * - **i**
-     - String
-     - Item OID or OID mask
+     - Vec<String>/String
+     - Item OID(s) or OID mask(s)
      - no
    * - **node**
      - String
@@ -632,8 +632,8 @@ item.state
      - Description
      - Required
    * - **i**
-     - String
-     - Item OID or OID mask
+     - Vec<String>/String
+     - Item OID(s) or OID mask(s)
      - no
    * - **include**
      - Vec<String>
