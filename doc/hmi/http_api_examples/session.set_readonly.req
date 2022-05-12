@@ -6,10 +6,8 @@ host: localhost:7727
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "action.toggle",
+  "method": "session.set_readonly",
   "params": {
-    "k": "secretkey",
-    "i": "unit:tests/door",
-    "wait": 1
+    "k": "secretkey"
   }
 }

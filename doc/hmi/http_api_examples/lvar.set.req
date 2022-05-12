@@ -9,8 +9,8 @@ host: localhost:7727
   "method": "lvar.set",
   "params": {
     "k": "secretkey",
-    "i": "lvar:tests/v1",
+    "status": 1,
     "value": "TEST",
-    "status": 1
+    "i": "lvar:tests/v1"
   }
 }

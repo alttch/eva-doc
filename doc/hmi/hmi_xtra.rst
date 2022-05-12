@@ -21,6 +21,11 @@ JSON RPC API URL:
 
     (all POST requests to the root URI are processed as JSON RPC)
 
+EVA ICS v4 included HMI service provides a compact HTTP API, which can be
+extended with :ref:`x calls <hmi_http__x__TARGET_SVC__METHOD>`. Administration
+methods can be called directly via :ref:`bus calls
+<hmi_http__bus__TARGET_SVC__METHOD>`.
+
 JSON RPC payload encoding
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 

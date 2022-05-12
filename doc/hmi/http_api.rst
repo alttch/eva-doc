@@ -202,6 +202,38 @@ action.toggle
     :response: http_api_examples/action.toggle.resp
 
 
+.. _hmi_http__bus__TARGET_SVC__METHOD:
+
+bus::<TARGET_SVC>::<METHOD>
+---------------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Calls any bus method (requires admin ACL)*
+   * - Parameters
+     - Sent as-is to the target service, except "k"
+   * - Returns
+     - The target service reply as-is
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/bus::<TARGET_SVC>::<METHOD>.req
+    :response: http_api_examples/bus::<TARGET_SVC>::<METHOD>.resp
+
+
 .. _hmi_http__item.state:
 
 item.state
@@ -774,6 +806,75 @@ run
     :response: http_api_examples/run.resp
 
 
+.. _hmi_http__session.list_neighbors:
+
+session.list_neighbors
+----------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *List all logged in users (if allowed)*
+   * - Parameters
+     - required
+   * - Returns
+     - List of logged in users
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/session.list_neighbors.req
+    :response: http_api_examples/session.list_neighbors.resp
+
+
+.. _hmi_http__session.set_readonly:
+
+session.set_readonly
+--------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Set the current session token read-only*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+To switch back to normal (read/write) session, either call "login" method
+to create a new session, or call it with user+password+a params to keep the
+current one.
+
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/session.set_readonly.req
+    :response: http_api_examples/session.set_readonly.resp
+
+
 .. _hmi_http__set_password:
 
 set_password
@@ -844,5 +945,55 @@ test
 ..  http:example:: curl wget httpie python-requests
     :request: http_api_examples/test.req
     :response: http_api_examples/test.resp
+
+
+.. _hmi_http__x__TARGET_SVC__METHOD:
+
+x::<TARGET_SVC>::<METHOD>
+-------------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Calls "x" service method*
+   * - Parameters
+     - Sent as-is to the target service, except "k"
+   * - Returns
+     - *nothing*
+
+Allows to extend HTTP API with custom functions.
+
+Similar to the admin bus call, but does not check ACL/permissions. The
+target service MUST implement "x" EAPI method and check ACL/permissions by
+itself.
+
+The target service gets the following parameters payload:
+
+======  ======  =============================
+Name    Type    Description
+======  ======  =============================
+method  String  extension sub-method 
+params  Any     call params as-is, except "k"
+aci     Struct  call ACI
+acl     Struct  call ACL
+======  ======  =============================
+
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/x::<TARGET_SVC>::<METHOD>.req
+    :response: http_api_examples/x::<TARGET_SVC>::<METHOD>.resp
 
 

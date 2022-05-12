@@ -36,7 +36,7 @@ EAPI methods
 
 See :doc:`/eapi` for the common information about the bus, types, errors and RPC calls.
 
-.. _eva.repl.__bus::<SVC_ID>::<METHOD>:
+.. _eva.repl.__bus__SVC_ID__METHOD:
 
 bus::<SVC_ID>::<METHOD>
 -----------------------
