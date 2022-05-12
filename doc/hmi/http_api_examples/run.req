@@ -6,9 +6,13 @@ host: localhost:7727
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "login",
+  "method": "run",
   "params": {
-    "password": "secret",
-    "user": "admin"
+    "kwargs": {
+      "a": 123
+    },
+    "i": "lmacro:tests/m1",
+    "wait": 2,
+    "k": "secretkey"
   }
 }

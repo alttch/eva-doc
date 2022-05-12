@@ -6,9 +6,11 @@ host: localhost:7727
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "login",
+  "method": "lvar.set",
   "params": {
-    "password": "secret",
-    "user": "admin"
+    "k": "secretkey",
+    "i": "lvar:tests/v1",
+    "value": "TEST",
+    "status": 1
   }
 }

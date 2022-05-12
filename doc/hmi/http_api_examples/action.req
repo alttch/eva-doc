@@ -6,9 +6,11 @@ host: localhost:7727
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "login",
+  "method": "action",
   "params": {
-    "password": "secret",
-    "user": "admin"
+    "i": "unit:tests/door",
+    "status": 1,
+    "k": "secretkey",
+    "wait": 1
   }
 }

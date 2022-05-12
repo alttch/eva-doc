@@ -8,9 +8,9 @@ host: localhost:7727
   "jsonrpc": "2.0",
   "method": "log.get",
   "params": {
-    "k": "secretkey",
     "level": "info",
     "module": "eva::svc",
+    "k": "secretkey",
     "time": 60,
     "rx": "starting.*"
   }

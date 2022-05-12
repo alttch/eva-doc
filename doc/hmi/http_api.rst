@@ -1,3 +1,207 @@
+.. _hmi_http__action:
+
+action
+------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Executes a unit action*
+   * - Parameters
+     - required
+   * - Returns
+     - Current result payload
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - String
+     - Unit OID
+     - **yes**
+   * - **status**
+     - i16
+     - Desired unit status
+     - **yes**
+   * - **value**
+     - Any
+     - Desired unit value
+     - no
+   * - **priority**
+     - u8
+     - Action priority
+     - no
+   * - **wait**
+     - f64
+     - Wait max seconds to finish
+     - no
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/action.req
+    :response: http_api_examples/action.resp
+
+
+.. _hmi_http__action.kill:
+
+action.kill
+-----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Attempts to terminate/cancel all scheduled/running actions for the specified item*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - String
+     - Item OID
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/action.kill.req
+    :response: http_api_examples/action.kill.resp
+
+
+.. _hmi_http__action.result:
+
+action.result
+-------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Gets current action result*
+   * - Parameters
+     - required
+   * - Returns
+     - Current result payload
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **u**
+     - String
+     - Action UUID
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/action.result.req
+    :response: http_api_examples/action.result.resp
+
+
+.. _hmi_http__action.terminate:
+
+action.terminate
+----------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Attempts to terminate/cancel an action*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **u**
+     - String
+     - Action UUID
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/action.terminate.req
+    :response: http_api_examples/action.terminate.resp
+
+
+.. _hmi_http__action.toggle:
+
+action.toggle
+-------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Executes a unit status-toggle action*
+   * - Parameters
+     - required
+   * - Returns
+     - Current result payload
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - String
+     - Unit OID
+     - **yes**
+   * - **priority**
+     - u8
+     - Action priority
+     - no
+   * - **wait**
+     - f64
+     - Wait max seconds to finish
+     - no
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/action.toggle.req
+    :response: http_api_examples/action.toggle.resp
+
+
 .. _hmi_http__item.state:
 
 item.state
@@ -292,6 +496,282 @@ logout
 ..  http:example:: curl wget httpie python-requests
     :request: http_api_examples/logout.req
     :response: http_api_examples/logout.resp
+
+
+.. _hmi_http__lvar.clear:
+
+lvar.clear
+----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Sets lvar status to 0*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - String
+     - Lvar OID
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/lvar.clear.req
+    :response: http_api_examples/lvar.clear.resp
+
+
+.. _hmi_http__lvar.decr:
+
+lvar.decr
+---------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Decrements lvar value by 1*
+   * - Parameters
+     - required
+   * - Returns
+     - New lvar value
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - String
+     - Lvar OID
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/lvar.decr.req
+    :response: http_api_examples/lvar.decr.resp
+
+
+.. _hmi_http__lvar.incr:
+
+lvar.incr
+---------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Increments lvar value by 1*
+   * - Parameters
+     - required
+   * - Returns
+     - New lvar value
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - String
+     - Lvar OID
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/lvar.incr.req
+    :response: http_api_examples/lvar.incr.resp
+
+
+.. _hmi_http__lvar.reset:
+
+lvar.reset
+----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Sets lvar status to 1*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - String
+     - Lvar OID
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/lvar.reset.req
+    :response: http_api_examples/lvar.reset.resp
+
+
+.. _hmi_http__lvar.set:
+
+lvar.set
+--------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Sets lvar status/value*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - String
+     - Lvar OID
+     - **yes**
+   * - **status**
+     - i16
+     - Desired status
+     - no
+   * - **value**
+     - Any
+     - Desired value
+     - no
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/lvar.set.req
+    :response: http_api_examples/lvar.set.resp
+
+
+.. _hmi_http__lvar.toggle:
+
+lvar.toggle
+-----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Toggles lvar status between 0 and 1*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - String
+     - Lvar OID
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/lvar.toggle.req
+    :response: http_api_examples/lvar.toggle.resp
+
+
+.. _hmi_http__run:
+
+run
+---
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Executes a lmacro action*
+   * - Parameters
+     - required
+   * - Returns
+     - Current result payload
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - String
+     - Lmacro OID
+     - **yes**
+   * - **args**
+     - Vec<Any>
+     - Arguments
+     - **yes**
+   * - **kwargs**
+     - Map<String, Any>
+     - Keyword arguments
+     - no
+   * - **priority**
+     - u8
+     - Action priority
+     - no
+   * - **wait**
+     - f64
+     - Wait max seconds to finish
+     - no
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/run.req
+    :response: http_api_examples/run.resp
 
 
 .. _hmi_http__set_password:

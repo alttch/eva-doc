@@ -6,9 +6,9 @@ host: localhost:7727
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "login",
+  "method": "action.terminate",
   "params": {
-    "password": "secret",
-    "user": "admin"
+    "k": "secretkey",
+    "u": "b37f15f0-410c-4ded-93d0-2ce744c68e08"
   }
 }
