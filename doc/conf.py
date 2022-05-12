@@ -36,7 +36,7 @@ import os
 # ones.
 # extensions = []
 extensions = [
-    'sphinxcontrib.httpdomain', 'sphinxcontrib.httpexmpl', 'sphinxcontrib.yt'
+    'sphinxcontrib.httpdomain', 'sphinxcontrib.httpexample', 'sphinxcontrib.yt'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
