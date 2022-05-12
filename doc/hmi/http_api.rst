@@ -973,7 +973,7 @@ The target service gets the following parameters payload:
 ======  ======  =============================
 Name    Type    Description
 ======  ======  =============================
-method  String  extension sub-method 
+method  String  sub-method 
 params  Any     call params as-is, except "k"
 aci     Struct  call ACI
 acl     Struct  call ACL

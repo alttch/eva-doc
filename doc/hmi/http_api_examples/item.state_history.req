@@ -8,9 +8,9 @@ host: localhost:7727
   "jsonrpc": "2.0",
   "method": "item.state_history",
   "params": {
-    "t_start": 1652387700.0,
-    "k": "secretkey",
     "fill": "5T:2",
+    "k": "secretkey",
+    "t_start": 1652387700.0,
     "i": "sensor:env/temp"
   }
 }

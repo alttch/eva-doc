@@ -52,10 +52,10 @@ Industry-4.0 automated control systems.
     :maxdepth: 1
 
     ui
-    pvt
-    serve_as
-    upload
-    api_tokens
+    hmi/pvt
+    hmi/serve_as
+    hmi/upload
+    hmi/api_tokens
     evahi
     EVA JS Framework <https://github.com/alttch/eva-js-framework>
 

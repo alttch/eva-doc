@@ -6,8 +6,8 @@ Serving structured data
 Structured data (YAML and JSON files) is very typical for UI development to
 keep settings, texts and other structured information.
 
-EVA ICS default HMI service provides a feature, called "serve as", which allows
-to convert any structured data file on-the-flow and load it into UI
+:doc:`/svc/eva-hmi` provides a feature, called "serve as", which allows to
+convert any structured data file on-the-flow and load it into UI
 applications in the most convenient way.
 
 This feature is supported by both public UI ("/ui" URLs) and :doc:`pvt` and
@@ -163,19 +163,19 @@ service (e.g. with :ref:`eva-shell`):
 Serving structured data from EVA ICS Registry
 =============================================
 
-To serve structured data from :doc:`EVA ICS registry<registry>`, use the
+To serve structured data from :doc:`EVA ICS registry</registry>`, use the
 following request:
 
 .. code-block:: shell
 
-    http://<IP:7727>/:pub/REGISTRY-KEY
+    http://<<IP/DOMAIN>[:PORT]>/:pub/REGISTRY-KEY
 
 where REGISTRY-KEY - key name, relative to *eva/user_data/pub*, e.g.
 to request a key "eva/user_data/pub/settings" use the following request:
 
 .. code-block:: shell
 
-    http://<IP:7727>/:pub/settings
+    http://<<IP/DOMAIN>[:PORT]>/:pub/settings
 
 By default, registry data is served in JSON. To change format or add locale
 translation, see :ref:`serve_as_format` and :ref:`serve_as_locale`.
