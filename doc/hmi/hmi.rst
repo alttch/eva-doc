@@ -6,4 +6,5 @@ See also:
 * :doc:`/hmi/pvt`
 * :doc:`/hmi/serve_as`
 * :doc:`/hmi/upload`
+* :doc:`/hmi/templates`
 * `EVA JS Framework <https://github.com/alttch/eva-js-framework>`_

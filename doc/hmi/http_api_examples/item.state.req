@@ -9,7 +9,7 @@ host: localhost:7727
   "method": "item.state",
   "params": {
     "full": true,
-    "k": "secretkey",
-    "i": "sensor:#"
+    "i": "sensor:#",
+    "k": "secretkey"
   }
 }
