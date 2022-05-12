@@ -1,7 +1,6 @@
 POST /jrpc HTTP/1.1
 accept: application/json
 content-type: application/json
-content-length: 119
 host: localhost:7727
 
 {
@@ -9,7 +8,7 @@ host: localhost:7727
   "jsonrpc": "2.0",
   "method": "login",
   "params": {
-    "user": "admin",
-    "password": "secret"
+    "password": "secret",
+    "user": "admin"
   }
 }
