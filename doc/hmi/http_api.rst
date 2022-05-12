@@ -13,7 +13,8 @@ login
    * - Returns
      - Token information payload
 
-* if no params are set, the method attempts to login user using basic auth
+* if no params are given, the method attempts to login user using basic
+  auth
 
 * if user and password are set, the method attempts to login user
   using the provided credentials
