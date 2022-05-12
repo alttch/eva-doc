@@ -65,6 +65,7 @@ prepare:
 	sed -i 's|svc/eva-aaa-msad|path/to/eva-aaa-msad|g' svc-tpl/svc-tpl-aaa-msad.yml
 	/opt/eva4/sbin/eapigen eva.core /opt/eva4/eva/eapi.yml > ./core_eapi.rst
 	/opt/eva4/sbin/eapigen hmi_ws /opt/eva4/svc/hmi/ws_api.yml --omit-title > ./hmi/ws_api.rst
+	cd hmi && /opt/eva4/sbin/eapigen hmi_http /opt/eva4/svc/hmi/http_api.yml --http-api http_api_examples > http_api.rst
 	./default-svcs.py
 
 .PHONY: html
