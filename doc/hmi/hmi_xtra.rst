@@ -71,7 +71,7 @@ and params *{ "k": "mykey" }*:
     not be batch. Use JSON RPC via HTTP POST with JSON or MessagePack payload
     always when possible.
 
-
+.. include:: /hmi/http_api.rst
 
 Web socket methods
 ==================

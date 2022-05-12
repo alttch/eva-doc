@@ -7,8 +7,11 @@ login
    :header-rows: 0
 
    * - Description
-     - *Login and obtain session token (read-write)
-
+     - *Login and obtain session token (read-write)*
+   * - Parameters
+     - required
+   * - Returns
+     - Token information payload
 * if no params are set, the method attempts to login user using basic auth
 
 * if user and password are set, the method attempts to login user
@@ -18,11 +21,7 @@ login
 
 * if both user, password and token are set, the method switches the token
   in read-write mode
-*
-   * - Parameters
-     - required
-   * - Returns
-     - Token information payload
+
 
 .. list-table:: Parameters
    :align: left
@@ -62,7 +61,7 @@ logout
    * - Parameters
      - required
    * - Returns
-     - Always returns no error, even if the token does not exist
+     - always no error, even if the token does not exist
 
 .. list-table:: Parameters
    :align: left
@@ -92,9 +91,21 @@ test
    * - Description
      - *Tests the node and HMI svc, returns system info*
    * - Parameters
-     - *none*
+     - required
    * - Returns
      - System info (struct)
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key
+     - **yes**
 
 ..  http:example:: curl wget httpie python-requests
     :request: http_api_examples/test.req
