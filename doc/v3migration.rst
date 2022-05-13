@@ -39,7 +39,7 @@ Why migrate to EVA ICS v4
   scenario, executed by a software or hardware PLC, written in any language and
   optimized especially for customers' needs.
 
-* **Backward compatibility**. Changed inside, refactored outside. EVA ICS v4 is
+* **Backward compatibility**. Reborn inside, refactored outside. EVA ICS v4 is
   **99.9% compatible** with all existing HMI web applications and almost with
   all V3 Python macros.
 
