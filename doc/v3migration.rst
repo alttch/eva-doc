@@ -9,16 +9,17 @@ Why migrate to EVA ICS v4
 * **Total refactoring**. Most of EVA ICS code has been rewritten in `Rust
   <https://www.rust-lang.org>`_ - a modern language, which provides near-C
   speeds with no safety costs. According to tests of typical customers' tasks,
-  version 4 is about 50x faster than v3.
+  version 4 is about **50x faster** than v3.
 
-* **New micro-kernel model**. With the new model, all logic was moved to
-  external services, which allows version 4 to process dozens of
-  millions items on a single node, about 1000x more than in v3.
+* **New micro-kernel model**. With :doc:`the new model </architecture>`, all
+  item logic was moved to external services, which allows version 4 to process
+  dozens of millions items on a single node, about **1000x more** than in v3.
 
-* **Node scalability***. V4 node has extremely great multiprocessing support and
+* **Node scalability**. V4 node has extremely great multiprocessing support and
   memory management and can utilize as much system resources as there are
   available. Furthermore, for heavy-loaded systems, nodes can be split into
-  multiple "points", installed on multiple neighbor computers.
+  multiple "points", by moving :doc:`services </services>` to neighbor
+  computers.
 
 * **New AAA**. The new :doc:`/aaa` architecture, much cleaner and much more
   powerful.
@@ -33,17 +34,33 @@ Why migrate to EVA ICS v4
   in-house IPC-bus, developed especially for high-loaded industrial
   applications.
 
-* **Logic** V3 had the only logic snippets: Python macros. In V4 :ref:`lmacro`
-  no longer means a Python script with lots of built-ins, but ANY scenario,
-  executed by a software or hardware PLC, written in any language and optimized
-  especially for customers' needs.
+* **Automation logic**. V3 had the only logic snippets: Python macros. In V4
+  :ref:`lmacro` no longer means a Python script with lots of built-ins, but ANY
+  scenario, executed by a software or hardware PLC, written in any language and
+  optimized especially for customers' needs.
 
 * **Backward compatibility**. Changed inside, refactored outside. EVA ICS v4 is
-  99.9% compatible with all existing HMI web applications and almost with all
-  V3 Python macros.
+  **99.9% compatible** with all existing HMI web applications and almost with
+  all V3 Python macros.
+
+* **Nevertheless no vendor lock-in**. EVA ICS is still open-source,
+  open-licensed, can work with any equipment and requires no vendor-cloud
+  connection. You build your cloud - you own your cloud. Private and secure.
 
 Migration
 =========
+
+V3 nodes in V4 cluster
+----------------------
+
+V3 nodes can be connected as secondaries to V4 nodes, see
+:doc:`/svc/eva4-svc-repl-legacy` for more details.
+
+The service provides all replication and interaction features, however there is
+not possible to do remote deployment for V3 nodes from V4 central ones.
+
+For the deployment tasks, consider leaving a few V3 SFA nodes and connect
+secondaries to both V3 and V4 centrals.
 
 Logic
 -----
