@@ -3,7 +3,7 @@ Local user/key authentication service
 
 .. contents::
 
-Local user/API key authentication service
+Local user/API key authentication service, see :doc:`/aaa` for more details.
 
 Setup
 =====

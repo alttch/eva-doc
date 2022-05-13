@@ -2,14 +2,14 @@
   exe: svc/eva-aaa-acl
   des: Default ACL service
   ins: by default with HMI (*--hmi*)
-  txt: Base authorization service, see :doc:`/auth` for more details.
+  txt: Base authorization service, see :doc:`/aaa` for more details.
   tpl: svc-tpl-aaa-acl.yml
   api: svc/aaa-acl/eapi.yml
 - nam: eva.aaa.localauth
   exe: svc/eva-aaa-localauth
   des: Local user/key authentication service
   ins: by default with HMI (*--hmi*)
-  txt: Local user/API key authentication service
+  txt: Local user/API key authentication service, see :doc:`/aaa` for more details.
   tpl: svc-tpl-aaa-localauth.yml
   api: svc/aaa-localauth/eapi.yml
 - nam: eva.controller.enipN

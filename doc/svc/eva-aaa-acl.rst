@@ -3,7 +3,7 @@ Default ACL service
 
 .. contents::
 
-Base authorization service, see :doc:`/auth` for more details.
+Base authorization service, see :doc:`/aaa` for more details.
 
 Setup
 =====

@@ -34,16 +34,16 @@ Industry-4.0 automated control systems.
     :maxdepth: 1
 
     install
+    v3migration
     What is new <changelog>
     architecture
     config
     registry
-    auth
+    aaa
     items
     cli
     highload
     enterprise
-    trademarks
 
 .. include:: core_svcs_toc.rst
 
@@ -73,3 +73,9 @@ Industry-4.0 automated control systems.
     eapi
     EVA ICS v4 SDK for Rust <https://crates.io/crates/eva-sdk>
     EVA ICS v4 SDK for Python <https://pypi.org/project/evaics/>
+
+.. toctree::
+    :caption: Legal
+
+    License <https://github.com/alttch/eva4/blob/master/LICENSE>
+    trademarks
