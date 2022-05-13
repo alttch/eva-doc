@@ -1,4 +1,4 @@
-Enterprise version
+EVA ICS Enterprise
 ******************
 
 .. contents::
@@ -112,6 +112,8 @@ Limitations
 
 * OID masks do not support internal wildcards (e.g. "sensor:\*/test")
 
+.. _aaa.msad:
+
 Active Directory authentication service
 =======================================
 
@@ -211,7 +213,7 @@ with id *{acl_prefix}{AD security group}*, e.g.
 
 * user has assigned security group EVA/operator
 
-* The EVA ICS ACL must have id *msad_operator*
+* EVA ICS ACL must have id *msad_operator*
 
 PubSubRT Enterprise
 ===================

@@ -38,8 +38,8 @@ Industry-4.0 automated control systems.
     architecture
     config
     registry
-    items
     auth
+    items
     cli
     highload
     enterprise
