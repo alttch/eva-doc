@@ -38,6 +38,8 @@ application/msgpack* HTTP request header.
 JSON RPC error responses
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+RPC error codes are equal to :ref:`EAPI error codes <eapi_error_codes>`.
+
 Response field *"message"* may contain additional information about error.
 
 .. warning::

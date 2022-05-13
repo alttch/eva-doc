@@ -168,14 +168,14 @@ following request:
 
 .. code-block:: shell
 
-    http://<<IP/DOMAIN>[:PORT]>/:pub/REGISTRY-KEY
+    http://<IP/DOMAIN>[:PORT]>/:pub/REGISTRY-KEY
 
 where REGISTRY-KEY - key name, relative to *eva/user_data/pub*, e.g.
 to request a key "eva/user_data/pub/settings" use the following request:
 
 .. code-block:: shell
 
-    http://<<IP/DOMAIN>[:PORT]>/:pub/settings
+    http://<IP/DOMAIN>[:PORT]>/:pub/settings
 
 By default, registry data is served in JSON. To change format or add locale
 translation, see :ref:`serve_as_format` and :ref:`serve_as_locale`.

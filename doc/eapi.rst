@@ -55,8 +55,10 @@ When a parameter or a result field is a time value, it is usually specified as
 f64-timestamp or f64-duration (some low-level methods may require durations as
 micro- or nano-seconds).
 
-Errors
-------
+.. _eapi_error_codes:
+
+Error codes
+-----------
 
 * ERR_CODE_NOT_FOUND: -32001
 * ERR_CODE_ACCESS_DENIED: -32002

@@ -55,7 +55,6 @@ Industry-4.0 automated control systems.
     hmi/pvt
     hmi/serve_as
     hmi/upload
-    hmi/api_tokens
     hmi/templates
     evahi
     EVA JS Framework <https://github.com/alttch/eva-js-framework>

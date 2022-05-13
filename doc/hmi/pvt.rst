@@ -73,14 +73,14 @@ the following request:
 
 .. code-block:: bash
 
-    http(s)://<<IP/DOMAIN>[:PORT]>/:pvt/REGISTRY-KEY
+    http(s)://<IP/DOMAIN>[:PORT]>/:pvt/REGISTRY-KEY
 
 where REGISTRY-KEY - key name, relative to *eva/user_data/pvt*, e.g.
 to request a key "eva/user_data/pvt/codes/code1" use the following request:
 
 .. code-block:: bash
 
-    http(s)://<<IP/DOMAIN>[:PORT]>/:pvt/codes/code1
+    http(s)://<IP/DOMAIN>[:PORT]>/:pvt/codes/code1
 
 The session key MUST have permissions either to the whole pvt data ("#") or to
 specific registry folders/keys. ACLs for registry keys should start with
