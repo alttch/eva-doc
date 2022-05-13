@@ -43,7 +43,7 @@ Why migrate to EVA ICS v4
   **99.9% compatible** with all existing HMI web applications and almost with
   all V3 Python macros.
 
-* **Nevertheless no vendor lock-in**. EVA ICS is still open-source,
+* **Nevertheless, zero vendor lock-in**. EVA ICS is still open-source,
   open-licensed, can work with any equipment and requires no vendor-cloud
   connection. You build your cloud - you own your cloud. Private and secure.
 
