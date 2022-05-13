@@ -48,7 +48,7 @@ as well as *content.js* file in any first-level folder.
 Loading files from PVT Server
 =============================
 
-The file can be loaded with the following request:
+A private file can be loaded with the following request:
 
 .. code-block:: bash
 
