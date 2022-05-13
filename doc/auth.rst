@@ -65,21 +65,21 @@ The default ACL has the following structure:
 
 Fields:
 
-* *admin* - admin ACL (has access to everything). In case if this field is set to
-  *true*, all others (except *meta*) are ignored and not used for
+* **admin** admin ACL (has access to everything). In case if this field is set
+  to *true*, all others (except *meta*) are ignored and not used for
   authorization.
 
-* *read* grants read access to items/pvt/rpvt
+* **read** grants read access to items/pvt/rpvt
 
-* *write* grants read/write access to items
+* **write** grants both read and write access to items
 
-* *deny* denies access to certain items/pvt/rpvt, e.g. if read/write masks are
-  used
+* **deny** denies access to certain items/pvt/rpvt, e.g. if read/write masks
+  are used
 
-* ops - list of special operations ("allow" in v3). supported values: *log*,
+* **ops** list of special operations ("allow" in v3). supported values: *log*,
   *supervisor*
 
-* meta - map of key=list fields, used for information purposes only
+* **meta** map of key=list fields, used for information purposes only
 
 When two ACLs are combined, all fields are combined as well, including meta.
 
