@@ -8,10 +8,10 @@ host: localhost:7727
   "jsonrpc": "2.0",
   "method": "log.get",
   "params": {
-    "level": "info",
-    "rx": "starting.*",
-    "module": "eva::svc",
     "k": "secretkey",
+    "level": "info",
+    "module": "eva::svc",
+    "rx": "starting.*",
     "time": 60
   }
 }

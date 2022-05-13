@@ -8,9 +8,9 @@ host: localhost:7727
   "jsonrpc": "2.0",
   "method": "action",
   "params": {
-    "status": 1,
-    "k": "secretkey",
     "i": "unit:tests/door",
+    "k": "secretkey",
+    "status": 1,
     "wait": 1
   }
 }

@@ -8,7 +8,7 @@ host: localhost:7727
   "jsonrpc": "2.0",
   "method": "action.kill",
   "params": {
-    "k": "secretkey",
-    "i": "unit:tests/door"
+    "i": "unit:tests/door",
+    "k": "secretkey"
   }
 }

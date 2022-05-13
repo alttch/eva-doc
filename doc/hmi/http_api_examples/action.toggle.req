@@ -8,8 +8,8 @@ host: localhost:7727
   "jsonrpc": "2.0",
   "method": "action.toggle",
   "params": {
+    "i": "unit:tests/door",
     "k": "secretkey",
-    "wait": 1,
-    "i": "unit:tests/door"
+    "wait": 1
   }
 }
