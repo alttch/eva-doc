@@ -150,4 +150,4 @@ Security and file upload limits
   corresponding processing lmacro.
 
 * There's no built-in limitations for uploaded file size, but the limit can be
-  set using an additional front-end server installed.
+  set using an additional :doc:`front-end server </hmi/frontend>` used.
