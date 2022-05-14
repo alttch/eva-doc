@@ -76,6 +76,7 @@ SCADA platform for Industry-4.0 automated control systems.
 
 .. toctree::
     :caption: Legal
+    :maxdepth: 1
 
     License <https://github.com/alttch/eva4/blob/master/LICENSE>
     trademarks

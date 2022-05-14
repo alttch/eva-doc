@@ -80,12 +80,20 @@ and params *{ "k": "mykey" }*:
 
 .. include:: /hmi/http_api.rst
 
+.. _hmi_ws:
+
 Web socket methods
 ==================
 
 Web socket method can be executed using a web socket, connected to:
 
-    **ws://<IP/DOMAIN>[:SVC_LISTEN_PORT]/ws**
+    **ws://<IP/DOMAIN>[:SVC_LISTEN_PORT]/ws?k=TOKEN**
+
+where *TOKEN* is a :ref:`session token <session_token>`.
+
+An extra parameter **buf_ttl=N** can be used to ask the server to group
+:doc:`item </items>` state events and send them in bulk. E.g. *buf_ttl=0.1*
+can be used to receive events every 100ms.
 
 Web socket methods provide one-way RPC calls with no returns. If a method
 returns a value, it means that the value is "ordered" and can be returned any
@@ -118,5 +126,36 @@ Example:
         "method": "subscribe.state",
         "params": ["#"]
     }
+
+Events
+------
+
+After connecting, the web socket receives event payloads in the following
+format:
+
+.. list-table::
+   :header-rows: 0
+
+   * - Field
+     - Type
+     - Description
+   * - s
+     - String
+     - Event subject
+   * - d
+     - Any
+     - Event data
+
+The service can send events with the following subjects:
+
+* **state** a state event, data contains one or multiple (list) item states
+
+* **pong** ping-reply events, data contains nothing
+
+* **reload** reload event, the server asks clients to reload interfaces
+
+* **server** other server events, determined by data field:
+
+    * **restart** server is going to be restarted soon
 
 .. include:: /hmi/ws_api.rst

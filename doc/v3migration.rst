@@ -168,8 +168,13 @@ variables, see :doc:`/hmi/server_templates`.
 HMI tokens
 ~~~~~~~~~~
 
-:doc:`/svc/eva-hmi` issues tokens only for user/password pair. Tokens for API
-keys are not supported.
+:doc:`/svc/eva-hmi` issues :ref:`session tokens <session_token>` only for
+user/password pair. Tokens for API keys are not supported.
+
+HMI web sockets
+~~~~~~~~~~~~~~~
+
+HMI web sockets can be connected using session tokens only.
 
 Python macros
 -------------

@@ -12,6 +12,9 @@ Each EVA ICS v4 node has the following architecture:
     :scale: 100%
     :alt: v4 architecture
 
+* Services are launched by the core (if deployed and setup) or by external
+  launchers.
+
 * The core and all services are connected to the single inter-process
   communication bus, based on `ELBUS <https://elbus.bma.ai>`_ and using
   MessagePack as the payload serialization format.

@@ -29,6 +29,8 @@ altered/patched/replaced.
     :scale: 100%
     :alt: v4 aaa
 
+.. _acl:
+
 Access control list
 -------------------
 
@@ -90,6 +92,8 @@ field name misspelling), as they can be used by different HMI/replication
 services. In case of an unsupported ACL, HMI/replication service may return an
 error when applied.
 
+.. _api_key:
+
 API key
 -------
 
@@ -103,6 +107,8 @@ users".
 
 By default, API key management and authentication are provided by
 :doc:`svc/eva-aaa-localauth` service.
+
+.. _user_account:
 
 User
 ----
@@ -118,6 +124,8 @@ By default, API key management and authentication are provided by
 Additional user authentication services available:
 
 * :ref:`aaa.msad` - included in :doc:`/enterprise`.
+
+.. _session_token:
 
 Session token
 -------------
