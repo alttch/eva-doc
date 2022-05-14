@@ -42,6 +42,7 @@ SCADA platform for Industry-4.0 automated control systems.
     aaa
     items
     cli
+    iac
     highload
     enterprise
 

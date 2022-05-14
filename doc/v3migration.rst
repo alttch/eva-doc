@@ -26,8 +26,9 @@ Why migrate to EVA ICS v4
   powerful.
 
 * **IaC and Deployment for everything**. V3 had great deployment features, but
-  V4 is much better - everything can be deployed, undeployed and redeployed as
-  on a single node, as on all selected nodes of customers' clouds.
+  V4 is much better - :doc:`everything can be deployed </iac>`, undeployed and
+  redeployed as on a single node, as on all selected nodes of customers'
+  clouds.
 
 * **Extension unification**. Version 3 had six types of extension. In version 4
   there is the only one type of extension - services. Which communicate with
@@ -215,3 +216,10 @@ Python macros
   Python modules or in EVA ICS services.
 
 See also :doc:`/lmacro/py/python_macros`.
+
+Deployment
+----------
+
+As v4 has brand-new internal :doc:`architecture </architecture>`,
+:doc:`/iac` has been significantly modified. Consider migrating
+deployment files.

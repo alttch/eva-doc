@@ -36,8 +36,8 @@ When the "admin_key" is set, the remote node becomes "managed".
 
 .. note::
 
-    Remote bus calls are required for IaC and deployment if a deployment
-    configuration contains sections for remote nodes.
+    Remote bus calls are required for :doc:`/iac` if a deployment configuration
+    contains sections for remote nodes.
 
 If discovery is enabled, newly discovered nodes are automatically connected
 with the "default_key". Discovery feature is recommended for trusted and
