@@ -67,6 +67,30 @@ itself. The hash can be get using e.g. Linux shell command:
           acls:
             - admin2
 
+Uploading files
+---------------
+
+Local files can be uploaded to the target's EVA_DIR/runtime directory with the
+following block:
+
+.. code:: yaml
+
+    - node: .local
+      upload:
+        - src: deploy.info
+          target: data/
+        - src: xx.yml
+          target: data/x.yml
+          svc: eva.filemgr.main # override the file manager
+        - text: |
+            hello, i am here
+          target: data/some-file
+
+.. note::
+
+    If a file content is defined directly in the deployment (field *text*), the
+    target MUST contain the full destination path, including the file name.
+
 Items
 -----
 
@@ -128,30 +152,6 @@ before continue.
             workers: 1
             user: nobody
  
-Uploading files
----------------
-
-Local files can be uploaded to the target's EVA_DIR/runtime directory with the
-following block:
-
-.. code:: yaml
-
-    - node: .local
-      upload:
-        - src: deploy.info
-          target: data/
-        - src: xx.yml
-          target: data/x.yml
-          svc: eva.filemgr.main # override the file manager
-        - text: |
-            hello, i am here
-          target: data/some-file
-
-.. note::
-
-    If a file content is defined directly in the deployment (field *text*), the
-    target MUST contain the full destination path, including the file name.
-
 Extra commands
 --------------
 
