@@ -12,8 +12,9 @@ Why migrate to EVA ICS v4
   version 4 is about **50x faster** than v3.
 
 * **New micro-kernel model**. With :doc:`the new model </architecture>`, all
-  item logic was moved to external services, which allows version 4 to process
-  dozens of millions items on a single node, about **1000x more** than in v3.
+  item logic has been moved to external services, which allows version 4 to
+  process dozens of millions items on a single node, about **1000x more** than
+  in v3.
 
 * **Node scalability**. V4 node has extremely great multiprocessing support and
   memory management and can utilize as much system resources as there are
@@ -28,7 +29,7 @@ Why migrate to EVA ICS v4
   V4 is much better - everything can be deployed, undeployed and redeployed as
   on a single node, as on all selected nodes of customers' clouds.
 
-* **Extension unification**. Version 3 had 6 types of extension. In version 4
+* **Extension unification**. Version 3 had six types of extension. In version 4
   there is the only one type of extension - services. Which communicate with
   the core and between each other using `ELBUS <https://elbus.bma.ai/>`_ - an
   in-house IPC-bus, developed especially for high-loaded industrial
@@ -119,6 +120,7 @@ HMI HTTP API methods
 
 Methods were changed as the following:
 
+==================  =====================================
 V3 method           V4 Method
 ==================  =====================================
 test                test (unchanged)
@@ -142,6 +144,7 @@ increment           lvar.incr
 decrement           lvar.decr
 get_neighbor_list   session.list_neighbors
 set_token_readonly  session.set_readonly
+==================  =====================================
 
 V3 methods, listed above, still work, but are deprecated and will be removed
 soon. Please update your HMI applications to use the new method names.
@@ -175,6 +178,27 @@ HMI web sockets
 ~~~~~~~~~~~~~~~
 
 HMI web sockets can be connected using session tokens only.
+
+EVA JS Framework
+~~~~~~~~~~~~~~~~
+
+If `EVA JS Framework <https://github.com/alttch/eva-js-framework>`_ is used,
+there is no need to migrate a HMI web application, as the framework does
+everything.
+
+The only steps are required:
+
+* update the framework to the version 0.3.34 or above.
+
+* switch the framework to V4 API:
+
+.. code:: javascript
+
+    $eva.api_version = 4;
+
+* change names of deprecated HTTP RPC methods to the new ones (open either
+  server logs or Web browser development console to see which deprecated
+  methods are called)
 
 Python macros
 -------------
