@@ -236,5 +236,6 @@ ws.stats
       "sub_clients": 1,
       "subscriptions": 1
   }
+
 .. include:: /hmi/hmi_xtra.rst
 

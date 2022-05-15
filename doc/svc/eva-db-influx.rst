@@ -191,3 +191,29 @@ state_log
           "value": 15
       }
   ]
+
+Retention policies
+==================
+
+In InfluxDB v1, retention policies can be created as the following:
+
+.. code:: sql
+
+  CREATE RETENTION POLICY "daily" ON "eva" DURATION 1D REPLICATION 1
+  CREATE CONTINUOUS QUERY "downsampled_env_temp1_30m" ON "eva" BEGIN
+    SELECT mode(status) as "status",mean(value) as value
+    INTO "daily"."sensor:env/temp1"
+    FROM "sensor:env/temp1"
+    GROUP BY time(30m)
+  END
+
+To process all items with the same downsampled rate, set the continuous
+query to:
+
+.. code:: sql
+
+  SELECT mode(status) as status, mean(value) as value
+  INTO "daily".:MEASUREMENT
+  FROM /.*/ WHERE time > now() - 1d
+  GROUP BY time(30m);
+

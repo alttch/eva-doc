@@ -137,4 +137,5 @@ or using ELBUS CLI client:
                     print(stdout.decode().rstrip(), file=sfh)
                 xtr = svc.get('xtr')
                 if xtr:
+                    print(file=sfh)
                     print(xtr, file=sfh)
