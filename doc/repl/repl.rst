@@ -46,3 +46,16 @@ semi-trusted environments.
 One node can have multiple replication services deployed. However all of the
 must replicate with the own set of remote nodes. Having same remote nodes
 replicated by different services leads to abnormal system behavior.
+
+See also: :doc:`/repl/proto`.
+
+Pub/sub security
+================
+
+In production systems a pub/sub server can be securely shared between customers
+in case of the following conditions:
+
+* no node discovery (as node states can be forged)
+* bulk telemetry, bulk encryption
+
+All RPC calls in EVA ICS are AES-256-encrypted by default.

@@ -73,6 +73,7 @@ SCADA platform for Industry-4.0 automated control systems.
     eapi
     EVA ICS v4 SDK for Rust <https://crates.io/crates/eva-sdk>
     EVA ICS v4 SDK for Python <https://pypi.org/project/evaics/>
+    /repl/proto
 
 .. toctree::
     :caption: Legal
