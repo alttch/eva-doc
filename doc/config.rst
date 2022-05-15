@@ -32,10 +32,23 @@ Configuration registry keys
 ===========================
 
 The configuration registry keys are used by the core to configure itself and
-additional services. To apply changes, the node server must be restarted.
+additional services. To apply changes, **the node server must be restarted**:
 
-They keys can be edited with either :ref:`eva-shell` command "edit config/X" or
-with "EVA_DIR/sbin/eva-registry-cli edit <FULL_KEY_NAME>"
+.. code:: shell
+
+    /opt/eva4/sbin/eva-control restart
+    # or using eva-shell
+    eva server restart
+
+The keys can be edited with:
+
+.. code:: shell
+
+    /opt/eva4/sbin/eva-registry-cli edit eva/config/X
+    # or using eva-shell
+    eva edit config/X
+
+.. _config_core:
 
 eva/config/core
 ---------------
@@ -45,6 +58,8 @@ The primary core configuration
 .. literalinclude:: ./registry_config/core.yml
     :language: yaml
 
+.. _config_bus:
+
 eva/config/bus
 --------------
 
@@ -52,6 +67,8 @@ The node bus configuration
 
 .. literalinclude:: ./registry_config/bus.yml
     :language: yaml
+
+.. _config_registry:
 
 eva/config/registry
 -------------------
@@ -61,6 +78,8 @@ The built-in registry service configuration
 .. literalinclude:: ./registry_config/registry.yml
     :language: yaml
 
+.. _config_logs:
+
 eva/config/logs
 ---------------
 
@@ -68,6 +87,8 @@ Logging configuration
 
 .. literalinclude:: ./registry_config/logs.yml
     :language: yaml
+
+.. _config_python_venv:
 
 eva/config/python-venv
 ----------------------
