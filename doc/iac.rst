@@ -264,7 +264,8 @@ block:
 
 .. code:: yaml
 
-    - extra:
+    - node: .local
+      extra:
         deploy:
           after:
           - method: eva.registry::server_set
