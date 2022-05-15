@@ -2,6 +2,8 @@ bus:
   path: var/elbus.ipc
 command: svc/eva-controller-virtual
 config:
+  # auto-create virtual items on set/action
+  auto_create: false
   # define virtual items
   items:
   #- sensor:tests/temp
