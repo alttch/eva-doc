@@ -260,7 +260,7 @@ with command-line argument *-T*:
 If :doc:`/registry` auto-flush is enabled on the target and multiple items are
 deployed, the deployment may take long time to complete. The registry
 auto-flush can be automatically switched off and back on with the following
-block:
+block.
 
 .. code:: yaml
 
@@ -289,6 +289,8 @@ block:
             params:
               name: auto_flush
               value: false
+
+The block also calls safe_purge to cleanup the registry after undeploy.
 
 Undeploying
 ~~~~~~~~~~~
