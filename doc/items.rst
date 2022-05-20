@@ -11,6 +11,115 @@ ones.
 EVA ICS v4 has the very minimal core logic for items. This allows to process
 dozens million items on a single node without additional overhead.
 
+Item types
+==========
+
+EVA ICS has the following item types, which are processed by :doc:`cores of
+nodes</core>`. States of these items can be replicated (except stateless) and
+actions can be called form any node in the cloud if allowed.
+
+=============  =======  =======  ===========================================================
+type           state    actions  purpose
+=============  =======  =======  ===========================================================
+:ref:`sensor`  **yes**  *no*     a hardware sensor or read-only PLC register
+:ref:`unit`    **yes**  **yes**  a hardware unit (e.g. relay) or PLC register
+:ref:`lvar`    **yes**  *no*     a logical variable, not connected to equipment
+:ref:`lmacro`  *no*     **yes**  a scenario (program/function), executed by PLC or a service
+=============  =======  =======  ===========================================================
+
+.. _sensor:
+
+sensor
+------
+
+An item, which is usually mapped to some external equipment register or state.
+Sensors are used for monitoring only and can not execute actions.
+
+Sensor items have no additional fields.
+
+.. _unit:
+
+unit
+----
+
+An item, which is usually mapped to some external equipment register or state
+and can accept actions (e.g. turn on, off etc.).
+
+To execute actions, a unit must have "action" property in the format:
+
+.. code:: yaml
+
+    action:
+      svc: service.id # a service, responsible for actions for this item
+      timeout: N # float number, overrides the default core timeout
+      config: null # optional property with parameters for the service
+
+.. _lvar:
+
+lvar
+----
+
+A logical variable, which has no direct mapping to hardware equipment and is
+used by logical controllers / in interface logic.
+
+lvars have no additional properties.
+
+flags
+~~~~~
+
+If "lvar.reset" / "lvar.clear" bus RPC or HTTP API functions are called, its
+state is changed correspondingly to 1 or 0. "lvar.toggle" method toggles lvar
+state from 1 to 0 and vice-versa.
+
+Any available lvar becomes a flag and can handle boolean logic, as soon as one
+of the above methods is called.
+
+timers
+~~~~~~
+
+In EVA ICS v4 items have no expiration time properties, however lvars can be
+used as timers with the provided "expiration" service.
+
+* as soon as "lvar.reset" is called, the timer is reset and countdown starts.
+* as soon as a timer is expired, its status is set to -1
+* "lvar.clear" method sets lvar status to 0 and stops the timer
+
+If the timer progress needs to be shown in external applications or UI, it is
+recommended to set meta/expires field to the timer value:
+
+.. code:: yaml
+
+  meta:
+    expires: 5.0 # expires in 5 seconds
+
+After, time before the expiration can be calculated with the formula:
+
+    meta.expires + t - now
+
+Where now = current time (timestamp) and t = item state set time.
+
+.. _lmacro:
+
+lmacro
+------
+
+lmacro items are various scenarios, which can be executed by logical
+controllers. lmacro items have no states.
+
+In EVA ICS v4 lmacro items can be scenarios, written in any language / format,
+accepted by the assigned action service, see the action service documentation
+for more details.
+
+To execute actions, a lmacro must have "action" property in the same format as
+units:
+
+.. code:: yaml
+
+    action:
+      svc: service.id # a service, responsible for actions for this item
+      timeout: N # float number, overrides the default core timeout
+      config: null # optional property with parameters for the service
+
 Creating and managing items
 ===========================
 
@@ -140,99 +249,3 @@ node
 
 A read-only property, contains the node name, where item is replicated from.
 For local items, node name is always equal to the local system name.
-
-Item types
-==========
-
-.. _sensor:
-
-sensor
-------
-
-An item, which is usually mapped to some external equipment register or state.
-Sensors are used for monitoring only and can not execute actions.
-
-Sensor items have no additional fields.
-
-.. _unit:
-
-unit
-----
-
-An item, which is usually mapped to some external equipment register or state
-and can accept actions (e.g. turn on, off etc.).
-
-To execute actions, a unit must have "action" property in the format:
-
-.. code:: yaml
-
-    action:
-      svc: service.id # a service, responsible for actions for this item
-      timeout: N # float number, overrides the default core timeout
-      config: null # optional property with parameters for the service
-
-.. _lvar:
-
-lvar
-----
-
-A logical variable, which has no direct mapping to hardware equipment and is
-used by logical controllers / in interface logic.
-
-lvars have no additional properties.
-
-flags
-~~~~~
-
-If "lvar.reset" / "lvar.clear" bus RPC or HTTP API functions are called, its
-state is changed correspondingly to 1 or 0. "lvar.toggle" method toggles lvar
-state from 1 to 0 and vice-versa.
-
-Any available lvar becomes a flag and can handle boolean logic, as soon as one
-of the above methods is called.
-
-timers
-~~~~~~
-
-In EVA ICS v4 items have no expiration time properties, however lvars can be
-used as timers with the provided "expiration" service.
-
-* as soon as "lvar.reset" is called, the timer is reset and countdown starts.
-* as soon as a timer is expired, its status is set to -1
-* "lvar.clear" method sets lvar status to 0 and stops the timer
-
-If the timer progress needs to be shown in external applications or UI, it is
-recommended to set meta/expires field to the timer value:
-
-.. code:: yaml
-
-  meta:
-    expires: 5.0 # expires in 5 seconds
-
-After, time before the expiration can be calculated with the formula:
-
-    meta.expires + t - now
-
-Where now = current time (timestamp) and t = item state set time.
-
-.. _lmacro:
-
-lmacro
-------
-
-lmacro items are various scenarios, which can be executed by logical
-controllers. lmacro items have no states.
-
-In EVA ICS v4 lmacro items can be scenarios, written in any language / format,
-accepted by the assigned action service, see the action service documentation
-for more details.
-
-To execute actions, a lmacro must have "action" property in the same format as
-units:
-
-.. code:: yaml
-
-    action:
-      svc: service.id # a service, responsible for actions for this item
-      timeout: N # float number, overrides the default core timeout
-      config: null # optional property with parameters for the service

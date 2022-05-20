@@ -1,7 +1,7 @@
 The core
 ********
 
-EVA ICS core is the primary entity, which handles the following tasks:
+EVA ICS core is the primary node entity, which handles the following tasks:
 
 * Manages :doc:`items<items>`
 

@@ -231,7 +231,7 @@ Deployment via CLI
 ==================
 
 Deploying
-~~~~~~~~~
+---------
 
 Deployment configuration can be applied using  *eva cloud deploy* (or
 *eva-cloud-manager cloud deploy*) command.  When deployed with
@@ -293,7 +293,7 @@ block:
 The block also calls safe_purge to cleanup the registry after undeploy.
 
 Undeploying
-~~~~~~~~~~~
+-----------
 
 Deployment configuration can be removed with *eva cloud undeploy*
 (*eva-cloud-manager cloud undeploy*) command.  Custom variable values can be
