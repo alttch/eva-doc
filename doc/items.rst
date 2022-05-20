@@ -16,7 +16,7 @@ Item types
 
 EVA ICS has the following item types, which are processed by :doc:`cores of
 nodes</core>`. States of these items can be replicated (except stateless) and
-actions can be called form any node in the cloud if allowed.
+actions can be called from any node in the cloud if allowed.
 
 =============  =======  =======  ===========================================================
 type           state    actions  purpose
