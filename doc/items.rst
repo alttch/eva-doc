@@ -22,7 +22,7 @@ actions can be called form any node in the cloud if allowed.
 type           state    actions  purpose
 =============  =======  =======  ===========================================================
 :ref:`sensor`  **yes**  *no*     a hardware sensor or read-only PLC register
-:ref:`unit`    **yes**  **yes**  a hardware unit (e.g. relay) or PLC register
+:ref:`unit`    **yes**  **yes**  a hardware unit (e.g. a relay) or PLC register
 :ref:`lvar`    **yes**  *no*     a logical variable, not connected to equipment
 :ref:`lmacro`  *no*     **yes**  a scenario (program/function), executed by PLC or a service
 =============  =======  =======  ===========================================================
