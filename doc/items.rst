@@ -235,8 +235,8 @@ The property format:
     logic:
       min: null # float or null, optional
       max: null # float or null, optional
-      min_eq: false # if true, the range is greater or equal to "min"
-      max_eq: false # if true, the range is less or equal to "max"
+      min_eq: true # if true, the range is greater or equal to "min", otherwise if greater
+      max_eq: true # if true, the range is less or equal to "max", otherwise if less
 
 as lmacro items have no states, they have no "logic" property as well.
 
