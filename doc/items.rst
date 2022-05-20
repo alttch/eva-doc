@@ -167,14 +167,17 @@ properties:
 * **value** in EVA ICS v4, the value can contain any serializable type (number,
   string, boolean, list or object), however it is recommended to use only
   basics (number/string) to let values be correctly processed by standard
-  logical controllers and database services.
+  logical controllers and database services
 
 * **ieid** incremental event replication ID, a pair of 64-bit unsigned
   integers: the node boot counter and node monotonic time at the moment the
   item state has been changed. The field is used by the core and by various
-  replication and HMI services.
+  replication and HMI services
 
 * **t** contains the state UNIX timestamp (float)
+
+* **act** a read-only property, available only for units, which contains the
+  number of pending/running actions.
 
 Unlike v3, item status 0 does not mean that the item is disabled (all items
 have got "enabled" property instead), however if an lvar has status=0, its
