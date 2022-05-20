@@ -245,7 +245,7 @@ connected
 
 A read-only property, for remote items, contains true if the remote node is
 accessible for the replication service, which synchronizes the item. Local
-items have always "connected=true".
+items always have "connected=true".
 
 node
 ----
