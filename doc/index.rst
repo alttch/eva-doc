@@ -64,6 +64,7 @@ SCADA platform for Industry-4.0 automated control systems.
     :caption: Automation
     :maxdepth: 1
 
+    svc/eva-controller-lm
     lmacro/py/python_macros
 
 .. toctree::

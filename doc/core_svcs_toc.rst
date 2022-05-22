@@ -13,6 +13,7 @@
     svc/eva-svc-filewriter
     svc/eva4-svc-repl-legacy
     svc/eva-aaa-localauth
+    svc/eva-controller-lm
     svc/eva-svc-mailer
     svc/eva-svc-mirror
     svc/eva-controller-modbus

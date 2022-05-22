@@ -107,8 +107,8 @@ lmacro items are various scenarios, which can be executed by logical
 controllers. lmacro items have no states.
 
 In EVA ICS v4 lmacro items can be scenarios, written in any language / format,
-accepted by the assigned action service, see the action service documentation
-for more details.
+accepted by the assigned action service (see the chosen action service
+documentation for more details, e.g. :doc:`/svc/eva4-svc-controller-py`).
 
 To execute actions, a lmacro must have "action" property in the same format as
 units:

@@ -40,6 +40,10 @@
      - svc/eva-aaa-localauth
      - :doc:`Local user/key authentication service</svc/eva-aaa-localauth>`
      - by default with HMI (*--hmi*)
+   * - :doc:`eva.controller.lmN</svc/eva-controller-lm>`
+     - svc/eva-controller-lm
+     - :doc:`Logic manager</svc/eva-controller-lm>`
+     - 
    * - :doc:`eva.svc.mailer</svc/eva-svc-mailer>`
      - svc/eva-svc-mailer
      - :doc:`Mailer service</svc/eva-svc-mailer>`

@@ -1,0 +1,71 @@
+# Logic manager programmable controller
+command: svc/eva-controller-lm
+bus:
+  path: var/elbus.ipc
+config:
+  rules: []
+    #- id: rule1
+      #oid: sensor:#
+      #prop: status # status, value or act (for units)
+      # full condition notation, can be shortened as x = -1
+      #condition:
+        #min: -1
+        #max: -1
+        #min_eq: true
+        #max_eq: true
+      #break: false # do not process further rules if mathces
+      #chillout_time: 10 # ignore further events, seconds
+      #run: lmacro:tests/sensor_down
+      #initial: process # process, skip, only
+      #block: false # block rule processing until the macro is finished
+    #- id: rule2
+      #oid: unit:#
+      #prop: act
+      #condition:
+        #min: 1
+      #run: lmacro:tests/action_started
+      #args:
+        #- 1
+        #- 2
+        #- "test"
+      #kwargs:
+        #from_rule: true
+    #- id: rule3
+      #oid: sensor:plc1/alarms
+      #prop: value
+      #condition: "x = 1"
+      #bit: 0 # analyze bit (value only)
+      #run: lmacro:tests/rule3_handler
+  cycles: []
+    #- id: cycle1
+      #auto_start: false
+      # (interval, seconds)
+      #interval: 0.5
+      # lmacro id to run
+      #run: lmacro:tests/cycle1_handler
+      # lmacro args, optional
+      #args:
+        #- 1
+        #- 2
+        #- "test"
+      # lmacro kwargs, optional
+      #kwargs:
+        #from_cycle: true
+       #error handler lmacro
+      #on_error: lmacro:tests/cycle1_error_handler
+  jobs: []
+    #- id: job1
+      # a cron-like schedule:
+      # second minute hour day month weekday year
+      #
+      # the year field can be omitted
+      # to run the task every N, use */N
+      #schedule: "* * * * * *"
+      #run: lmacro:tests/action_started
+      #args:
+        #- 1
+        #- 2
+        #- "test"
+      #kwargs:
+        #from_job: true
+user: nobody

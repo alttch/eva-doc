@@ -12,6 +12,13 @@
   txt: Local user/API key authentication service, see :doc:`/aaa` for more details.
   tpl: svc-tpl-aaa-localauth.yml
   api: svc/aaa-localauth/eapi.yml
+- nam: eva.controller.lmN
+  exe: svc/eva-controller-lm
+  des: Logic manager
+  txt: |
+    .. include:: /plc/lm.rst
+  tpl: svc-tpl-controller-lm.yml
+  api: svc/controller-lm/eapi.yml
 - nam: eva.controller.enipN
   exe: svc/eva-controller-enip
   des: Ethernet/IP PLC controller gateway
