@@ -79,6 +79,8 @@ following block:
       upload:
         - src: deploy.info
           target: data/
+          # override the file permissions, specify in oct
+          permissions: 0o400
         - src: xx.yml
           target: data/x.yml
           svc: eva.filemgr.main # override the file manager
@@ -90,6 +92,8 @@ following block:
 
     If a file content is defined directly in the deployment (field *text*), the
     target MUST contain the full destination path, including the file name.
+
+The upload source field accepts both local files and HTTP URLs.
 
 Items
 -----
@@ -256,6 +260,8 @@ with command-line argument *-T*:
 .. code:: shell
 
     eva -T 15 cloud deploy file.yml
+
+The deployment file can be a local one or HTTP URL.
 
 If :doc:`/registry` auto-flush is enabled on the target and multiple items are
 deployed, the deployment may take long time to complete. The registry
