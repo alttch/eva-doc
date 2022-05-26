@@ -72,6 +72,10 @@
      - svc/eva-db-sql
      - :doc:`SQL databases state history</svc/eva-db-sql>`
      - 
+   * - :doc:`eva.controller.srN</svc/eva-controller-sr>`
+     - svc/eva-controller-sr
+     - :doc:`Script runner controller</svc/eva-controller-sr>`
+     - 
    * - :doc:`eva.svc.lockerN</svc/eva-svc-locker>`
      - svc/eva-svc-locker
      - :doc:`Shared lock service</svc/eva-svc-locker>`

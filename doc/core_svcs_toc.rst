@@ -21,5 +21,6 @@
     svc/eva4-svc-controller-py
     svc/eva-repl
     svc/eva-db-sql
+    svc/eva-controller-sr
     svc/eva-svc-locker
     svc/eva-controller-virtual

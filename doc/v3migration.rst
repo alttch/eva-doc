@@ -223,3 +223,12 @@ Deployment
 As v4 has brand-new internal :doc:`architecture </architecture>`,
 :doc:`/iac` has been significantly modified. Consider migrating
 deployment files.
+
+Item scripts
+------------
+
+There are no item scripts support in v4 core, however
+:doc:`/svc/eva-controller-sr` provides the very same functionality. Note that
+some options are changed:
+
+* action scripts no longer receive unit id as the first argument

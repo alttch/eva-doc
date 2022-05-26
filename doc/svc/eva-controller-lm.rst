@@ -3,7 +3,7 @@ Logic manager
 
 .. contents::
 
-.. include:: /plc/lm.rst
+.. include:: /svc_doc/lm.rst
 
 
 Setup

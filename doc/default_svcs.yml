@@ -16,9 +16,16 @@
   exe: svc/eva-controller-lm
   des: Logic manager
   txt: |
-    .. include:: /plc/lm.rst
+    .. include:: /svc_doc/lm.rst
   tpl: svc-tpl-controller-lm.yml
   api: svc/controller-lm/eapi.yml
+- nam: eva.controller.srN
+  exe: svc/eva-controller-sr
+  des: Script runner controller
+  txt: |
+    .. include:: /svc_doc/sr.rst
+  tpl: svc-tpl-controller-sr.yml
+  api: svc/controller-sr/eapi.yml
 - nam: eva.controller.enipN
   exe: svc/eva-controller-enip
   des: Ethernet/IP PLC controller gateway
