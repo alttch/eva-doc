@@ -43,7 +43,7 @@ with open('core_svcs_toc.rst', 'w') as tfh:
         print('   * - Suggested name', file=fh)
         print('     - Executable', file=fh)
         print('     - Description', file=fh)
-        print('     - Install', file=fh)
+        print('     - Deployed', file=fh)
         for svc in svcs:
             nam = svc['nam']
             exe = svc['exe']

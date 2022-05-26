@@ -3,7 +3,7 @@
    * - Suggested name
      - Executable
      - Description
-     - Install
+     - Deployed
    * - :doc:`eva.aaa.acl</svc/eva-aaa-acl>`
      - svc/eva-aaa-acl
      - :doc:`Default ACL service</svc/eva-aaa-acl>`
