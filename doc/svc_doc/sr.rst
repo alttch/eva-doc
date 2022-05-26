@@ -9,7 +9,7 @@ Commons
 
 When executed, a script has the following environment variables set:
 
-* **EVA_BUS_PATH** Path to the bus socket
+* **EVA_BUS_PATH** path to the bus socket
 * **EVA_DIR** EVA ICS directory
 * **EVA_ITEM_OID** item OID (e.g. *sensor:plant1/tests/env*)
 * **EVA_ITEM_FULL_ID** item full id (e.g. *plant1/test/env*)
