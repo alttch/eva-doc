@@ -30,6 +30,9 @@ To use EVA ICS in high-load environments, remember the following:
 * Consider splitting the node and move high-loaded services to other neighbor
   computers.
 
+* Move inventory to an external SQL database (edit :ref:`config_core` and set
+  *inventory_db* path). The inventory must be re-deployed after.
+
 Hardware
 ========
 
