@@ -1,0 +1,18 @@
+# SNMP trap handler controller
+command: svc/eva-controller-snmptrap
+bus:
+  path: var/elbus.ipc
+config:
+  listen: 0.0.0.0:1161
+  # accepted communities
+  communities:
+    - public
+  # accepted hosts/networks
+  hosts_allow:
+     - 127.0.0.1
+     - 10.0.0.0/8
+  # process lmacro OID
+  process: lmacro:tests/trap_handler
+  # verbose info logging
+  verbose: false
+user: nobody
