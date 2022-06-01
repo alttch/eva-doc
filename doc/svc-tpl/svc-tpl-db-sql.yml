@@ -6,6 +6,8 @@ bus:
 config:
   # database URI (supported: sqlite, mysql, postgres)
   db: sqlite:///tmp/eva_history.db
+  # db: mysql://USER:PASSWORD@HOST/DB
+  # db: postgres://USER:PASSWORD@HOST/DB
   # TS extension (supported: timescale), required for fills
   #ts_extension: timescale
   # event buffer time-to-live, seconds
