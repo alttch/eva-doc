@@ -18,10 +18,8 @@ config:
   verbose: false
   mibs:
     # if SNMP mibs are enabled, the process macro receives MIB-converted var
-    # names MIB conversion uses net-snmp (built-in) library, which may be
-    # considered as unsafe
-    #
-    # DO NOT USE MIBs FROM UNVERIFIED SOURCES, WHICH MAY CAUSE A CODE EXPLOIT
+    # names. MIB conversion uses net-snmp (built-in) library, which may be
+    # considered as unsafe. DO NOT USE MIBs FROM UNVERIFIED SOURCES.
     #
     # Usually requires installing base MIBs (libsnmp-base, snmp-mibs-downloader
     # and/or related system packages)
