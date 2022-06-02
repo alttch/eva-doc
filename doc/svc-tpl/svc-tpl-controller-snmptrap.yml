@@ -3,7 +3,7 @@ command: svc/eva-controller-snmptrap
 bus:
   path: var/elbus.ipc
 config:
-  listen: 0.0.0.0:1161
+  listen: 0.0.0.0:1162
   protocol: v2c # v1 or v2c (default)
   # accepted communities
   communities:
