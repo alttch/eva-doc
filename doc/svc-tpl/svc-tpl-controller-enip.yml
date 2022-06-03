@@ -54,6 +54,15 @@ config:
           #oid: sensor:tests/test1
           #type: real
           #value_delta: 0.5 # report event only if the new value difference is >=
+          #transform:
+            #- func: multiply # multiply the value by N
+              #params: [ 1000 ]
+            #- func: divide # divide the value by N
+              #params: [ 1000 ]
+            #- func: round # round the value to N digits after comma
+              #params: [ 2 ]
+            #- func: calc_speed # use the value as calc-speed gauge (with N seconds delta)
+              #params: [ 1 ]
     # pull bits
     #- tag: test_array.test_bool_array
       #map:
