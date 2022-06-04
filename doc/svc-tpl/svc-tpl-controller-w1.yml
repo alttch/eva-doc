@@ -33,6 +33,8 @@ config:
             #params: [ 2 ]
           #- func: calc_speed # use the value as calc-speed gauge (with N seconds delta)
             #params: [ 1 ]
+          #- func: invert # invert the value between 0/1
+          # #params: []
   # action queue size, per item, actions on overflow are not dropped but wait
   # their attempt to enter the queue. The core marks an action as failed if it
   # does not enter the queue for <action timeout> seconds

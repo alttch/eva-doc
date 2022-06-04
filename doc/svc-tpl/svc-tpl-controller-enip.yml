@@ -63,6 +63,8 @@ config:
               #params: [ 2 ]
             #- func: calc_speed # use the value as calc-speed gauge (with N seconds delta)
               #params: [ 1 ]
+            #- func: invert # invert the value between 0/1
+            # #params: []
     # pull bits
     #- tag: test_array.test_bool_array
       #map:
