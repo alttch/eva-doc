@@ -1,4 +1,4 @@
-# 1-Wire (OWFS) controller gateway service
+# 1-Wire (OWFS) controller service
 command: svc/eva-controller-w1
 bus:
   path: var/elbus.ipc
