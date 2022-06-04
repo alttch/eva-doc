@@ -1,4 +1,4 @@
-# Modbus controller gateway service
+# Modbus master controller service
 command: svc/eva-controller-modbus
 bus:
   path: var/elbus.ipc
