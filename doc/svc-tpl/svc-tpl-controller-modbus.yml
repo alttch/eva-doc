@@ -86,7 +86,7 @@ config:
   # their attempt to enter the queue. The core marks an action as failed if it
   # does not enter the queue for <action timeout> seconds
   action_queue_size: 32
-  # verify written tags for actions
+  # verify written data for actions
   actions_verify: true
   # OID map for actions
   #action_map:
