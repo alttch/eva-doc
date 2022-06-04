@@ -11,7 +11,7 @@ required to collect and send states in inverted way, physically sending "1" for
     :scale: 100%
     :alt: NC-relay
 
-    NC-relay. Light turns OFF when relay turns on
+    NC-relay. Light turns OFF when relay turns ON
 
 Majority of EVA ICS controllers and gateway services support inverted state
 transformation for both status and value using **transform** directive in
