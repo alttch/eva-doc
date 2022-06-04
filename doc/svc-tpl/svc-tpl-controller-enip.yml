@@ -83,7 +83,6 @@ config:
       #value:
         #tag: test_array.test_float_array[0]
         #type: real
-    #unit:tests/u1:
       #status:
         #tag: test_array.test_bool_array
         #type: bit

@@ -95,7 +95,6 @@ config:
         #reg: h100
         #type: real
         #unit: 1 # override the default modbus unit
-    #unit:tests/u1:
       #status:
         #reg: h200
         #type: bit

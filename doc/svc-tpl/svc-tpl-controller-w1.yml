@@ -44,7 +44,6 @@ config:
     #unit:tests/u1:
       #value:
         #path: 29.F2FBE3467CC2/PIO.0
-    #unit:tests/u1:
       #status:
         #path: 29.F2FBE3467CC2/PIO.2
 user: nobody
