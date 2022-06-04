@@ -142,6 +142,10 @@ tag.set
      - String
      - PLC tag
      - **yes**
+   * - **value**
+     - Any
+     - value to set
+     - **yes**
    * - **type**
      - String
      - Data type (e.g. DINT)

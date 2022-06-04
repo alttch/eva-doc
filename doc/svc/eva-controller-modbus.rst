@@ -146,6 +146,10 @@ reg.set
      - String
      - Register (h/i/d/c e.g. h100 for holding #100)
      - **yes**
+   * - **value**
+     - Any
+     - value to set
+     - **yes**
    * - **type**
      - String
      - Data type (e.g. DINT)

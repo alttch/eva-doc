@@ -271,6 +271,10 @@ w1.set
      - String
      - dev.path/attr
      - **yes**
+   * - **value**
+     - Any
+     - value to set
+     - **yes**
    * - **verify**
      - bool
      - Read the attribute back and verify its value
