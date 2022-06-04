@@ -6,7 +6,7 @@
      - Deployed
    * - :doc:`eva.controller.w1_N</svc/eva-controller-w1>`
      - svc/eva-controller-w1
-     - :doc:`1-Wire (OWFS) controller gateway</svc/eva-controller-w1>`
+     - :doc:`1-Wire (OWFS) controller</svc/eva-controller-w1>`
      - 
    * - :doc:`eva.aaa.acl</svc/eva-aaa-acl>`
      - svc/eva-aaa-acl

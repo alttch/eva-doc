@@ -46,7 +46,7 @@
   api: svc/controller-modbus/eapi.yml
 - nam: eva.controller.w1_N
   exe: svc/eva-controller-w1
-  des: 1-Wire (OWFS) controller gateway
+  des: 1-Wire (OWFS) controller
   txt: |
     Allows to communicate with 1-Wire equipment via `OWFS <https://owfs.org>`_
     (built-in). Supports both OWFS servers and direct 1-Wire bus access.

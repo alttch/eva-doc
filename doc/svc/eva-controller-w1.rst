@@ -1,5 +1,5 @@
-1-Wire (OWFS) controller gateway
-********************************
+1-Wire (OWFS) controller
+************************
 
 .. contents::
 
