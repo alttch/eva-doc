@@ -38,7 +38,8 @@ starting/ready statuses have additional fields:
 build: EVA ICS build (u64)
 version: EVA ICS version (string)
 
-# Bulk events
+Bulk events
+===========
 
 * byte 0: 0x00 (binary notification)
 
