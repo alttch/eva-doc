@@ -38,6 +38,8 @@ starting/ready statuses have additional fields:
 build: EVA ICS build (u64)
 version: EVA ICS version (string)
 
+.. _bulk_repl_event:
+
 Bulk events
 ===========
 
