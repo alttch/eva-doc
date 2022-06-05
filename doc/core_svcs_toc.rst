@@ -21,7 +21,7 @@
     svc/eva-svc-modbus-slave
     svc/eva4-svc-controller-py
     svc/eva-repl
-    svc/eva-controller-snmptrap
+    svc/eva-controller-trap
     svc/eva-db-sql
     svc/eva-controller-sr
     svc/eva-svc-locker

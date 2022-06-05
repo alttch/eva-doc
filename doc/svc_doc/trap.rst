@@ -1,8 +1,11 @@
-SNMP trap handler controller provides easy-to-use way to control SNMP v1/v2c
-traps.
+SNMP/UDP trap handler controller provides easy-to-use way to process SNMP
+v1/v2c and EVA ICS native UDP traps.
+
+SNMP Traps
+==========
 
 Processing
-==========
+----------
 
 A trap data is parsed and processed later with a custom :ref:`lmacro` with the
 following keyword arguments:
@@ -16,7 +19,7 @@ trap_vars       Map<String, Any>  Trap variables map as SNMP_OID=VAL
 ==============  ================  ==================================
 
 Supported SNMP data types
-=========================
+-------------------------
 
 The following SNMP data types are parsed and sent in *trap_vars*:
 

@@ -26,12 +26,12 @@
     .. include:: /svc_doc/sr.rst
   tpl: svc-tpl-controller-sr.yml
   api: svc/controller-sr/eapi.yml
-- nam: eva.controller.snmptrapN
-  exe: svc/eva-controller-snmptrap
-  des: SNMP trap handler
+- nam: eva.controller.trapN
+  exe: svc/eva-controller-trap
+  des: SNMP/UDP trap handler
   txt: |
-    .. include:: /svc_doc/snmptrap.rst
-  tpl: svc-tpl-controller-snmptrap.yml
+    .. include:: /svc_doc/trap.rst
+  tpl: svc-tpl-controller-trap.yml
 - nam: eva.controller.enipN
   exe: svc/eva-controller-enip
   des: Ethernet/IP PLC controller gateway

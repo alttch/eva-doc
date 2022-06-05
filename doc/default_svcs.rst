@@ -72,9 +72,9 @@
      - svc/eva-repl
      - :doc:`Replication service</svc/eva-repl>`
      - 
-   * - :doc:`eva.controller.snmptrapN</svc/eva-controller-snmptrap>`
-     - svc/eva-controller-snmptrap
-     - :doc:`SNMP trap handler</svc/eva-controller-snmptrap>`
+   * - :doc:`eva.controller.trapN</svc/eva-controller-trap>`
+     - svc/eva-controller-trap
+     - :doc:`SNMP/UDP trap handler</svc/eva-controller-trap>`
      - 
    * - :doc:`eva.db.sN</svc/eva-db-sql>`
      - svc/eva-db-sql
