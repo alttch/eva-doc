@@ -54,6 +54,14 @@ Bulk events
 * byte 5-: sender (string) 0x00 encryption key id (string) or nothing 0x00
   payload
 
+where protocol flags byte is (bits)
+
+0-3 - encryption type (0 - none, 1 - AES-128-GCM, 2 - AES-256-GCM)
+
+4-5 - compression type (0 - none, 1 - bzip2)
+
+6-7 - reserved
+
 RPC
 ===
 
@@ -74,13 +82,7 @@ following payload format:
 * byte 5-: sender (string) 0x00 encryption key id (string) or nothing 0x00
   payload
 
-where protocol flags byte is (bits)
-
-0-3 - encryption type (0 - none, 1 - AES-128-GCM, 2 - AES-256-GCM)
-
-4-5 - compression type (0 - none, 1 - bzip2)
-
-6-7 - reserved
+(see :ref:`bulk_repl_event` for protocol flags)
 
 Call payload format:
 
@@ -107,6 +109,7 @@ RPC replies are sent to *NODE/RPC/<caller_name>* topic in the following format:
 
 * byte 20-: payload (encrypted)
 
+(see :ref:`bulk_repl_event` for protocol flags)
 
 Response payload format:
 

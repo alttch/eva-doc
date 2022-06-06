@@ -88,3 +88,42 @@ Example:
 
 If a toggle-action is required to be executed, use "t" (or "toggle") as the
 status.
+
+Encrypted/compressed traps
+--------------------------
+
+The service supports encrypted and/or compressed trap payloads. The frame
+format is the same as for :ref:`replication bulk events <bulk_repl_event>`.
+
+For encrypted frames, *key_svc* parameter in the service config is mandatory.
+
+A Python example, which sends bzip2-compressed plus AES-256-GCM-encrypted
+native traps:
+
+.. code:: python
+
+    import socket
+    import bz2
+    from Cryptodome import Random
+    from Cryptodome.Cipher import AES
+    from hashlib import sha256
+
+    nonce = Random.new().read(12)
+    key_val = 'SECRET'
+    hasher = sha256()
+    hasher.update(key_val.encode())
+    cipher = AES.new(hasher.digest(), AES.MODE_GCM, nonce)
+    flags = 2 + (1 << 4)  # 2 = AES-256-GCM, 5th bit = 1 - bzip2
+    payload = """
+    u sensor:env/temp 1 25.57
+    a unit:tests/door t
+    a unit:tests/u2 1
+    """
+    frame, digest = cipher.encrypt_and_digest(bz2.compress(payload.encode()))
+    sender = ''
+    key_id = 'mykey'
+    binary_payload = b'\x00\x01' + flags.to_bytes(
+        1, 'little') + b'\x00\x00' + sender.encode() + b'\x00' + key_id.encode(
+        ) + b'\x00' + frame + digest + nonce
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock.sendto(binary_payload, ('127.0.0.1', 1162))
