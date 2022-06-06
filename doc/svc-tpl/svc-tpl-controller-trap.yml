@@ -16,7 +16,7 @@ config:
   hosts_allow:
      - 127.0.0.1
      - 10.0.0.0/8
-  # process lmacro OID
+  # process lmacro OID, not required for native UDP traps
   process: lmacro:tests/trap_handler
   # verbose info logging
   verbose: false
