@@ -405,6 +405,48 @@ key.undeploy
      - API keys or a list of API key IDs
      - **yes**
 
+.. _eva.aaa.localauth__user.create_one_time:
+
+user.create_one_time
+--------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Creates an one-time temporary user account, which is auto-deleted after the first login*
+   * - Parameters
+     - required
+   * - Returns
+     - One-time account credentials
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **acls**
+     - String
+     - ACL IDs
+     - **yes**
+   * - **login**
+     - String
+     - included into one-time login as OT.$login.$RANDOM
+     - no
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {
+      "login": "OT.test.eHlrGMgPlpqKmzTr",
+      "password": "QZoz0jYRaL2BSdKc"
+  }
+  
+
 .. _eva.aaa.localauth__user.deploy:
 
 user.deploy
