@@ -16,8 +16,12 @@ config:
   hosts_allow:
      - 127.0.0.1
      - 10.0.0.0/8
-  # process lmacro OID, not required for native UDP traps
+  # process lmacro OID, required for SNMP traps
   process: lmacro:tests/trap_handler
+  # key service, required for encrypted traps (native)
+  key_svc: eva.aaa.localauth
+  # allow encrypted traps only (native)
+  require_auth: false
   # verbose info logging
   verbose: false
   mibs:
