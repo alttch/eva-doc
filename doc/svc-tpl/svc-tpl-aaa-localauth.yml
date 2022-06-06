@@ -4,6 +4,8 @@ bus:
   path: var/elbus.ipc
 config:
   acl_svc: eva.aaa.acl
+  # allow one-time users
   one_time:
+    # one-time user account expiration (sec)
     expires: 10
 user: nobody
