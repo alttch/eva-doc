@@ -108,20 +108,22 @@ native traps:
     from Cryptodome.Cipher import AES
     from hashlib import sha256
 
-    nonce = Random.new().read(12)
+    sender = ''
+    key_id = 'mykey'
     key_val = 'SECRET'
-    hasher = sha256()
-    hasher.update(key_val.encode())
-    cipher = AES.new(hasher.digest(), AES.MODE_GCM, nonce)
-    flags = 2 + (1 << 4)  # 2 = AES-256-GCM, 5th bit = 1 - bzip2
+
     payload = """
     u sensor:env/temp 1 25.57
     a unit:tests/door t
     a unit:tests/u2 1
     """
+
+    flags = 2 + (1 << 4)  # 2 = AES-256-GCM, 5th bit = 1 - bzip2
+    nonce = Random.new().read(12)
+    hasher = sha256()
+    hasher.update(key_val.encode())
+    cipher = AES.new(hasher.digest(), AES.MODE_GCM, nonce)
     frame, digest = cipher.encrypt_and_digest(bz2.compress(payload.encode()))
-    sender = ''
-    key_id = 'mykey'
     binary_payload = b'\x00\x01' + flags.to_bytes(
         1, 'little') + b'\x00\x00' + sender.encode() + b'\x00' + key_id.encode(
         ) + b'\x00' + frame + digest + nonce
