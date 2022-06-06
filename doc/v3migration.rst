@@ -232,3 +232,9 @@ There are no item scripts support in v4 core, however
 some options are changed:
 
 * action scripts no longer receive unit id as the first argument
+
+UDP API
+-------
+
+There is no UC UDP API in v4, however :doc:`/svc/eva-controller-trap` provides
+the very same functionality.

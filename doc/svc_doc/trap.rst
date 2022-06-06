@@ -35,3 +35,51 @@ String       String
 ===========  ===================
 
 Unsupported data types are ignored.
+
+Native traps
+============
+
+EVA ICS native traps is a native UDP signaling trap protocol, which replaces v3
+UC UDP API.
+
+The native trap structure is a string with new-line (LF) separated commands,
+e.g.:
+
+.. code::
+
+    u sensor:env/temp 1 25.57
+    a unit:tests/motor1 1 34.22
+    a unit:tests/relay1 toggle
+
+Updates
+-------
+
+Update commands have the following format:
+
+.. code::
+
+    u[pdate] <OID> <status> [value]
+
+Example:
+
+.. code::
+
+    u sensor:env/temp 1 25.57
+
+Actions
+-------
+
+Action commands have the following format:
+
+.. code::
+
+    a[action] <OID> <status> [value]
+
+Example:
+
+.. code::
+
+    a unit:tests/motor1 1 34.22
+
+If a toggle-action is required to be executed, use "t" (or "toggle") as the
+status.
