@@ -51,6 +51,11 @@ e.g.:
     a unit:tests/motor1 1 34.22
     a unit:tests/relay1 toggle
 
+.. note::
+
+    Native traps are processed by the service directly, the process macro is
+    not required to be set.
+
 Updates
 -------
 
