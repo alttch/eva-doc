@@ -212,6 +212,12 @@ The only steps are required:
   server logs or Web browser development console to see which deprecated
   methods are called)
 
+EVA JS Framework WASM extension
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The old framework WASM extension builds are not compatible with EVA ICS v4. Ask
+your Enterprise pack vendor to provide a new extension tarball.
+
 Python macros
 -------------
 
