@@ -158,4 +158,12 @@ The service can send events with the following subjects:
 
     * **restart** server is going to be restarted soon
 
+.. note::
+
+    Log events are collected from the local IPC bus. To let web sockets
+    subscribe and receive log messages, a :ref:`core bus logger <config_logs>`
+    MUST be configured.
+
+    The service allows subscribing to log levels info and above.
+
 .. include:: /hmi/ws_api.rst

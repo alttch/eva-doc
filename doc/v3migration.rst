@@ -178,7 +178,10 @@ user/password pair. Tokens for API keys are not supported.
 HMI web sockets
 ~~~~~~~~~~~~~~~
 
-HMI web sockets can be connected using session tokens only.
+* HMI web sockets can be connected using session tokens only
+
+* When subscribed to logs, note that "warning" level has been changed to
+  "warn".
 
 EVA JS Framework
 ~~~~~~~~~~~~~~~~

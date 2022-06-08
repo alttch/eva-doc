@@ -28,6 +28,21 @@ ping
    * - Returns
      - {s:"pong"}
 
+.. _hmi_ws__subscribe.log:
+
+subscribe.log
+-------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Subscribes to log events*
+   * - Parameters
+     - u8 (20 = info, 30 = warn, 40 = error)
+   * - Returns
+     - *nothing*
+
 .. _hmi_ws__subscribe.state:
 
 subscribe.state
