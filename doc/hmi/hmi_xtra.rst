@@ -127,6 +127,8 @@ Example:
         "params": ["#"]
     }
 
+.. include:: /hmi/ws_api.rst
+
 Events
 ------
 
@@ -165,5 +167,3 @@ The service can send events with the following subjects:
     MUST be configured.
 
     The service allows subscribing to log levels info and above.
-
-.. include:: /hmi/ws_api.rst
