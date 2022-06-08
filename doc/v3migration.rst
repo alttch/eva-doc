@@ -200,7 +200,7 @@ everything.
 
 The only steps are required:
 
-* update the framework to the version 0.3.34 or above.
+* update the framework to the version 0.3.35 or above.
 
 * switch the framework to V4 API:
 
