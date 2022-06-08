@@ -110,6 +110,8 @@ General info
 
 * the item state field "set_time" has been changed to "t"
 
+* the item state field "controller_id" has been changed to "node"
+
 * the item state fields "description" and "location" are no longer available.
   Instead, use "meta" field, which can contain any customizable object.
 
