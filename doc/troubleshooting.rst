@@ -24,7 +24,7 @@ dump file with :doc:`cli`:
 
     eva dump
     # or directly with eva-cloud-manager
-    /opt/eva4/bin/eva-cloud-manager dump
+    /opt/eva4/bin/eva-cloud-manager node dump
 
 .. note::
 
@@ -58,7 +58,7 @@ service-request dump:
 
     eva dump -s
     # or directly with eva-cloud-manager
-    /opt/eva4/bin/eva-cloud-manager dump -s
+    /opt/eva4/bin/eva-cloud-manager node dump -s
 
 Such dumps are RSA-encrypted and can be opened by EVA ICS core-team engineers
 only.
