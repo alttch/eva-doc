@@ -44,6 +44,7 @@ SCADA platform for Industry-4.0 automated control systems.
     cli
     iac
     highload
+    troubleshooting
     enterprise
 
 .. include:: core_svcs_toc.rst
