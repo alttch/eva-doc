@@ -131,14 +131,14 @@ HMI HTTP API methods
 
 Methods were changed as the following:
 
-==================  =====================================
+==================  ============================================
 V3 method           V4 Method
-==================  =====================================
+==================  ============================================
 test                test (unchanged)
 login               login (unchanged)
 logout              logout ("k" parameter changed to "a")
 state               item.state
-state_history       item.state_history
+state_history       item.state_history (accepts timestamps only)
 state_log           item.state_log
 log_get             log.get
 action              action (unchanged)
@@ -155,7 +155,7 @@ increment           lvar.incr
 decrement           lvar.decr
 get_neighbor_list   session.list_neighbors
 set_token_readonly  session.set_readonly
-==================  =====================================
+==================  ============================================
 
 V3 methods, listed above, still work, but are deprecated and will be removed
 soon. Please update your HMI applications to use the new method names.
