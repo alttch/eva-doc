@@ -1,12 +1,29 @@
+# Queue size
+queue_size: 512
 # ELBUS buffer size (core + defaults for services)
 buf_size: 8192
 # Buffer time-to-live (microseconds)
 buf_ttl: 10
-# The default queue size
-queue_size: 512
-# ELBUS sockets
+# ELBUS sockets, default timeout = core timeout
 sockets:
   # always keep this one unles you know what you are doing
   - var/elbus.ipc
-  # allow ELBUS calls from remotes (insecure, for private networks only)
+  # allow ELBUS calls from remotes (zero security)
   #- 0.0.0.0:7777
+  # allow ELBUS calls from remotes (with config/ACLs)
+  #- path: 0.0.0.0:7778
+    #buf_size: 16384 # override the default buf size
+    #buf_ttl: 20 # override the default buf ttl
+    #timeout: 10 # override the default timeout
+    #clients: # if defined, AAA map is applied
+      #- name: some.client1
+        #hosts: # allowed hosts (ignored for UNUX sockets)
+          #- 192.168.22.55/32
+        #p2p: # allowed p2p peers
+          #- "*"
+        #broadcast: # allowed broadcast requests
+          #- "*"
+        #publish: # allowed topics to publish
+          #- "#"
+        #subscribe: # allowed topics to subscribe
+          #- "#"

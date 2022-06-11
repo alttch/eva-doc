@@ -23,3 +23,5 @@ config:
   mime_types: share/mime.yml
   buf_size: 16384
 user: eva
+timeout:
+  default: 10
