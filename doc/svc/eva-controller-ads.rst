@@ -100,10 +100,10 @@ symbol.get
      - Retry attempts
      - no
 
-.. _eva.controller.ads__tag.set:
+.. _eva.controller.ads__symbol.set:
 
-tag.set
--------
+symbol.set
+----------
 
 .. list-table::
    :header-rows: 0
