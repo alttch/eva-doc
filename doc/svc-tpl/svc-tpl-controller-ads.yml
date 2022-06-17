@@ -33,10 +33,10 @@ config:
   # block
   #
   #pull:
-    # pull an array
-    - symbol: test_arrays.test_float_array
+     #pull an array
+    #- symbol: test_arrays.test_float_array
       #map:
-        #- idx: 0 # array index, starting from zero
+        #- idx: 0 # payload index, starting from zero
         #  oid: sensor:tests/test0
         #  prop: value # status or value (default = value)
         #- idx: 4
