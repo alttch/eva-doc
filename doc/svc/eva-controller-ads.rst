@@ -139,7 +139,7 @@ var.set
      - Required
    * - **i**
      - String
-     - symbil name
+     - symbol name
      - **yes**
    * - **value**
      - Any
