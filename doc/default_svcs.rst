@@ -88,6 +88,10 @@
      - svc/eva-svc-locker
      - :doc:`Shared lock service</svc/eva-svc-locker>`
      - 
+   * - :doc:`eva.controller.adsN</svc/eva-controller-ads>`
+     - svc/eva-controller-ads
+     - :doc:`TwinCAT ADS gateway</svc/eva-controller-ads>`
+     - 
    * - :doc:`eva.controller.virtN</svc/eva-controller-virtual>`
      - svc/eva-controller-virtual
      - :doc:`Virtual controller</svc/eva-controller-virtual>`

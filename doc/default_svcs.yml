@@ -38,6 +38,12 @@
   txt: Allows to communicate with Ethernet/IP-powered PLCs and other equipment.
   tpl: svc-tpl-controller-enip.yml
   api: svc/controller-enip/eapi.yml
+- nam: eva.controller.adsN
+  exe: svc/eva-controller-ads
+  des: TwinCAT ADS gateway
+  txt: Allows to communicate with Beckhoff TwinCAT ADS PLCs and other equipment.
+  tpl: svc-tpl-controller-ads.yml
+  api: svc/controller-ads/eapi.yml
 - nam: eva.controller.modbusN
   exe: svc/eva-controller-modbus
   des: Modbus master controller
