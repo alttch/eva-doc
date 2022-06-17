@@ -65,10 +65,25 @@ kill
    * - Returns
      - See :ref:`unit_action`
 
-.. _eva.controller.ads__symbol.get:
+.. _eva.controller.ads__terminate:
 
-symbol.get
-----------
+terminate
+---------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Attempts to terminate/cancel a unit action*
+   * - Parameters
+     - See :ref:`unit_action`
+   * - Returns
+     - See :ref:`unit_action`
+
+.. _eva.controller.ads__var.get:
+
+var.get
+-------
 
 .. list-table::
    :header-rows: 0
@@ -87,7 +102,7 @@ symbol.get
      - Type
      - Description
      - Required
-   * - **symbol**
+   * - **i**
      - String
      - symbol name
      - **yes**
@@ -100,10 +115,10 @@ symbol.get
      - Retry attempts
      - no
 
-.. _eva.controller.ads__symbol.set:
+.. _eva.controller.ads__var.set:
 
-symbol.set
-----------
+var.set
+-------
 
 .. list-table::
    :header-rows: 0
@@ -122,7 +137,7 @@ symbol.set
      - Type
      - Description
      - Required
-   * - **symbol**
+   * - **i**
      - String
      - symbil name
      - **yes**
@@ -142,18 +157,3 @@ symbol.set
      - u8
      - Retry attempts
      - no
-
-.. _eva.controller.ads__terminate:
-
-terminate
----------
-
-.. list-table::
-   :header-rows: 0
-
-   * - Description
-     - *Attempts to terminate/cancel a unit action*
-   * - Parameters
-     - See :ref:`unit_action`
-   * - Returns
-     - See :ref:`unit_action`

@@ -65,9 +65,24 @@ kill
    * - Returns
      - See :ref:`unit_action`
 
-.. _eva.controller.enip__tag.get:
+.. _eva.controller.enip__terminate:
 
-tag.get
+terminate
+---------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Attempts to terminate/cancel a unit action*
+   * - Parameters
+     - See :ref:`unit_action`
+   * - Returns
+     - See :ref:`unit_action`
+
+.. _eva.controller.enip__var.get:
+
+var.get
 -------
 
 .. list-table::
@@ -87,7 +102,7 @@ tag.get
      - Type
      - Description
      - Required
-   * - **tag**
+   * - **i**
      - String
      - PLC tag
      - **yes**
@@ -116,9 +131,9 @@ tag.get
      - Retry attempts
      - no
 
-.. _eva.controller.enip__tag.set:
+.. _eva.controller.enip__var.set:
 
-tag.set
+var.set
 -------
 
 .. list-table::
@@ -138,7 +153,7 @@ tag.set
      - Type
      - Description
      - Required
-   * - **tag**
+   * - **i**
      - String
      - PLC tag
      - **yes**
@@ -166,18 +181,3 @@ tag.set
      - u8
      - Retry attempts
      - no
-
-.. _eva.controller.enip__terminate:
-
-terminate
----------
-
-.. list-table::
-   :header-rows: 0
-
-   * - Description
-     - *Attempts to terminate/cancel a unit action*
-   * - Parameters
-     - See :ref:`unit_action`
-   * - Returns
-     - See :ref:`unit_action`
