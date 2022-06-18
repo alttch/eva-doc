@@ -190,7 +190,7 @@ var.set_bulk
      - **yes**
    * - **verify**
      - bool
-     - Read the symbol back and verify its value
+     - Read the symbols back and verify their values
      - no
    * - **timeout**
      - f64
