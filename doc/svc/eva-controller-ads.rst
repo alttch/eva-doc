@@ -157,3 +157,55 @@ var.set
      - u8
      - Retry attempts
      - no
+
+.. _eva.controller.ads__var.set_bulk:
+
+var.set_bulk
+------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Set symbols on ADS in bulk*
+   * - Parameters
+     - required
+   * - Returns
+     - Operation status: failed-to-set symbols list or an empty dict
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - Vec<String>
+     - symbol names
+     - **yes**
+   * - **values**
+     - Vec<Any>
+     - values to set
+     - **yes**
+   * - **verify**
+     - bool
+     - Read the symbol back and verify its value
+     - no
+   * - **timeout**
+     - f64
+     - Max operation timeout
+     - no
+   * - **retries**
+     - u8
+     - Retry attempts
+     - no
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {
+    "failed": [ "var1" ]
+  }
