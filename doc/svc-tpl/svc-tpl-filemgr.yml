@@ -1,7 +1,7 @@
 # File manager service
 command: svc/eva-filemgr
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   protected:
     - registry

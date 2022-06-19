@@ -146,7 +146,7 @@ before continue.
         - id: eva.svc.locker2
           params:
             bus:
-              path: var/elbus.ipc
+              path: var/bus.ipc
             command: svc/eva-svc-locker
             config:
               locks:

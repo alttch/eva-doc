@@ -1,6 +1,6 @@
 # Core logger configuration
 # Levels: trace, debug, info, warn, error
-# Only a single console/memory/elbus logger is supported
+# Only a single console/memory/bus logger is supported
 - output: console
   level: info
 - output: bus

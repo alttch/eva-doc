@@ -2,7 +2,7 @@
 command: svc/eva-repl
 workers: 2
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   pubsub:
     # mqtt or psrt

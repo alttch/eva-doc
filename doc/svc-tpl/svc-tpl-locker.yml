@@ -1,7 +1,7 @@
 # Locker service
 command: svc/eva-svc-locker
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   locks:
    - lock1

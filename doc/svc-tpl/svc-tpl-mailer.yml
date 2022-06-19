@@ -1,7 +1,7 @@
 # Mailer service (SMTP gateway)
 command: svc/eva-svc-mailer
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   #from: eva@domain
   #default_rcp:

@@ -65,7 +65,7 @@
     Provides Modbus slave context.
 
     A :doc:`/svc/eva-controller-modbus` can be used later to pull the context
-    and analyze its data (Modbus via ELBUS is highly recommended).
+    and analyze its data (Modbus via the native bus is highly recommended).
   tpl: svc-tpl-modbus-slave.yml
   api: svc/svc-modbus-slave/eapi.yml
 - nam: eva.controller.py

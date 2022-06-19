@@ -1,7 +1,7 @@
 # Local users and API keys service
 command: svc/eva-aaa-localauth
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   acl_svc: eva.aaa.acl
   # allow one-time users

@@ -21,13 +21,13 @@ Create the service using :ref:`eva-shell`:
 
     eva svc create eva.controller.virt1 /opt/eva4/share/svc-tpl/svc-tpl-controller-virtual.yml
 
-or using ELBUS CLI client:
+or using the bus CLI client:
 
 .. code:: shell
 
     cd /opt/eva4
     cat DEPLOY.yml | ./bin/yml2mp | \
-        ./sbin/elbus ./var/elbus.ipc rpc call eva.core svc.deploy -
+        ./sbin/bus ./var/bus.ipc rpc call eva.core svc.deploy -
 
 (see :ref:`eva.core::svc.deploy<eva.core__svc.deploy>` for more info)
 

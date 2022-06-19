@@ -1,7 +1,7 @@
 # Scrpt-runner controller service
 command: svc/eva-controller-sr
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   update:
     - command: xc/sr/temp_update.sh

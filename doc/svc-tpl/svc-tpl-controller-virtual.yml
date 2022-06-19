@@ -1,5 +1,5 @@
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 command: svc/eva-controller-virtual
 config:
   # auto-create virtual items on set/action

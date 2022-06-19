@@ -1,7 +1,7 @@
 # State expiration service
 command: svc/eva-svc-expiration
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   ## check interval, seconds
   interval: 0.1

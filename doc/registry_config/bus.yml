@@ -1,16 +1,16 @@
-# Queue size
+# queue size
 queue_size: 512
-# ELBUS buffer size (core + defaults for services)
+# bus buffer size (core + defaults for services)
 buf_size: 8192
-# Buffer time-to-live (microseconds)
+# buffer time-to-live (microseconds)
 buf_ttl: 10
-# ELBUS sockets, default timeout = core timeout
+# bus sockets, default timeout = core timeout
 sockets:
   # always keep this one unles you know what you are doing
-  - var/elbus.ipc
-  # allow ELBUS calls from remotes (zero security)
+  - var/bus.ipc
+  # allow bus calls from remotes (zero security)
   #- 0.0.0.0:7777
-  # allow ELBUS calls from remotes (with config/ACLs)
+  # allow bus calls from remotes (with config/ACLs)
   #- path: 0.0.0.0:7778
     #buf_size: 16384 # override the default buf size
     #buf_ttl: 20 # override the default buf ttl

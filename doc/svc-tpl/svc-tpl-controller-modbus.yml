@@ -1,13 +1,13 @@
 # Modbus master controller service
 command: svc/eva-controller-modbus
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   modbus: 
-    protocol: tcp # udp, rtu, ascii or elbus
+    protocol: tcp # udp, rtu, ascii or the native bus
     path: 192.168.1.200:502 # for serial:
     #  /dev/ttySXX:SPEED:DATABITS:PARITY:STOPBITS, e.g. /dev/ttyS0:9600:8:N:1
-    #  for ELBUS: service name
+    #  for the local bus: service name
     unit: 1 # default modbus unit
     # frame_delay: 0.1 # optional serial frame delay (sec), default: 0.1 (100ms)
   # panic on critical errors in X seconds after happened (0 - panic immediately)

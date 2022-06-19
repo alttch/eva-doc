@@ -1,7 +1,7 @@
 # Logic manager programmable controller
 command: svc/eva-controller-lm
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   rules: []
     #- id: rule1

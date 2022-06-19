@@ -20,8 +20,8 @@ with a bus call:
     # with eva-shell
     /opt/eva4/bin/eva svc call eva.hmi.default tpl.reload
 
-    # or with ELBUS client directly
-    ./sbin/elbus ./var/elbus.ipc rpc call eva.hmi.default tpl.reload
+    # or with the bus client directly
+    ./sbin/bus ./var/bus.ipc rpc call eva.hmi.default tpl.reload
 
 Template files
 ==============

@@ -1,7 +1,7 @@
 # Active directory authentication service
 command: path/to/eva-aaa-msad
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   ## ACL service
   acl_svc: eva.aaa.acl

@@ -38,7 +38,7 @@ Each EVA ICS v4 node has the following architecture:
   functions. The external service processes can be launched manually.
 
 * External equipment (such as custom hardware controllers) can be connected to
-  the bus directly (if externals sockets are specified in "eva/config/elbus"
+  the bus directly (if externals sockets are specified in "eva/config/bus"
   registry key).
 
 * Multiple EVA ICS nodes can be :doc:`replicated</svc/eva-repl>` and interact
@@ -126,7 +126,7 @@ If deployed with eva-shell, the payload must have the following minimal format:
       params:
         command: # path to the service executable
         bus:
-            path: var/elbus.ipc # for the local bus
+            path: var/bus.ipc # for the local bus
         config:
             # service configuration
 
@@ -144,7 +144,7 @@ Service methods can be called via bus RPC directly, e.g.:
 
 .. code:: shell
 
-    /opt/eva4/sbin/elbus /opt/eva4/var/elbus.ipc rpc call eva.aaa.acl acl.list
+    /opt/eva4/sbin/bus /opt/eva4/var/bus.ipc rpc call eva.aaa.acl acl.list
 
 If payload is required, it must be packed to MessagePack. A tool "bin/yml2mp"
 can be used to convert YAML files to MessagePack from the command-line.

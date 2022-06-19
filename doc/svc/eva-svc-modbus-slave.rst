@@ -6,7 +6,7 @@ Modbus slave service
 Provides Modbus slave context.
 
 A :doc:`/svc/eva-controller-modbus` can be used later to pull the context
-and analyze its data (Modbus via ELBUS is highly recommended).
+and analyze its data (Modbus via the native bus is highly recommended).
 
 
 Setup
@@ -23,13 +23,13 @@ Create the service using :ref:`eva-shell`:
 
     eva svc create eva.svc.modbus1 /opt/eva4/share/svc-tpl/svc-tpl-modbus-slave.yml
 
-or using ELBUS CLI client:
+or using the bus CLI client:
 
 .. code:: shell
 
     cd /opt/eva4
     cat DEPLOY.yml | ./bin/yml2mp | \
-        ./sbin/elbus ./var/elbus.ipc rpc call eva.core svc.deploy -
+        ./sbin/bus ./var/bus.ipc rpc call eva.core svc.deploy -
 
 (see :ref:`eva.core::svc.deploy<eva.core__svc.deploy>` for more info)
 
@@ -48,7 +48,7 @@ MB
    :header-rows: 0
 
    * - Description
-     - *([0x4D 0x42]) Executes Modbus method via ELBUS*
+     - *([0x4D 0x42]) Executes Modbus method via the native bus*
    * - Parameters
      - Modbus request frame, RTU-encoded, unit ID must be 1
    * - Returns

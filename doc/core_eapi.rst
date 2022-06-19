@@ -1275,11 +1275,11 @@ svc.get_params
       "bus": {
           "buf_size": 8192,
           "buf_ttl": 10,
-          "path": "var/elbus.ipc",
+          "path": "var/bus.ipc",
           "ping_interval": 1.0,
           "queue_size": 8192,
           "timeout": null,
-          "type": "elbus"
+          "type": "native"
       },
       "command": "target/debug/eva-svc-modbus-slave",
       "config": {

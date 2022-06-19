@@ -1,7 +1,7 @@
 # Event-to-file writer service
 command: svc/eva-svc-filewriter
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   file_path: /tmp/1.csv
   # flush data after each block (slow, but more reliable)

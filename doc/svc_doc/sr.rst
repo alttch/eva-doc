@@ -61,7 +61,7 @@ bus calls. In case if the state is required, it can be obtained manually via a
 
 .. code:: shell
 
-    "${EVA_DIR}/sbin/elbus" -s "$EVA_BUS_PATH" \
+    "${EVA_DIR}/sbin/bus" -s "$EVA_BUS_PATH" \
         rpc call eva.core item.state "i=$EVA_ITEM_OID" | jq -r ".[0]"
 
 It is recommended to store the state in a variable and use *jq* later to parse

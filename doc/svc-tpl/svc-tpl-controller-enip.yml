@@ -1,7 +1,7 @@
 # EthernetIP PLC controller gateway service
 command: svc/eva-controller-enip
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   plc: 
     # only ab_eip is supported

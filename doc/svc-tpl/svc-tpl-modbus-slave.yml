@@ -10,7 +10,7 @@
 #
 command: svc/eva-svc-modbus-slave
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   persistent: true # persistent context
   listen:

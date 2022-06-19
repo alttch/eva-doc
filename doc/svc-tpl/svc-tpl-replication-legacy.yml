@@ -3,7 +3,7 @@
 # Requires https://pypi.org/project/eva4-repl-legacy/ Python module installed
 command: venv/bin/eva4-svc-repl-legacy
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   key_svc: eva.aaa.localauth
   ## psrt configuration

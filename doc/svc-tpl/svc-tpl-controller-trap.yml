@@ -1,7 +1,7 @@
 # SNMP trap handler controller
 command: svc/eva-controller-trap
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   listen: 0.0.0.0:1162
   # valid values

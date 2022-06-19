@@ -14,14 +14,14 @@ RPC layer for procedure calls. The default encoding payload for all RPC calls
 Calling EAPI methods
 ====================
 
-Service EAPI methods can be called either with ELBUS clients or with included
-CLI ELBUS client (EVA_DIR/sbin/elbus). Methods of individual services
+Service EAPI methods can be called either with bus clients or with included
+CLI bus client (EVA_DIR/sbin/bus). Methods of individual services
 (including internal ones) can be called as well with :ref:`eva-shell`, using
 "svc call" command.
 
 .. note::
 
-    In ELBUS RPC, "no payload" and "null payload" have different meaning. In
+    In the bus RPC, "no payload" and "null payload" have different meaning. In
     EVA ICS, "none" payload means that a method accepts no payload. If the
     method is called with "null" payload, it may return invalid parameters
     error.
@@ -83,14 +83,14 @@ Error codes
 * ERR_CODE_METHOD_NOT_FOUND: -32601
 * ERR_CODE_INVALID_PARAMS: -32602
 * ERR_CODE_INTERNAL_RPC: -32603
-* ERR_CODE_ELBUS_CLIENT_NOT_REGISTERED: -32113
-* ERR_CODE_ELBUS_DATA: -32114
-* ERR_CODE_ELBUS_IO: -32115
-* ERR_CODE_ELBUS_OTHER: -32116
-* ERR_CODE_ELBUS_NOT_SUPPORTED: -32117
-* ERR_CODE_ELBUS_BUSY: -32118
-* ERR_CODE_ELBUS_NOT_DELIVERED: -32119
-* ERR_CODE_ELBUS_TIMEOUT: -32120
+* ERR_CODE_BUS_CLIENT_NOT_REGISTERED: -32113
+* ERR_CODE_BUS_DATA: -32114
+* ERR_CODE_BUS_IO: -32115
+* ERR_CODE_BUS_OTHER: -32116
+* ERR_CODE_BUS_NOT_SUPPORTED: -32117
+* ERR_CODE_BUS_BUSY: -32118
+* ERR_CODE_BUS_NOT_DELIVERED: -32119
+* ERR_CODE_BUS_TIMEOUT: -32120
 
 EAPI Basics
 ===========
@@ -135,7 +135,7 @@ Example meta data format (info+methods):
 
     {
         "author": "Bohemia Automation",
-        "description": "Virtual ELBUS controller",
+        "description": "Virtual bus controller",
         "version": "4.0.0"
         "methods": {
             "get": {
@@ -174,7 +174,7 @@ Communications
 The core
 --------
 
-The core (eva.core) hosts ELBUS broker (.broker), the registry (eva.registry)
+The core (eva.core) hosts bus broker (.broker), the registry (eva.registry)
 and the main node launcher (eva.launcher.main). All these services are embedded
 in a single OS process.
 
@@ -309,8 +309,8 @@ other optional services. All messages are in plain text
 
 levels (lowercase): trace, debug, info, warn, error
 
-if the core elbus logger is enabled, the core sends aggregated log events to
-LOG/EV/level elbus topics.
+if the core bus logger is enabled, the core sends aggregated log events to
+LOG/EV/level bus topics.
 
 Auth
 ----
@@ -377,8 +377,8 @@ STDIN:
         eapi_version: EAPI version
         path: path to EVA ICS installation directory
     bus:
-        type: elbus (always)
-        path: path to the ELBUS socket (required)
+        type: "native" (always)
+        path: path to the bus socket (required)
         timeout: bus timeout (optional)
         buf_ttl: buffer ttl (seconds)
         buf_size: buffer size (optional, not required for JS)
@@ -402,7 +402,7 @@ Events
 ------
 
 Controllers are not pulled by the core, they must send events from its internal
-registers to RAW/OID ELBUS topic.
+registers to RAW/OID bus topic.
 
 .. _unit_action:
 

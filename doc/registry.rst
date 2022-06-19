@@ -72,7 +72,7 @@ execute:
 
 .. code:: shell
 
-    /opt/eva4/sbin/elbus /opt/eva4/var/elbus.ipc rpc call eva.registry safe_purge
+    /opt/eva4/sbin/bus /opt/eva4/var/bus.ipc rpc call eva.registry safe_purge
 
 The same can be done with eva-shell:
 
@@ -88,7 +88,7 @@ feature:
 
 .. code:: shell
 
-    /opt/eva4/sbin/elbus /opt/eva4/var/elbus.ipc rpc call eva.registry server_set name=auto_flush value=false
+    /opt/eva4/sbin/bus /opt/eva4/var/bus.ipc rpc call eva.registry server_set name=auto_flush value=false
 
 The same can be done with eva-shell:
 

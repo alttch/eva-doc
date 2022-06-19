@@ -61,7 +61,7 @@ Bus CLI
 =======
 
 Various calls to the EVA ICS core and services can be performed via `ELBUS
-<https://elbus.bma.ai/>`_ with "sbin/elbus" command-line tool.
+<https://elbus.bma.ai/>`_ with "sbin/bus" command-line tool.
 
 .. note::
 

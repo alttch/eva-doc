@@ -1,7 +1,7 @@
 # TwinCAT ADS controller gateway service
 command: svc/eva-controller-ads
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   ads: 
     host: 192.168.1.100

@@ -2,7 +2,7 @@
 command: svc/eva-db-sql
 workers: 2
 bus:
-  path: var/elbus.ipc
+  path: var/bus.ipc
 config:
   # database URI (supported: sqlite, mysql, postgres)
   db: sqlite:///tmp/eva_history.db
