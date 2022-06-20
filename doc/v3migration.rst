@@ -193,6 +193,13 @@ HMI web sockets
 * When subscribed to logs, note that "warning" level has been changed to
   "warn".
 
+HMI PVT/RPVT
+~~~~~~~~~~~~
+
+Certain pvt/rpvt functions (directory listing, image processing) have been
+removed. Use custom intermediate RPVT servers instead (e.g. `cctvproxy
+<https://pypi.org/project/cctvproxy/>`_ for camera image processing).
+
 EVA JS Framework
 ~~~~~~~~~~~~~~~~
 
@@ -218,7 +225,7 @@ EVA JS Framework WASM extension
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The old framework WASM extension builds are not compatible with EVA ICS v4. Ask
-your Enterprise pack vendor to provide a new extension tarball.
+your Enterprise pack vendor to provide a new extension tar-ball.
 
 Python macros
 -------------
