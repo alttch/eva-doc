@@ -64,6 +64,12 @@ not possible to do remote deployment for V3 nodes from V4 central ones.
 For the deployment tasks, consider leaving a few V3 SFA nodes and connect
 secondaries to both V3 and V4 centrals.
 
+V3 and V4 nodes on the same machine
+-----------------------------------
+
+EVA ICS v3 and v4 can live on the same machine with no problems and do not
+interfere each other.
+
 Logic
 -----
 

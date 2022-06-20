@@ -27,3 +27,9 @@ Items
 -----
 
 Cycle states are not supported (there are no replicated cycles in v4)
+
+rpvt
+----
+
+v4-v3 rpvt calls are not supported: if a node can not be migrated to v4 yet,
+consider installing an additional local v4 node for rpvt functionality only.
