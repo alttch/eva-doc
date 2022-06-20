@@ -9,8 +9,6 @@ suicide_timeout: 10
 instant_save: true
 # keep action history in memory (seconds)
 keep_action_history: 86400
-# keep the pid file path as default unless you know what you are doing
-pid_file: var/eva.pid
 # optional inventory database (for huge projects)
 # SQLite:
 #inventory_db: sqlite:///opt/eva4/var/inventory.db
