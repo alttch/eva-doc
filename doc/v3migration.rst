@@ -206,6 +206,9 @@ Certain pvt/rpvt functions (directory listing, image processing) have been
 removed. Use custom intermediate RPVT servers instead (e.g. `cctvproxy
 <https://pypi.org/project/cctvproxy/>`_ for camera image processing).
 
+:ref:`RPVT <rpvt>` calls are slightly modified to make ACLs more clear and
+simple.
+
 EVA JS Framework
 ~~~~~~~~~~~~~~~~
 

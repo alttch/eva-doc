@@ -1,6 +1,8 @@
 Serving private data (PVT)
 **************************
 
+.. contents::
+
 While developing the interfaces for :doc:`/svc/eva-hmi`, integrators face the
 issue of the private data protection: the UI is loaded with the JavaScript
 application that runs in the browser and requires authentication to access the
@@ -89,3 +91,90 @@ specific registry folders/keys. ACLs for registry keys should start with
 
 By default, registry data is served as JSON. To change format and/or to add
 locale translation, see :doc:`/hmi/serve_as`.
+
+.. _rpvt:
+
+Serving remote resources (RPVT)
+===============================
+
+The service can act as a proxy, fetching allowed resources in the local or
+remote networks.
+
+Local network resources
+-----------------------
+
+Example:
+
+.. code-block:: bash
+
+    http(s)://<IP/DOMAIN>[:PORT]/rpvt?k=APIKEY&f=<NODE>/remote_host/folder/file
+
+Example: there is a chart on a storage server in the local network displaying
+storage usage. The chart is located at http://192.168.1.20/charts/zfs.png
+
+Set rpvt permissions of the API key to:
+
+.. code:: yaml
+
+  read:
+    # .....
+    rpvt:
+    - .local/192.168.1.20/charts/#
+
+The above grants access to all files on the specified host in /charts/ folder.
+
+Then include remote chart in the interface:
+
+.. code-block:: html
+
+    <img src="/rpvt?k=APIKEY&f=.local/192.168.1.20/charts/zfs.png" />
+
+Optionally, the protocol schema can be specified:
+
+.. code-block:: html
+
+    <img src="/rpvt?k=APIKEY&f=.local/https://192.168.1.20/charts/zfs.png" />
+
+Note that the URL schema is stripped before checking and it must be omitted in
+ACLs. If access to the remote resource is granted, it can be requested with
+both http and https.
+
+.. note::
+
+    Avoid using rpvt: ["#"], as this allows **/rpvt** to work as http proxy for
+    any local and Internet resource and may open a security hole.
+
+Remote network resources
+------------------------
+
+If ".local" (or the local node name) is specified, the HMI service requests the
+resource. Otherwise, the HMI service works in combination with
+:doc:`/svc/eva-repl`.
+
+The remote node always receives rpvt call as
+".local/resource", so the remote replication ACL must be set to ".local/..."
+only.
+
+Example of a local ACL:
+
+.. code:: yaml
+
+  read:
+    # .....
+    rpvt:
+    - remote_node/192.168.99.20/charts/#
+
+Example of a remote ACL, assigned to the replication key:
+
+.. code:: yaml
+
+  read:
+    # .....
+    rpvt:
+    - .local/192.168.99.20/charts/#
+
+Example HTML block with a chart image:
+
+.. code-block:: html
+
+    <img src="/rpvt?k=APIKEY&f=remote_node/https://192.168.99.20/charts/zfs.png" />
