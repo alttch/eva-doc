@@ -37,6 +37,7 @@ SCADA platform for Industry-4.0 automated control systems.
     v3migration
     What is new <changelog>
     architecture
+    local_cluster
     config
     registry
     aaa

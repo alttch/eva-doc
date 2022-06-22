@@ -1185,7 +1185,7 @@ spoint.list
    * - Parameters
      - *none*
    * - Returns
-     - S-point info (list)
+     - S-Point info (list)
 
 
 *Return payload example:*

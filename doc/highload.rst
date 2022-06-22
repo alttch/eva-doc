@@ -33,6 +33,8 @@ To use EVA ICS in high-load environments, remember the following:
 * Move inventory to an external SQL database (edit :ref:`config_core` and set
   *inventory_db* path). The inventory must be re-deployed after.
 
+* For heavy-loaded services, use :doc:`local_cluster`.
+
 Hardware
 ========
 

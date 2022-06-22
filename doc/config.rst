@@ -9,8 +9,12 @@ Configuration files
 The configuration files are located in */opt/eva4/etc* folder. If the files are
 missing, the default values are used.
 
+.. _eva_config:
+
 eva_config
 ----------
+
+Location: *etc/eva_config*
 
 A minimal config, used by "./sbin/eva-control" shell script to start the node
 server:
@@ -20,6 +24,8 @@ server:
 
 watchdog_config
 ---------------
+
+Location: *etc/watchdog_config*
 
 If started in the regular mode, "eva-control" script starts an additional
 watchdog shell script, which continuously monitors eva.core and restarts the
