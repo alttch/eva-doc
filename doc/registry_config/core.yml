@@ -4,7 +4,7 @@ workers: 2
 timeout: 5
 # the suicide timeout, used during shutdown (the node process is forcibly
 # killed after)
-suicide_timeout: 10
+suicide_timeout: 15
 # instantly save item states
 instant_save: true
 # keep action history in memory (seconds)

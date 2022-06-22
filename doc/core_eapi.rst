@@ -1172,6 +1172,42 @@ save
    * - Returns
      - *nothing*
 
+.. _eva.core__spoint.list:
+
+spoint.list
+-----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *List connected secondary points*
+   * - Parameters
+     - *none*
+   * - Returns
+     - S-point info (list)
+
+
+*Return payload example:*
+
+.. code:: json
+
+  [
+      {
+          "build": 2022062202,
+          "name": "eva.spoint.m2",
+          "port": "192.168.22.77:7777",
+          "version": "4.0.0"
+      },
+      {
+          "build": 2022062202,
+          "name": "eva.spoint.m1",
+          "port": "192.168.22.77:7777",
+          "version": "4.0.0"
+      }
+  ]
+  
+
 .. _eva.core__svc.deploy:
 
 svc.deploy
