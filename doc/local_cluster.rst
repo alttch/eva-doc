@@ -104,7 +104,7 @@ Edit/deploy/re-deploy a service, with an additional parameter:
     launcher: eva.launcher.<NAME>
 
 As soon as the service configuration is modified, it is stopped at the primary
-point and launched on the secondary.
+point and launched at the secondary one.
 
 For services, not included in the default EVA ICS distribution, make sure they
 are installed on the secondary point machine.
