@@ -114,7 +114,7 @@ e.g.:
     - id: eva.svc.locker2
       params:
         bus:
-          path: var/bus.ipc
+          path: 192.168.1.1:7777
         command: svc/eva-svc-locker
         config:
           locks:
@@ -145,5 +145,5 @@ by default. To make file :ref:`deployment <deploy_files>` available, firstly
 deploy a file management service, specifying the target secondary point as a
 launcher.
 
-After started, the service is ready to accept file deployment calls, which will
-be performed on the secondary point it is running on.
+After started, the service is ready to accept file deployment calls, which are
+performed on the secondary point it is running on.
