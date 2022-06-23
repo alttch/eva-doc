@@ -68,7 +68,7 @@ Cons of native management:
 Conclusion
 ==========
 
-* It is recommended to use the native management in huge setups, which runs
+* It is recommended to use the native management in huge setups, which run
   dozens of services with various and often unpredictable loads.
 
 * It is recommended to use the mixed management in large setups, which run at
