@@ -22,6 +22,10 @@ Why migrate to EVA ICS v4
   multiple "points", by moving :doc:`services </services>` to neighbor
   computers.
 
+* **Local clusters**. In addition to node-to-cloud formations, heavy-loaded
+  nodes can be split on local points, which run on different machines. See
+  :doc:`local_cluster`.
+
 * **New AAA**. The new :doc:`/aaa` architecture, much cleaner and much more
   powerful.
 

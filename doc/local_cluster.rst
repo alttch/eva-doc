@@ -97,11 +97,33 @@ Restart the primary s-point:
 Moving services to secondary points
 ===================================
 
-Edit/deploy/re-deploy a service, with an additional parameter:
+Edit/deploy/re-deploy a service, with the configuration parameters:
 
 .. code:: yaml
 
+    bus:
+    # .....
+      path: your_ip_or_host:7777 # must be set to the bus public socket
+    # .....
     launcher: eva.launcher.<NAME>
+
+e.g.:
+
+.. code:: yaml
+
+    - id: eva.svc.locker2
+      params:
+        bus:
+          path: var/bus.ipc
+        command: svc/eva-svc-locker
+        config:
+          locks:
+            - lock1
+            - lock2
+            - lock3
+        workers: 1
+        user: nobody
+        launcher: eva.launcher.point_b # the point name
 
 As soon as the service configuration is modified, it is stopped at the primary
 point and launched at the secondary one.
@@ -114,3 +136,13 @@ Updating
 
 Secondary points can be :ref:`updated <updating>` either locally or using
 :ref:`cloud updates <cloud_updating>` (both local and remote).
+
+Uploading files via deployment
+==============================
+
+Secondary points do not run :doc:`file management services </svc/eva-filemgr>`
+by default. To make file :doc:`deployment </iac>` available, firstly deploy a
+file management service, specifying the target secondary point as a launcher.
+
+After started, the service is ready to accept file deployment calls, which will
+be performed on the secondary point it is running on.
