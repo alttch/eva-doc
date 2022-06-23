@@ -141,8 +141,9 @@ Uploading files via deployment
 ==============================
 
 Secondary points do not run :doc:`file management services </svc/eva-filemgr>`
-by default. To make file :doc:`deployment </iac>` available, firstly deploy a
-file management service, specifying the target secondary point as a launcher.
+by default. To make file :ref:`deployment <deploy_files>` available, firstly
+deploy a file management service, specifying the target secondary point as a
+launcher.
 
 After started, the service is ready to accept file deployment calls, which will
 be performed on the secondary point it is running on.

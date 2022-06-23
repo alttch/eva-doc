@@ -67,6 +67,8 @@ itself. The hash can be get using e.g. Linux shell command:
           acls:
             - admin2
 
+.. _deploy_files:
+
 Uploading files
 ---------------
 
