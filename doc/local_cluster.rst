@@ -108,3 +108,9 @@ point and launched at the secondary one.
 
 For services, not included in the default EVA ICS distribution, make sure they
 are installed on the secondary point machine.
+
+Updating
+========
+
+Secondary points can be :ref:`updated <updating>` either locally or using
+:ref:`cloud updates <cloud_updating>` (both local and remote).

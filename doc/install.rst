@@ -94,3 +94,40 @@ in other tools.
 
 To rebuild the virtual environment from scratch, completely delete
 /opt/eva4/venv folder or call the above command with *-S* argument.
+
+.. _updating:
+
+Updating
+========
+
+Local nodes
+-----------
+
+To update a local node, use the command:
+
+.. code:: shell
+
+    eva update
+    # or
+    /opt/eva4/bin/eva-cloud-manager node update
+
+.. _cloud_updating:
+
+Remote nodes
+------------
+
+If any remote nodes are connected with :doc:`replication services
+</svc/eva-repl>` and configured as managed (admin key is set), they can be
+updated using cloud-update feature:
+
+.. code:: shell
+
+    eva cloud update
+    # or
+    /opt/eva4/bin/eva-cloud-manager cloud update
+
+After being started, the cloud-update firstly gathers facts about the available
+nodes and after offers the update plan, which must be additionally confirmed.
+
+Remote nodes are always updated to the same version, which the management node
+has got.
