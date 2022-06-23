@@ -67,7 +67,7 @@ As the bus sockets provide very minimal security, it is highly recommended to
 host both the primary and the secondary points in a trusted network and use
 VPN/firewall for network-to-network communications.
 
-Restart the primary s-point:
+Restart the primary:
 
 .. code::
 
