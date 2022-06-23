@@ -8,7 +8,7 @@ EVA ICS has got a :doc:`built-in node-scaling mechanism for heavy-loaded setups
 and allow service :doc:`deployment </iac>`.
 
 However, in certain circumstances it may be useful to use
-`https://kubernetes.io`_ as an additional platform for local service
+`<https://kubernetes.io>`_ as an additional platform for local service
 management, which can provide additional high-availability mechanisms and
 automatic resource load-balancing for huge local clusters.
 
@@ -60,7 +60,7 @@ Cons of native management:
 * Lacks cloud deployment features, services can be deployed on the local
   cluster only
 
-* Weaker health-check mechanisms: EVA ICS does the native health-check using
+* Weaker health-checking mechanisms: EVA ICS does the native health-check using
   multiple ways, including internal bus calls. Kubernetes does the health-check
   by using either external command-line tools or monitoring open ports, which
   are usually not provided by automation workers.
@@ -76,5 +76,6 @@ Conclusion
   additional high-availability.
 
 * It is recommended to avoid orchestra management services for simple setups
-  (less than 20 services per the local node), as EVA ICS in-house features make
-  maintenance much more elementary.
+  (less than 20 services per the local node), as EVA ICS in-house features
+  provide enough mechanisms for service health-checking and make maintenance
+  much more elementary.
