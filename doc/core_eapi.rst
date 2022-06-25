@@ -1195,14 +1195,16 @@ spoint.list
   [
       {
           "build": 2022062202,
-          "name": "eva.spoint.m2",
+          "name": "eva.spoint.m1",
           "port": "192.168.22.77:7777",
+          "source": "192.168.22.71:55643",
           "version": "4.0.0"
       },
       {
           "build": 2022062202,
-          "name": "eva.spoint.m1",
+          "name": "eva.spoint.m2",
           "port": "192.168.22.77:7777",
+          "source": "192.168.22.72:55641",
           "version": "4.0.0"
       }
   ]

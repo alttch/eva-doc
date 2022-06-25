@@ -22,6 +22,8 @@ config:
   ignore_events: false
   # event queue size
   queue_size: 8192
+  # panic on critical errors in X seconds after happened (0 - panic immediately)
+  panic_in: null
   # influx client pool size (default = workers)
   #clients: 2
   # item OIDs / OID masks
