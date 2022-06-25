@@ -1,6 +1,11 @@
 The replication service allows V4 nodes to replicate events and interact with
 each other.
 
+.. note::
+
+    There can be only a single replication instance per pub/sub server deployed
+    for each EVA ICS node
+
 The nodes must be connected via either `PSRT <https://psrt.bma.ai/>`_ or `MQTT
 <https://mqtt.org>`_ pub/sub.
 
