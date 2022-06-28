@@ -6,8 +6,8 @@ The service provides a second replication layer, in addition to
 :doc:`/svc/eva-repl`, which 100% guaranties that all telemetry data is
 transferred to the target node, unless deleted as expired.
 
-The service is perfect helper to fill all gaps in logs, charts or any other
-kind of archive data representation.
+The service is a perfect helper to fill all gaps in logs, charts or any other
+kind of archive data representation, collection or analysis.
 
 .. figure:: /schemas/zfrepl.png
     :scale: 100%
