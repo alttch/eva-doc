@@ -22,6 +22,16 @@ The default Enterprise pack can be obtained from `EVA ICS representatives
   customers who regularly spend certain amount of funds on support contracts.
   Please contact your representative for details.
 
+Active Directory authentication service
+=======================================
+
+See :doc:`/svc/eva-aaa-msad`.
+
+Zero-failure replication service
+================================
+
+See :doc:`/svc/eva-zfrepl`.
+
 EVA JS Framework WASM extension
 ===============================
 
@@ -113,11 +123,6 @@ Limitations
 * OID masks do not support internal wildcards (e.g. "sensor:\*/test")
 
 .. _aaa.msad:
-
-Active Directory authentication service
-=======================================
-
-See :doc:`/svc/eva-aaa-msad`.
 
 PubSubRT Enterprise
 ===================
