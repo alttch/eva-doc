@@ -39,6 +39,8 @@ service on a local node (e.g. :doc:`/svc/eva-db-influx` or
 :doc:`/svc/eva-db-sql`), the collector may be asked to fill mailbox with blocks
 from the database (see :ref:`eva.zfrepl.N.collector|replicator__mailbox.fill`).
 
+The service, which runs under the collector role, is always online.
+
 Replicator
 ----------
 
@@ -64,6 +66,9 @@ the current collector block. In the last case, the block is forcibly rotated.
 This means if the mailbox replication schedule is set as continuous, the
 replication frequency is nearly equal to the block requests interval set.
 
+The service, which runs under the replicator role, is automatically restarted
+on pub/sub failures.
+
 Standalone
 ----------
 
@@ -79,6 +84,8 @@ To process the block directory manually, use:
     # or using the bus CLI client
     /opt/eva4/sbin/bus /opt/eva4/var/bus.ipc rpc call eva.zfrepl.1.replicator \
         process_dir path=/path/to/blocks node=SOURCE_NAME delete=true
+
+The service, which runs under the standalone role, is always online.
 
 Recommendations
 ===============
@@ -97,3 +104,20 @@ Recommendations
 
     * enough bus queue
     * enough file ops queue
+
+* if huge network load is expected (e.g. equipment, connected to the node, is
+  reconfigured) because of lots of real-time data, a service, which runs under
+  the replicator role may be temporally disabled:
+
+.. code:: shell
+
+    eva svc call eva.zfrepl.1.replicator disable
+    # or using the bus CLI client
+    /opt/eva4/sbin/bus /opt/eva4/var/bus.ipc rpc call eva.zfrepl.1.replicator disable
+
+When disabled, the service stops all local replication client tasks (which must
+be later triggered either by schedulers or manually) and forbids serving blocks
+via pub/sub for external clients. Other methods and tasks are not affected.
+
+To enable the service back, repeat the above command with "enable" method or
+restart it.
