@@ -13,10 +13,10 @@ kind of archive data representation, collection or analysis.
     :scale: 100%
     :alt: Zero-failure replication schema
 
-The service can work in 3 modes (only one can be defined in the deployment
+The service can work in 3 roles (only one can be defined in the deployment
 config):
 
-Service modes
+Service roles
 =============
 
 Collector
@@ -55,11 +55,30 @@ dedicated server).
 
 Transfers blocks compressed and encrypted.
 
+.. warning::
+
+    The replicator role MUST be deployed on the same machine as the collector.
+
+The replicator client may fetch both prepared-to-replicate blocks as well as
+the current collector block. In the last case, the block is forcibly rotated.
+This means if the mailbox replication schedule is set as continuous, the
+replication frequency is nearly equal to the block requests interval set.
+
 Standalone
 ----------
 
 Allows to import manually copied blocks only (see
 :ref:`eva.zfrepl.N.collector|replicator__process_dir`).
+
+To process the block directory manually, use:
+
+.. code:: shell
+
+    eva svc call eva.zfrepl.1.replicator \
+        process_dir path=/path/to/blocks node=SOURCE_NAME delete=true
+    # or using the bus CLI client
+    /opt/eva4/sbin/bus /opt/eva4/var/bus.ipc rpc call eva.zfrepl.1.replicator \
+        process_dir path=/path/to/blocks node=SOURCE_NAME delete=true
 
 Recommendations
 ===============
@@ -73,7 +92,7 @@ Recommendations
 * If large amount of blocks is generated, increase *block_ttl_sec* mailbox
   collector field.
 
-* `eva.zfrepl.N.collector|replicator__mailbox.fill` may cause significant
+* :ref:`eva.zfrepl.N.collector|replicator__mailbox.fill` may cause significant
   disk/event queue overhead. Make sure the collector service has:
 
     * enough bus queue

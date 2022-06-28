@@ -4,7 +4,7 @@ workers: 2
 bus:
   path: var/bus.ipc
 config:
-  # the service can work in three modes:
+  # the service can work in three roles:
   #
   # collector - collects data from the local node bus events to mailboxes,
   # always online. Must have the "collector"
@@ -14,8 +14,6 @@ config:
   # replicator - serves and collects the data from the mailboxes via pub/sub,
   # MUST be deployed on the same machine as the collector. Must have the
   # "replicator" section
-  #
-  # collector and replicator blocks can not be mixed in a single service instance
   collector:
     # mailboxes location
     path: runtime/zfrepl/spool
