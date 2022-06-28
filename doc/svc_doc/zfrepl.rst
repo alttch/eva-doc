@@ -1,6 +1,6 @@
 Zero-failure replication service solves a typical IoT problem, when real-time
-data is lost in case if pub/sub receiver is offline or a sender has no
-connection with pub/sub.
+data is lost in cases if pub/sub target is offline or a source has temporally
+no connection with pub/sub.
 
 The service provides a second replication layer, in addition to
 :doc:`/svc/eva-repl`, which 100% guaranties that all telemetry data is
@@ -8,6 +8,10 @@ transferred to the target node, unless deleted as expired.
 
 The service is perfect helper to fill all gaps in logs, charts or any other
 kind of archive data representation.
+
+.. figure:: /schemas/zfrepl.png
+    :scale: 100%
+    :alt: Zero-failure replication schema
 
 The service can work in 3 modes (only one can be defined in the deployment
 config):
