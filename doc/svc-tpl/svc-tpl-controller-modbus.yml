@@ -4,7 +4,7 @@ bus:
   path: var/bus.ipc
 config:
   modbus: 
-    protocol: tcp # udp, rtu, ascii or native
+    protocol: tcp # udp, rtu, ascii or native for the local bus
     path: 192.168.1.200:502 # for serial:
     #  /dev/ttySXX:SPEED:DATABITS:PARITY:STOPBITS, e.g. /dev/ttyS0:9600:8:N:1
     #  for the local bus: service name

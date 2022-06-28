@@ -5,6 +5,7 @@
     core
     services
     svc/eva-controller-w1
+    svc/eva-aaa-msad
     svc/eva-aaa-acl
     svc/eva-controller-enip
     svc/eva-filemgr
@@ -27,3 +28,4 @@
     svc/eva-svc-locker
     svc/eva-controller-ads
     svc/eva-controller-virtual
+    svc/eva-zfrepl

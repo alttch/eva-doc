@@ -17,6 +17,7 @@ SCHEMA = {
             'tpl': {},
             'api': {},
             'xtr': {},
+            'ent': {},
         },
         'required': ['nam', 'exe', 'des'],
         'additionalProperties': False
@@ -45,13 +46,17 @@ with open('core_svcs_toc.rst', 'w') as tfh:
         print('     - Description', file=fh)
         print('     - Deployed', file=fh)
         for svc in svcs:
+            enterprise = svc.get('ent', False)
             nam = svc['nam']
             exe = svc['exe']
-            exe_link = exe.replace('venv/bin/', 'svc/')
+            exe_link = exe.replace('venv/bin/',
+                                   'svc/').replace('path/to/', 'svc/')
             des = svc['des']
             nam = f':doc:`{nam}</{exe_link}>`'
             des = f':doc:`{des}</{exe_link}>`'
             ins = svc.get('ins', '')
+            if not ins and enterprise:
+                ins = 'requires :doc:`/enterprise`'
             if ins.startswith('py:'):
                 pymod = ins[3:]
                 ins = (
@@ -71,6 +76,8 @@ with open('core_svcs_toc.rst', 'w') as tfh:
                 print('.. contents::', file=sfh)
                 print(file=sfh)
                 txt = svc.get('txt')
+                if enterprise:
+                    txt = '**Requires** :doc:`/enterprise`.\n\n' + txt
                 if txt:
                     print(txt, file=sfh)
                     print(file=sfh)
@@ -102,8 +109,11 @@ https://pypi.org/project/{pymod}/
                     if snam.endswith('N'):
                         snam = snam[:-1] + '1'
                         gnam = gnam[:-1]
+                    tpl_dir = '' if enterprise else 'EVA_DIR/share/svc-tpl/'
+                    tpl_dir_p = 'path/to/' if enterprise \
+                            else '/opt/eva4/share/svc-tpl/'
                     print(f"""
-Use the template *EVA_DIR/share/svc-tpl/{tpl}*:
+Use the template *{tpl_dir}{tpl}*:
 
 .. literalinclude:: ../svc-tpl/{tpl}
    :language: yaml
@@ -112,7 +122,7 @@ Create the service using :ref:`eva-shell`:
 
 .. code:: shell
 
-    eva svc create {snam} /opt/eva4/share/svc-tpl/{tpl}
+    eva svc create {snam} {tpl_dir_p}{tpl}
 
 or using the bus CLI client:
 
@@ -127,8 +137,10 @@ or using the bus CLI client:
                           file=sfh)
                 api = svc.get('api')
                 if api:
+                    api_path = f'/opt/eva4-enterprise/{api}' if enterprise \
+                            else f'/opt/eva4/{api}'
                     p = subprocess.Popen(
-                        ['/opt/eva4/sbin/eapigen', gnam, f'/opt/eva4/{api}'],
+                        ['/opt/eva4/sbin/eapigen', gnam, api_path],
                         stdout=subprocess.PIPE)
                     stdout, _ = p.communicate()
                     if p.returncode != 0:

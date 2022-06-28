@@ -58,6 +58,7 @@ prepare:
 	cp -r /opt/eva4/share/registry/defaults/config registry_config
 	rm -rf svc-tpl
 	cp -r /opt/eva4/share/svc-tpl .
+	cp -r /opt/eva4-enterprise/svc-tpl/* svc-tpl/
 	rm -rf etc-config
 	mkdir etc-config
 	cp -r /opt/eva4/etc/*-dist etc-config/

@@ -8,6 +8,10 @@
      - svc/eva-controller-w1
      - :doc:`1-Wire (OWFS) controller</svc/eva-controller-w1>`
      - 
+   * - :doc:`eva.aaa.msad</svc/eva-aaa-msad>`
+     - path/to/eva-aaa-msad
+     - :doc:`Active directory auth service</svc/eva-aaa-msad>`
+     - requires :doc:`/enterprise`
    * - :doc:`eva.aaa.acl</svc/eva-aaa-acl>`
      - svc/eva-aaa-acl
      - :doc:`Default ACL service</svc/eva-aaa-acl>`
@@ -96,3 +100,7 @@
      - svc/eva-controller-virtual
      - :doc:`Virtual controller</svc/eva-controller-virtual>`
      - 
+   * - :doc:`eva.zfrepl.N.collector|replicator</svc/eva-zfrepl>`
+     - path/to/eva-zfrepl
+     - :doc:`Zero-failure replication service</svc/eva-zfrepl>`
+     - requires :doc:`/enterprise`
