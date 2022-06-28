@@ -30,7 +30,7 @@ The mailbox blocks have compact and crash-free format with serialize+CRC32
 scheme, which allows processing all available frames in the block unless a
 broken one is detected.
 
-Telemetry data is know-to-be-compressed-well so it is highly recommended to
+Telemetry data is known to be compressed well so it is highly recommended to
 compress blocks when transferred (the service client applies BZIP2-compression
 automatically).
 
