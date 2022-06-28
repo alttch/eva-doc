@@ -15,7 +15,10 @@ config:
   # MUST be deployed on the same machine as the collector. Must have the
   # "replicator" section
   collector:
-    # mailboxes location
+    # mailboxes location, relative to EVA_DIR or absolute. if running under a
+    # restricted user account (default: eva), the directory MUST be created
+    # manually and the effective account must have read/write/execute (list)
+    # permissions to it
     path: runtime/zfrepl/spool
     mailboxes:
       node1:
