@@ -30,9 +30,9 @@ The mailbox blocks have compact and crash-free format with serialize+CRC32
 scheme, which allows processing all available frames in the block unless a
 broken one is detected.
 
-Additionally, telemetry data is know-to-be-compressed-well so it is highly
-recommended to compress blocks when transferred (the service client applies
-BZIP2-compression automatically).
+Telemetry data is know-to-be-compressed-well so it is highly recommended to
+compress blocks when transferred (the service client applies BZIP2-compression
+automatically).
 
 Additionally, if replication blocks are lost but there is a history database
 service on a local node (e.g. :doc:`/svc/eva-db-influx` or
