@@ -40,7 +40,7 @@ service on a local node (e.g. :doc:`/svc/eva-db-influx` or
 blocks from the database (see
 :ref:`eva.zfrepl.N.collector|replicator__mailbox.fill`).
 
-The service, which runs under the collector role, is always online.
+The service performing the collector role is always online.
 
 Replicator
 ----------
@@ -68,8 +68,8 @@ the current collector block. In the last case, the block is forcibly rotated.
 This means if the mailbox replication schedule is set as continuous, the
 replication frequency is nearly equal to the block requests interval set.
 
-The service, which runs under the replicator role, is automatically restarted
-on pub/sub failures.
+The service performing the replicator role is automatically restarted on
+pub/sub failures.
 
 Standalone
 ----------
@@ -87,7 +87,7 @@ To process the block directory manually, use:
     /opt/eva4/sbin/bus /opt/eva4/var/bus.ipc rpc call eva.zfrepl.1.replicator \
         process_dir path=/path/to/blocks node=SOURCE_NAME delete=true
 
-The service, which runs under the standalone role, is always online.
+The service performing the standalone role is always online.
 
 Recommendations
 ===============
