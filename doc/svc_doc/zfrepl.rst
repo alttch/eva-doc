@@ -36,8 +36,9 @@ automatically).
 
 Additionally, if replication blocks are lost but there is a history database
 service on a local node (e.g. :doc:`/svc/eva-db-influx` or
-:doc:`/svc/eva-db-sql`), the collector may be asked to fill mailbox with blocks
-from the database (see :ref:`eva.zfrepl.N.collector|replicator__mailbox.fill`).
+:doc:`/svc/eva-db-sql`), the collector may be asked to fill a mailbox with
+blocks from the database (see
+:ref:`eva.zfrepl.N.collector|replicator__mailbox.fill`).
 
 The service, which runs under the collector role, is always online.
 
@@ -51,9 +52,9 @@ Automatically collects replication blocks from remote nodes and pushes them to
 the local bus replication archive topic (*ST/RAR/<OID>*).
 
 Requires pub/sub server (`PSRT <psrt.bma.ai/>`_ or `MQTT <https://mqtt.org>`_).
-Both source and target node must share same :ref:`api_key`. While being usually
-deployed together with :doc:`/svc/eva-repl`, uses a dedicated connection (or a
-dedicated server).
+Both source and target node must share the same :ref:`api_key`. While being
+usually deployed together with :doc:`/svc/eva-repl`, uses a dedicated
+connection (or a dedicated server).
 
 Transfers blocks compressed and encrypted.
 
