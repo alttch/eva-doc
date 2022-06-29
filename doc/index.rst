@@ -33,6 +33,7 @@ SCADA platform for Industry-4.0 automated control systems.
     :caption: System documentation
     :maxdepth: 1
 
+    quickstart
     install
     v3migration
     What is new <changelog>
