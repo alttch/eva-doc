@@ -430,7 +430,7 @@ not group+id, so let us create the file called *room1.fan_control.py*:
 The "_1" variable contains the first non-keyword argument, sent by the logic
 manager.
 
-That is not it yet, as the node core does not know yet that the :ref:`lmacro`
+The node core does not know yet that the :ref:`lmacro`
 *lmacro:room1/room1.fan_control* is handled by *eva.controller.py* service. Let
 us create it and assign action:
 
@@ -446,7 +446,7 @@ us create it and assign action:
 	action:
 	  svc: eva.controller.py
 
-How everything is mapped correctly. Check the lmacro, by manually running it:
+Now everything is mapped correctly. Check the lmacro, by manually running it:
 
 .. code:: shell
 
