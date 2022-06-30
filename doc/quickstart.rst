@@ -457,7 +457,7 @@ Now everything is mapped correctly. Check the lmacro, by manually running it:
 
 That is it. When the sensor temperature is changed, the scenario is executed
 automatically. Both :ref:`unit` and :ref:`lmacro` action results can be
-obtained at any time with command:
+obtained at any time with the command:
 
 .. code:: shell
 
@@ -467,7 +467,7 @@ Building Human-Machine Interface
 ================================
 
 Interfaces and combined HTTP API for 3rd-party applications in EVA ICS v4 can
-be handled by the default service :doc:`/svc/eva-hmi`.
+be provided by the default service :doc:`/svc/eva-hmi`.
 
 Creating users and ACLs
 -----------------------
@@ -549,9 +549,9 @@ only. There is no login prompt, the credentials are hard-coded directly:
 
 Note that after calling fan actions, the HMI app does not need to update the
 button value. The value is updated in real-time by "$eva.watch" as soon as the
-server reports that the action is completed.
+server reports a new state.
 
-Go to http://localhost:7727 (or IP of your system) and HMI application is ready
+Open http://localhost:7727 (or IP of your system) and HMI application is ready
 to go:
 
 .. image:: screenshots/quickstart.png
