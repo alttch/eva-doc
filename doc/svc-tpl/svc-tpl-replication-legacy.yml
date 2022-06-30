@@ -22,8 +22,8 @@ config:
   ## node configuration
   #nodes:
     #node1_legacy:
-      #key: default-v3
-      #key_legacy_name: default
+      #key_id: default-v3
+      #key_legacy_id: default
       #reload_interval: 30
       #timeout: 5
       #controllers: ['uc', 'lm']

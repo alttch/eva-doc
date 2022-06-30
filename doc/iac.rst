@@ -8,7 +8,7 @@ resources and their parameters from deployment files in YAML format.
 
     To allow deployment on remote nodes, the local node must have remotes
     connected in management mode (the :doc:`replication service
-    </svc/eva-repl>` field "admin_key" must be set).
+    </svc/eva-repl>` field "admin_key_id" must be set).
 
 .. contents::
 

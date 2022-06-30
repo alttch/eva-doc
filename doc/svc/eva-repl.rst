@@ -140,10 +140,10 @@ node.export
   {
       "nodes": [
           {
-              "admin_key": "admin",
+              "admin_key_id": "admin",
               "compress": true,
               "enabled": true,
-              "key": "default",
+              "key_id": "default",
               "name": "rtest1",
               "ping_interval": 1.0,
               "reload_interval": 60.0,
@@ -234,10 +234,10 @@ node.get_config
 .. code:: json
 
   {
-      "admin_key": "admin",
+      "admin_key_id": "admin",
       "compress": true,
       "enabled": true,
-      "key": "default",
+      "key_id": "default",
       "name": "rtest1",
       "ping_interval": 1.0,
       "reload_interval": 60.0,

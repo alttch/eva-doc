@@ -34,10 +34,11 @@ The API key specifies ACL(s) for the remote node to handle RPC-via-pub/sub
 calls.
 
 To enable all remote bus calls, nodes must also share the same API key with
-admin privileges, which must be set in "admin_key" configuration field on the
-primary (manager) node. The security policy is the same as for regular keys.
+admin privileges, which must be set in "admin_key_id" configuration field on
+the primary (manager) node. The security policy is the same as for regular
+keys.
 
-When the "admin_key" is set, the remote node becomes "managed".
+When the "admin_key_id" is set, the remote node becomes "managed".
 
 .. note::
 

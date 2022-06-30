@@ -360,11 +360,12 @@ Check the service status:
 Logic macros
 ------------
 
-What does "run" field mean? It is mapped to a :ref:`lmacro`. Logic macros are
-similar to PLC programs, which are executed either cyclically or on events. The
-primary difference is that lmacro can be written in any supported programming
-language and physically hosted on any EVA ICS node in the cloud. Some lmacro
-scenarios can be embedded in custom services as well.
+What does "run" field mean? It tells the controller to run a :ref:`lmacro` when
+a rule condition matches. Logic macros are similar to PLC programs, which are
+executed either cyclically or on events. The primary difference is that lmacro
+can be written in any supported programming language and physically hosted on
+any EVA ICS node in the cloud. Some lmacro scenarios can be embedded in custom
+services as well.
 
 Deploying lmacro controller
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -558,3 +559,180 @@ to go:
 That is all. After understanding this simple example, read other sections of
 EVA ICS documentation to discover the real power of this mighty open-source
 Industry-4.0 automation platform. Good luck!
+
+The same but with deployment
+============================
+
+The above example is good for small or test setups. However, large setups
+require :doc:`IaC </iac>` approach. Let us repeat everything with a single
+deployment file.
+
+.. note::
+
+    Certain sections of the deployment file can be exported from a live system,
+    using "eva item export", "eva acl export", "eva svc export" and related
+    commands.
+
+Make a fresh install and append additional services:
+
+.. code:: shell
+    
+    sudo -s
+    curl https://pub.bma.ai/eva/install | sh /dev/stdin -a --hmi
+    /opt/eva4/sbin/venvmgr add eva4-controller-py
+    # allow deployment for UI files
+    ln -sf /opt/eva4/ui /opt/eva4/runtime/ui
+
+Create a deployment file. As both lmacro code and HMI app are text-only, let us
+include their content directly inside the file:
+
+.. code:: yaml
+
+    version: 4
+    content:
+      # ".local" is alias for the local node
+      # the deplyment can be peformed on any managed node in the cloud
+      # (if admin_key_id is set for the node in the replication service)
+      - node: .local
+        items:
+          - oid: sensor:room1/temp
+          - oid: unit:room1/fan
+            action:
+              svc: eva.controller.modbus1
+          - oid: lmacro:room1/room1.fan_control
+            action:
+              svc: eva.controller.py
+        svcs:
+          - id: eva.controller.modbus1
+            params:
+              bus:
+                path: var/bus.ipc # the default local node event bus
+              command: svc/eva-controller-modbus
+              config:
+                modbus:
+                  path: /dev/ttyS0:9600:8:N:1
+                  protocol: rtu
+                pull:
+                - count: 1
+                  reg: c0
+                  unit: 1
+                  map:
+                  - offset: 0
+                    oid: unit:room1/fan
+                    prop: status
+                - count: 2
+                  reg: h0
+                  unit: 2
+                  map:
+                  - offset: 0
+                    oid: sensor:room1/temp
+                    type: real
+                pull_cache_sec: 3600
+                pull_interval: 0.2
+                action_map:
+                  unit:room1/fan:
+                    status:
+                      reg: c0
+                      unit: 1
+                action_queue_size: 32
+                actions_verify: true
+                panic_in: 0
+                queue_size: 32768
+                retries: 2
+              react_to_fail: true
+              timeout:
+                startup: 10.0
+              user: eva
+              workers: 1
+          - id: eva.controller.lm.room1
+            params:
+              command: svc/eva-controller-lm
+              bus:
+                path: var/bus.ipc
+              config:
+                rules:
+                  - id: ROOM1_TEMP_ABOVE
+                    oid: sensor:room1/temp
+                    prop: value
+                    condition:
+                      min: 25
+                    run: lmacro:room1/room1.fan_control
+                    args:
+                      - 1
+                  - id: ROOM1_TEMP_BELOW
+                    oid: sensor:room1/temp
+                    prop: value
+                    condition:
+                      max: 22
+                    run: lmacro:room1/room1.fan_control
+                    args:
+                      - 0
+              user: nobody
+          - id: eva.controller.py
+            params:
+                  command: venv/bin/eva4-svc-controller-py
+                  bus:
+                    path: var/bus.ipc
+                  config: {}
+                  user: nobody
+        acls:
+          - id: op
+            read:
+              items:
+              - '#'
+              pvt:
+              - '#'
+              rpvt:
+              - '#'
+            write:
+              items:
+              - '#'
+        users:
+          - login: op
+            # sha256-hashed
+            # to generate: "echo -n 123 | sha256sum"
+            password: a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3
+            acls:
+              - op
+        upload:
+          - src: https://github.com/alttch/eva-js-framework/releases/download/v0.3.35/eva.framework.min.js
+            target: ui/
+          - text: |
+              if _1 == 0:
+                stop('unit:room1/fan')
+              elif _1 == 1:
+                start('unit:room1/fan')
+            target: xc/py/room1.fan_control.py
+          - text: |
+              <html>
+              <head>
+                  <title>My first cool EVA ICS HMI</title>
+                  <script type="text/javascript" src="eva.framework.min.js"></script>
+              </head>
+              <body>
+                  <div>Temperature: <span id="temp"></span></div>
+                  <div>Fan:
+                      <input id="fan" type="button"
+                          onclick="$eva.call('action.toggle', 'unit:room1/fan')" /></div>
+                  <script type="text/javascript">
+                  $eva.api_version = 4;
+                  $eva.login = "op";
+                  $eva.password = "123";
+                  $eva.watch("unit:room1/fan",
+                      (state) => document.getElementById("fan").value = state.status?"ON":"OFF");
+                  $eva.watch("sensor:room1/temp",
+                      (state) => document.getElementById("temp").innerHTML = state.value);
+                  $eva.start();
+                  </script>
+              </body>
+              </html>
+            target: ui/index.html
+
+and deploy it:
+
+.. code:: shell
+
+    eva cloud deploy path/to/deploy.yml
+    # or with eva-cloud-manager directly
+    /opt/eva4/bin/eva-cloud-manager cloud deploy path/to/deploy.yml
+
