@@ -1386,6 +1386,60 @@ svc.list
   ]
   
 
+.. _eva.core__svc.purge:
+
+svc.purge
+---------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Undeploys local services and purge their data*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **svc**
+     - Vec<struct/String>
+     - Service parameters or a list of service IDs
+     - no
+
+.. _eva.core__svc.restart:
+
+svc.restart
+-----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Restarts a local service*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Service ID
+     - **yes**
+
 .. _eva.core__svc.undeploy:
 
 svc.undeploy
@@ -1395,7 +1449,7 @@ svc.undeploy
    :header-rows: 0
 
    * - Description
-     - *Undeploys local services and purge their data*
+     - *Undeploys local services*
    * - Parameters
      - required
    * - Returns
