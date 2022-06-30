@@ -257,7 +257,7 @@ comments:
         # mapped in "pull" sections to -1 (error)
         react_to_fail: true
         timeout:
-          # for fieldbus services, set startup timeout a little larger than the
+          # for fieldbus services, set startup timeout a little higher than the
           # core timeout (default: 5 sec) to give them a time to connect to the
           # fieldbus and perform initial tasks
           startup: 10.0
@@ -467,7 +467,7 @@ Building Human-Machine Interface
 ================================
 
 Interfaces and combined HTTP API for 3rd-party applications in EVA ICS v4 can
-be provided by the default service :doc:`/svc/eva-hmi`.
+be provided by the default :doc:`/svc/eva-hmi`.
 
 Creating users and ACLs
 -----------------------
@@ -590,8 +590,8 @@ include their content directly inside the file:
 
     version: 4
     content:
-      # ".local" is alias for the local node
-      # the deplyment can be peformed on any managed node in the cloud
+      # ".local" is the alias for the local node
+      # the deployment can be peformed on any managed node in the cloud
       # (if admin_key_id is set for the node in the replication service)
       - node: .local
         items:
