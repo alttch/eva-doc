@@ -3,8 +3,8 @@ Quick start
 
 .. contents::
 
-Few words from authors
-======================
+Few words from the authors
+==========================
 
 Thank you for being interested in EVA ICS! Our goal is to make EVA ICS the
 world-fastest, the most reliable, flexible, modern and easy-to use cloud-SCADA.
