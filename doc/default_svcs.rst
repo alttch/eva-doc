@@ -92,6 +92,10 @@
      - svc/eva-svc-locker
      - :doc:`Shared lock service</svc/eva-svc-locker>`
      - 
+   * - :doc:`eva.svc.tts.PROVIDER</svc/eva4-svc-tts>`
+     - venv/bin/eva4-svc-tts
+     - :doc:`Text-to-speech service</svc/eva4-svc-tts>`
+     - requires `eva4-svc-tts <https://pypi.org/project/eva4-svc-tts/>`_ Python module
    * - :doc:`eva.controller.adsN</svc/eva-controller-ads>`
      - svc/eva-controller-ads
      - :doc:`TwinCAT ADS gateway</svc/eva-controller-ads>`

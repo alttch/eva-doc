@@ -26,6 +26,7 @@
     svc/eva-db-sql
     svc/eva-controller-sr
     svc/eva-svc-locker
+    svc/eva4-svc-tts
     svc/eva-controller-ads
     svc/eva-controller-virtual
     svc/eva-zfrepl

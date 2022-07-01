@@ -68,6 +68,13 @@
     and analyze its data (Modbus via the native bus is highly recommended).
   tpl: svc-tpl-modbus-slave.yml
   api: svc/svc-modbus-slave/eapi.yml
+- nam: eva.svc.tts.PROVIDER
+  exe: venv/bin/eva4-svc-tts
+  des: Text-to-speech service
+  ins: py:eva4-svc-tts
+  txt: Allows to use text-to-speech functions via the local bus
+  tpl: svc-tpl-tts.yml
+  api: svc/svc-tts/eapi.yml
 - nam: eva.controller.py
   exe: venv/bin/eva4-svc-controller-py
   des: Python macros controller
