@@ -16,7 +16,7 @@ Each EVA ICS v4 node has the following architecture:
   launchers.
 
 * The core and all services are connected to the single inter-process
-  communication bus, based on `ELBUS <https://elbus.bma.ai>`_ and using
+  communication bus, based on `BUS/RT <https://busrt.bma.ai>`_ and using
   MessagePack as the payload serialization format.
 
 * ELBUS is a high-speed industrial IPC bus, which can provide 100K+ RPC calls a

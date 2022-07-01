@@ -5,7 +5,7 @@ EAPI is the name of API/SDK, used in EVA ICS v4
 :doc:`architecture<architecture>` by services and external software to
 communicate with the node core and each other.
 
-EAPI is based on `ELBUS <https://elbus.bma.ai/>`_ IPC bus and uses its default
+EAPI is based on `BUS/RT <https://busrt.bma.ai/>`_ IPC bus and uses its default
 RPC layer for procedure calls. The default encoding payload for all RPC calls
 (except a few exclusions) is `MessagePack <https://msgpack.org/index.html>`_.
 
