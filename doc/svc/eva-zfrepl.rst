@@ -11,7 +11,7 @@ Zero-failure replication service
 Setup
 =====
 
-Use the template *svc-tpl-zfrepl.yml*:
+Use the template *EVA_DIR/share/svc-tpl/svc-tpl-zfrepl.yml*:
 
 .. literalinclude:: ../svc-tpl/svc-tpl-zfrepl.yml
    :language: yaml
@@ -20,7 +20,7 @@ Create the service using :ref:`eva-shell`:
 
 .. code:: shell
 
-    eva svc create eva.zfrepl.N.collector|replicator path/to/svc-tpl-zfrepl.yml
+    eva svc create eva.zfrepl.N.collector|replicator /opt/eva4/share/svc-tpl/svc-tpl-zfrepl.yml
 
 or using the bus CLI client:
 

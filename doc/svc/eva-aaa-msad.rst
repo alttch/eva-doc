@@ -10,7 +10,7 @@ Active directory user authentication service, see :doc:`/aaa` for more details.
 Setup
 =====
 
-Use the template *svc-tpl-aaa-msad.yml*:
+Use the template *EVA_DIR/share/svc-tpl/svc-tpl-aaa-msad.yml*:
 
 .. literalinclude:: ../svc-tpl/svc-tpl-aaa-msad.yml
    :language: yaml
@@ -19,7 +19,7 @@ Create the service using :ref:`eva-shell`:
 
 .. code:: shell
 
-    eva svc create eva.aaa.msad path/to/svc-tpl-aaa-msad.yml
+    eva svc create eva.aaa.msad /opt/eva4/share/svc-tpl/svc-tpl-aaa-msad.yml
 
 or using the bus CLI client:
 

@@ -109,9 +109,11 @@ https://pypi.org/project/{pymod}/
                     if snam.endswith('N'):
                         snam = snam[:-1] + '1'
                         gnam = gnam[:-1]
-                    tpl_dir = '' if enterprise else 'EVA_DIR/share/svc-tpl/'
-                    tpl_dir_p = 'path/to/' if enterprise \
-                            else '/opt/eva4/share/svc-tpl/'
+                    # tpl_dir = '' if enterprise else 'EVA_DIR/share/svc-tpl/'
+                    tpl_dir = 'EVA_DIR/share/svc-tpl/'
+                    tpl_dir_p = '/opt/eva4/share/svc-tpl/'
+                    # tpl_dir_p = 'path/to/' if enterprise \
+                    # else '/opt/eva4/share/svc-tpl/'
                     print(f"""
 Use the template *{tpl_dir}{tpl}*:
 
