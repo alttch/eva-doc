@@ -84,7 +84,7 @@ Installation
   installed. E.g. if the framework is installed in */opt/eva/ui*, the module
   should be placed in */opt/eva/ui/evajw*.
 
-* (Recommended). Make sure the *wasm* MIME type is set to "application/wasm" in
+* (Recommended) Make sure the *wasm* MIME type is set to "application/wasm" in
   EVA ICS HMI service.
 
 * Put the following code in your HMI, before starting the web-HMI application
