@@ -8,27 +8,56 @@ General terms and conditions
 
 The default EVA ICS v4 Enterprise pack includes the following extensions:
 
+* Enterprise services (single node)
 * EVA JS Framework WASM extension (single node)
-* Active Directory authentication service (single node)
 * PubSubRT Enterprise (up to two PubSubRT nodes in cluster)
 
 The default Enterprise pack can be obtained from `EVA ICS representatives
 <https://www.eva-ics.com/contacts>`_.
 
-* The default Enterprise pack costs 2,000 EUR/year and includes 10 hours of
-  support from the EVA ICS core team.
-
 * The Enterprise extensions may be provided for free or with a discount for
   customers who regularly spend certain amount of funds on support contracts.
   Please contact your representative for details.
 
+Enterprise services
+===================
+
+* The license is issued for 366 (+30) days and is tied to the node system name.
+
+* It is not possible to change the node name after the license had been issued.
+
+* It is possible to get a trial (7-day) license free of charge.
+
+.. _ee_license_install:
+
+Installation
+------------
+
+The license is imported with a command:
+
+.. code:: shell
+
+    /opt/eva4/sbin/eva-registry-cli set eva/config/ee/license \
+        - --type json < eva-ics-ee-NAME.json
+
+when there is less than 30 days before the expiration date left, deployed
+Enterprise services start sending warning messages in logs every hour.
+
+A new license can be imported on-the-flow, no service/node restart is required.
+
+The license expiration UNIX timestamp can be obtained with a command:
+
+.. code:: shell
+
+    /opt/eva4/sbin/eva-registry-cli get-field eva/config/ee/license expires
+
 Active Directory authentication service
-=======================================
+---------------------------------------
 
 See :doc:`/svc/eva-aaa-msad`.
 
 Zero-failure replication service
-================================
+--------------------------------
 
 See :doc:`/svc/eva-zfrepl`.
 
@@ -99,10 +128,10 @@ Licensing
   not be used on others. If a user requires accessing web-HMI via IP address,
   it should be added in the license as well.
 
+* The license is issued for 366 (+30) days.
+
 * The license is built-in into the copy of the WASM extension, owned by the
   customer.
-
-* The license may have expiration time or be perpetual.
 
 * To check the license expiration time manually, the following function can be
   used:
@@ -114,6 +143,8 @@ Licensing
 
 * The list of domains/IP addresses is encrypted and can not be read.
 
+* There is no trial license for WASM extension.
+
 Limitations
 -----------
 
@@ -121,8 +152,6 @@ Limitations
   particular handler function. Watch can be cleared by *oid* or globally only.
 
 * OID masks do not support internal wildcards (e.g. "sensor:\*/test")
-
-.. _aaa.msad:
 
 PubSubRT Enterprise
 ===================
