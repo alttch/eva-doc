@@ -1,5 +1,5 @@
 # queue size
-queue_size: 512
+queue_size: 32768
 # bus buffer size (core + defaults for services)
 buf_size: 8192
 # buffer time-to-live (microseconds)

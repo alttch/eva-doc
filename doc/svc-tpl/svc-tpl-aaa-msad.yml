@@ -1,5 +1,5 @@
 # Active directory authentication service
-command: path/to/eva-aaa-msad
+command: svc/eva-aaa-msad
 bus:
   path: var/bus.ipc
 config:
