@@ -5,7 +5,7 @@ HMI kiosk manager
 
 **Requires** :doc:`/enterprise`.
 
-Allows to orchestrize installed HMI kiosks
+Allows to orchestrate installed HMI kiosks
 
 Setup
 =====

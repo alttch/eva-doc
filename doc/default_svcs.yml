@@ -276,7 +276,7 @@
 - nam: eva.kioskman.default
   exe: path/to/eva-kioskman
   des: HMI kiosk manager
-  txt: Allows to orchestrize installed HMI kiosks
+  txt: Allows to orchestrate installed HMI kiosks
   api: eva4-esvc/kiosk-manager/eapi.yml
   ent: true
   tpl: svc-tpl-kioskman.yml
