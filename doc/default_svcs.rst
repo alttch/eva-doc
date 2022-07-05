@@ -24,6 +24,10 @@
      - svc/eva-filemgr
      - :doc:`File manager service</svc/eva-filemgr>`
      - always by default
+   * - :doc:`eva.kioskman.default</svc/eva-kioskman>`
+     - path/to/eva-kioskman
+     - :doc:`HMI kiosk manager</svc/eva-kioskman>`
+     - requires :doc:`/enterprise`
    * - :doc:`eva.hmi.default</svc/eva-hmi>`
      - svc/eva-hmi
      - :doc:`HMI service</svc/eva-hmi>`

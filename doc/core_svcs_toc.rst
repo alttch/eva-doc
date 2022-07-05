@@ -9,6 +9,7 @@
     svc/eva-aaa-acl
     svc/eva-controller-enip
     svc/eva-filemgr
+    svc/eva-kioskman
     svc/eva-hmi
     svc/eva-db-influx
     svc/eva-svc-expiration

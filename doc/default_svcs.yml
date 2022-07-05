@@ -273,3 +273,10 @@
   api: eva4-esvc/zfrepl/eapi.yml
   ent: true
   tpl: svc-tpl-zfrepl.yml
+- nam: eva.kioskman.default
+  exe: path/to/eva-kioskman
+  des: HMI kiosk manager
+  txt: Allows to orchestrize installed HMI kiosks
+  api: eva4-esvc/kiosk-manager/eapi.yml
+  ent: true
+  tpl: svc-tpl-kioskman.yml

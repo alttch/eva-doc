@@ -53,6 +53,7 @@ clean:
 	rm -rf $(BUILDDIR)
 
 prepare:
+	cd /opt/eva4-enterprise/eva4-esvc/kiosk-manager && make eapi
 	cp /opt/eva4/CHANGELOG.rst changelog.rst
 	rm -rf registry_config
 	cp -r /opt/eva4/share/registry/defaults/config registry_config

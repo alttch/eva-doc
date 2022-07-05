@@ -141,6 +141,7 @@ or using the bus CLI client:
                 if api:
                     api_path = f'/opt/eva4-enterprise/{api}' if enterprise \
                             else f'/opt/eva4/{api}'
+                    print('/opt/eva4/sbin/eapigen', gnam, api_path)
                     p = subprocess.Popen(
                         ['/opt/eva4/sbin/eapigen', gnam, api_path],
                         stdout=subprocess.PIPE)

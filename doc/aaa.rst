@@ -123,7 +123,7 @@ By default, API key management and authentication are provided by
 
 Additional user authentication services available:
 
-* :ref:`aaa.msad` - included in :doc:`/enterprise`.
+* :doc:`/svc/eva-aaa-msad` - included in :doc:`/enterprise`.
 
 .. _session_token:
 
