@@ -9,8 +9,8 @@ HMI Kiosk Manager service allows to orchestrate HMI kiosks and provides the
 following functions:
 
 * Provides a dedicated bus, isolated from the primary EVA ICS node bus, which
-  restricts kiosk communications between each other and allows connection from
-  specified IP addresses/networks only
+  restricts kiosk communications between each other and permits connections
+  from specified IP addresses/networks only
 
 * Allows to monitor states of connected kiosks
 
