@@ -116,6 +116,12 @@ architecture, browser version etc., use the command:
 
     eva kiosk info <kiosk_name>
 
+Kiosks may have the following states:
+
+* **preparing** a kiosk is loading HMI web application
+* **loaded** the application is loaded and ready to be authenticated
+* **active** the application is authenticated and running
+
 Destroying kiosk connection
 ---------------------------
 
