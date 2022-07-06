@@ -161,6 +161,8 @@ before continue.
 Extra commands
 --------------
 
+.. _iac_bus_calls:
+
 BUS calls
 ~~~~~~~~~
 

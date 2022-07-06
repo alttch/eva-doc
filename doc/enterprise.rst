@@ -51,15 +51,20 @@ The license expiration UNIX timestamp can be obtained with a command:
 
     /opt/eva4/sbin/eva-registry-cli get-field eva/config/ee/license expires
 
-Active Directory authentication service
----------------------------------------
+Active Directory authentication
+-------------------------------
 
 See :doc:`/svc/eva-aaa-msad`.
 
-Zero-failure replication service
---------------------------------
+Zero-failure replication
+------------------------
 
 See :doc:`/svc/eva-zfrepl`.
+
+HMI Kiosk manager
+-----------------
+
+See :doc:`/svc/eva-kioskman`.
 
 EVA JS Framework WASM extension
 ===============================

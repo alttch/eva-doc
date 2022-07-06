@@ -5,7 +5,8 @@ HMI kiosk manager
 
 **Requires** :doc:`/enterprise`.
 
-Allows to orchestrate installed HMI kiosks
+.. include:: /svc_doc/kioskman.rst
+
 
 Setup
 =====
