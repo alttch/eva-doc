@@ -1,4 +1,4 @@
-# EVA ICS v4-v4 replication service
+# EVA ICS zero-failure replication service
 command: svc/eva-zfrepl
 workers: 2
 bus:
