@@ -16,17 +16,20 @@ Each EVA ICS v4 node has the following architecture:
   launchers.
 
 * The core and all services are connected to the single inter-process
-  communication bus, based on `BUS/RT <https://busrt.bma.ai>`_ and using
-  MessagePack as the payload serialization format.
+  communication bus, based on `BUS/RT <https://busrt.bma.ai>`_.
 
-* ELBUS is a high-speed industrial IPC bus, which can provide 100K+ RPC calls a
-  second and 1M+ events a second without significant CPU load. ELBUS provides
+* BUS/RT is a high-speed industrial IPC bus, which can provide 100K+ RPC calls a
+  second and 1M+ events a second without significant CPU load. BUS/RT provides
   zero security in favor of speed and reliability, so all services/equipment in
   the local cluster must communicate via a private network only.
 
+* EVA ICS core and services use :doc:`EAPI <eapi>` layer above the bus, which
+  contains unified RPC, topics and event format and exchange with `MessagePack
+  <https://msgpack.org/index.html>`_-encoded payloads.
+
 * The node server has the following services embedded:
 
-    * **.broker** ELBUS broker service
+    * **.broker** BUS/RT broker service
     * **eva.core** the core service
     * **eva.launcher.** external service launchers
     * **eva.registry** the registry database service
