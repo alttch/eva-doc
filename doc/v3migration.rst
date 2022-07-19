@@ -149,6 +149,7 @@ login               login (unchanged)
 logout              logout ("k" parameter changed to "a")
 state               item.state
 state_history       item.state_history (accepts timestamps only)
+check_item_access   item.check_access
 state_log           item.state_log
 log_get             log.get
 action              action (unchanged)

@@ -234,6 +234,42 @@ bus::<TARGET_SVC>::<METHOD>
     :response: http_api_examples/bus__TARGET_SVC__METHOD.resp
 
 
+.. _hmi_http__item.check_access:
+
+item.check_access
+-----------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Check read/write access for a single or multiple items*
+   * - Parameters
+     - required
+   * - Returns
+     - Map OID/access
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - Vec<String>/String
+     - Item OID(s) or masks
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: http_api_examples/item.check_access.req
+    :response: http_api_examples/item.check_access.resp
+
+
 .. _hmi_http__item.state:
 
 item.state
