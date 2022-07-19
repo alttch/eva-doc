@@ -364,7 +364,7 @@ item.announce
      - String
      - Item OID or OID mask
      - no
-   * - **node**
+   * - **node (alias: src)**
      - String
      - filter items by node (use .local as an alias for the local one)
      - no
@@ -571,7 +571,7 @@ item.list
      - Vec<String>/String
      - Item OID(s) or OID mask(s)
      - no
-   * - **node**
+   * - **node (alias: src)**
      - String
      - filter items by node (use .local as an alias for the local one)
      - no
