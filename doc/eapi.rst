@@ -9,6 +9,11 @@ EAPI is based on `BUS/RT <https://busrt.bma.ai/>`_ IPC bus and uses its default
 RPC layer for procedure calls. The default encoding payload for all RPC calls
 (except a few exclusions) is `MessagePack <https://msgpack.org/index.html>`_.
 
+.. note::
+
+    In EAPI Pub/Sub item OIDs are always used as paths: kind/group/id (":"
+    between kind and group/id is replaced with "/").
+
 .. contents::
 
 Calling EAPI methods
