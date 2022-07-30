@@ -13,6 +13,11 @@ monitor and manage a remotely connected EVA ICS v4 node, as well as all other
 The application's goal is to provide an interactive cloud dashboard with
 certain management functions. For complete management, refer to :doc:`/cli`.
 
+We are continuously extend Cloud Manager UI functionality to let it monitor
+more and more resources and perform more management operations. See `EVA ICS
+Cloud Manager UI CHANGELOG
+<https://github.com/eva-ics/ecmui/blob/main/CHANGELOG.rst>`_ for more details.
+
 Installation
 ============
 
