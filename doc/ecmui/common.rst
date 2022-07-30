@@ -78,14 +78,14 @@ Certain tables, such as items and services, allow exporting resources.
 
 when clicked, the operation is performed on ALL selected resources/items.
 
-The resources can be exported as a resource payload file (e.g. for
+The resources can be exported as a resource payload file (YAML, e.g. for
 :ref:`eva-shell` *item deploy* command) or as a payload for :doc:`/iac`.
 
 Importing resources/items
 =========================
 
 Certain tables, such as items and services, allow importing resources from
-resource payload files.
+resource payload YAML files.
 
 .. figure:: ss/import.png
     :scale: 30%
