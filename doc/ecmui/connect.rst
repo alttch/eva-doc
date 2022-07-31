@@ -6,7 +6,7 @@ Connecting to a node
 Connection dialog
 =================
 
-When Cloud Manager is started, the connect window appears automatically:
+When Cloud Manager UI is started, the connect window appears automatically:
 
 .. figure:: ss/connect.png
     :scale: 30%

@@ -10,4 +10,4 @@ added/edited/destroyed or restarted.
 .. note::
 
     If :doc:`/svc/eva-repl` or :doc:`/svc/eva-hmi` service is restarted, the
-    Cloud Manager application may drop the current connection.
+    Cloud Manager UI application may drop the current connection.
