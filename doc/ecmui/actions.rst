@@ -3,7 +3,7 @@ Actions
 
 .. contents::
 
-:ref:`unit` and `lmacro` actions can be monitored on the actions page.
+:ref:`unit` and :ref:`lmacro` actions can be monitored on the actions page.
 
 .. figure:: ss/actions.png
     :scale: 20%
