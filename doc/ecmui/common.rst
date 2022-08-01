@@ -81,6 +81,12 @@ when clicked, the operation is performed on ALL selected resources/items.
 The resources can be exported as a resource payload file (YAML, e.g. for
 :ref:`eva-shell` *item deploy* command) or as a payload for :doc:`/iac`.
 
+.. warning::
+
+    Remote node resources (items) can not be exported. When exporting items,
+    always set "node" filter to the current chosen node to avoid remote items
+    in the export list.
+
 Importing resources/items
 =========================
 
